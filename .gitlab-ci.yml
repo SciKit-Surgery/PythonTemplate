@@ -61,7 +61,7 @@ testjob-linux:
     - virtualenv -p $py2_bin $py2_venv_name
 
     # print Python version to CI output
-    - $py2_venv_bin/python --version
+    - $py2_venv_name/bin/python --version
 
     # Install requirements for tests
     - $py2_venv_name/bin/pip install -r requirements-test.txt

@@ -82,9 +82,6 @@ testjob-mac:
     # print system info
     - pwd
 
-    # save current folder path just in case
-    - export code_dir=$(pwd)
-
     #### python 3 tests ###################################
     - echo 'Running Python 3 tests'
 
@@ -92,18 +89,15 @@ testjob-mac:
     - py3_venv_name="pythondemo-venv-py3"
     - py3_bin=$(which python3)
     - virtualenv -p $py3_bin $py3_venv_name
-    - cd $py3_venv_name/bin
-    - py3_venv_bin=$(pwd)
 
     # print Python version to CI output
-    - $py3_venv_bin/python --version
+    - $py3_venv_name/bin/python --version
 
     # Install requirements for tests
-    - cd $code_dir
-    - $py3_venv_bin/pip install -r requirements-test.txt
+    - $py3_venv_name/bin/pip install -r requirements-test.txt
 
     # Run tests
-    - $py3_venv_bin/python -m unittest discover -s "tests"
+    - $py3_venv_name/bin/python -m unittest discover -s "tests"
 
     ###############end of python3
 
@@ -115,18 +109,15 @@ testjob-mac:
     - py2_venv_name="pythondemo-venv-py2"
     - py2_bin=$(which python2)
     - virtualenv -p $py2_bin $py2_venv_name
-    - cd $py2_venv_name/bin
-    - py2_venv_bin=$(pwd)
 
     # print Python version to CI output
-    - $py2_venv_bin/python --version
+    - $py2_venv_name/bin/python --version
 
     # Install requirements for tests
-    - cd $code_dir
-    - $py2_venv_bin/pip install -r requirements-test.txt
+    - $py2_venv_name/bin/pip install -r requirements-test.txt
 
     # Run tests
-    - $py2_venv_bin/python -m unittest discover -s "tests"
+    - $py2_venv_name/bin/python -m unittest discover -s "tests"
 
     ###############end of python3
 

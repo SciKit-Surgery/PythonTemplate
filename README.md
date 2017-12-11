@@ -5,7 +5,7 @@
 [![build status](https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareArchitecture/PythonDemo/badges/master/build.svg)](https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareArchitecture/PythonDemo/commits/master)
 [![coverage report](https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareArchitecture/PythonDemo/badges/master/coverage.svg)](https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareArchitecture/PythonDemo/commits/master)
 
-PythonDemo is a python template project with a code structure compatible with PyPI, unit testing sn automatic documentation building.
+PythonDemo is a python template project with a code structure compatible with PyPI, unit testing and automatic documentation building.
 
 
 Author: Tom Doel

@@ -1,6 +1,6 @@
 # {{ cookiecutter.project_name }}
 
-<img src="{{ cookiecutter.project_url }}/raw/master/weiss-icon.png" width="150" height="150">
+<img src="{{ cookiecutter.project_url }}/raw/master/project-icon.png" width="150" height="150">
 
 [![build status]({{ cookiecutter.project_url }}/badges/master/build.svg)]({{ cookiecutter.project_url }}/commits/master)
 [![coverage report]({{ cookiecutter.project_url }}/badges/master/coverage.svg)]({{ cookiecutter.project_url }}/commits/master)

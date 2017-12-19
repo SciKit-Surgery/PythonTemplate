@@ -2,9 +2,8 @@
   "project_name": "My New Project",
   "full_name": "Your Name",
   "gitlab_group": "{{ cookiecutter.full_name|replace(' ', '') }}",
-  "project_folder": "{{ cookiecutter.project_name|replace(' ', '') }}",
-  "project_url": "https://weisslab.cs.ucl.ac.uk/{{ cookiecutter.gitlab_group }}/{{ cookiecutter.project_folder }}",
-  "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
-  "pkg_name": "{{ cookiecutter.project_slug|replace('-', '') }}",
+  "project_slug": "{{ cookiecutter.project_name|replace(' ', '') }}",
+  "project_url": "https://weisslab.cs.ucl.ac.uk/{{ cookiecutter.gitlab_group }}/{{ cookiecutter.project_slug }}",
+  "pkg_name": "{{ cookiecutter.project_name|lower }}",
   "open_source_license": ["BSD license", "Apache Software License 2.0"]
 }

@@ -1,9 +1,9 @@
 {
   "project_name": "My New Project",
   "full_name": "Your Name",
-  "repo_name": "{{ cookiecutter.full_name|replace(' ', '') }}",
+  "gitlab_group": "{{ cookiecutter.full_name|replace(' ', '') }}",
   "project_folder": "{{ cookiecutter.project_name|replace(' ', '') }}",
-  "project_url": "https://weisslab.cs.ucl.ac.uk/{{ cookiecutter.repo_name }}/{{ cookiecutter.project_folder }}",
+  "project_url": "https://weisslab.cs.ucl.ac.uk/{{ cookiecutter.gitlab_group }}/{{ cookiecutter.project_folder }}",
   "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
   "pkg_name": "{{ cookiecutter.project_slug|replace('-', '') }}"
 }

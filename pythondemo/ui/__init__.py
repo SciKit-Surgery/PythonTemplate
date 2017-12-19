@@ -1,3 +1,3 @@
 # coding=utf-8
 
-"""PythonDemo"""
+"""{{ cookiecutter.project_name }}"""

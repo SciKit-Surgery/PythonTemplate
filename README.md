@@ -1,16 +1,16 @@
-# PythonDemo
+# {{ cookiecutter.project_name }}
 
-<img src="https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareArchitecture/PythonDemo/raw/master/weiss-icon.png" width="150" height="150">
+<img src="{{ cookiecutter.project_url }}/raw/master/weiss-icon.png" width="150" height="150">
 
-[![build status](https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareArchitecture/PythonDemo/badges/master/build.svg)](https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareArchitecture/PythonDemo/commits/master)
-[![coverage report](https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareArchitecture/PythonDemo/badges/master/coverage.svg)](https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareArchitecture/PythonDemo/commits/master)
+[![build status]({{ cookiecutter.project_url }}/badges/master/build.svg)]({{ cookiecutter.project_url }}/commits/master)
+[![coverage report]({{ cookiecutter.project_url }}/badges/master/coverage.svg)]({{ cookiecutter.project_url }}/commits/master)
 
-PythonDemo is a python template project with a code structure compatible with PyPI, unit testing and automatic documentation building.
+{{ cookiecutter.project_name }} is a python template project with a code structure compatible with PyPI, unit testing and automatic documentation building.
 
 
-Author: Tom Doel
+Author: {{ cookiecutter.name }}
 
-PythonDemo was developed at the [Wellcome EPSRC Centre for Interventional and Surgical Sciences][weiss] in [University College London (UCL)][ucl].
+{{ cookiecutter.project_name }} was developed at the [Wellcome EPSRC Centre for Interventional and Surgical Sciences][weiss] in [University College London (UCL)][ucl].
 
 
 
@@ -21,15 +21,15 @@ Please see the [contribution guidelines](./CONTRIBUTING.md).
 
 ### Useful links
 
-[PythonDemo source code on WeissLab][PythonDemo-vcs]
+[{{ cookiecutter.project_name }} source code on WeissLab][vcs]
 
-[PythonDemo-vcs]: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareArchitecture/PythonDemo
+[vcs]: {{ cookiecutter.project_url }}
 
 
 ## Licensing and Copyright
 
 Copyright 2017 University College London.
-PythonDemo is released under the BSD-3 license. Please see the LICENSE file for details.
+{{ cookiecutter.project_name }} is released under the BSD-3 license. Please see the LICENSE file for details.
 
 
 ## Acknowledgements

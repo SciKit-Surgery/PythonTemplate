@@ -7,7 +7,7 @@ pylintjob:
   script:
 
     # create a virtual env so that pylint can import
-    - pyl_venv_name="pythondemo-test-pyl"
+    - pyl_venv_name="py-test-pyl"
     - py3_bin=$(which python3)
     - virtualenv -p $py3_bin $pyl_venv_name
 
@@ -35,7 +35,7 @@ testjob-linux:
     - echo 'Running Python 3 tests'
 
     # create a virtual env for testing
-    - py3_venv_name="pythondemo-test-py3"
+    - py3_venv_name="py-venv-py3"
     - py3_bin=$(which python3)
     - virtualenv -p $py3_bin $py3_venv_name
 
@@ -56,7 +56,7 @@ testjob-linux:
     - echo 'Running Python 2 tests'
 
     # create a virtual env for testing
-    - py2_venv_name="pythondemo-test-py2"
+    - py2_venv_name="py-venv-py2"
     - py2_bin=$(which python2)
     - virtualenv -p $py2_bin $py2_venv_name
 
@@ -86,7 +86,7 @@ testjob-mac:
     - echo 'Running Python 3 tests'
 
     # create a virtual env for testing
-    - py3_venv_name="pythondemo-venv-py3"
+    - py3_venv_name="py-venv-py3"
     - py3_bin=$(which python3)
     - virtualenv -p $py3_bin $py3_venv_name
 
@@ -106,7 +106,7 @@ testjob-mac:
     - echo 'Running Python 2 tests'
 
     # create a virtual env for testing
-    - py2_venv_name="pythondemo-venv-py2"
+    - py2_venv_name="py-venv-py2"
     - py2_bin=$(which python2)
     - virtualenv -p $py2_bin $py2_venv_name
 
@@ -136,7 +136,7 @@ testjob-win:
     - py -3 --version
 
     # create a virtual env for testing
-    - set py3_venv_name=pythondemo-venv-py3
+    - set py3_venv_name=py-venv-py3
 
     # Create virtual environment if it does not exist
     - IF NOT EXIST %py3_venv_name%\Scripts\python.exe (
@@ -156,7 +156,7 @@ testjob-win:
     - py -2 --version
 
     # create a virtual env for testing
-    - set py2_venv_name=pythondemo-test-py2
+    - set py2_venv_name=py-venv-py2
 
     # Create virtual environment if it does not exist
     - IF NOT EXIST %py2_venv_name%\Scripts\python2 (

@@ -1,6 +1,6 @@
 {
   "project_name": "My New Project",
-  "name": "Your Name",
+  "full_name": "Your Name",
   "project_url": "https://weisslab.cs.ucl.ac.uk/{{ cookiecutter.project_name|replace(' ', '') }}/{{ cookiercutter.project_name }}",
   "repo_slug": "{{ cookiecutter.project_name|replace(' ', '-') }}",
   "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",

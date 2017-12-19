@@ -8,7 +8,7 @@
 {{ cookiecutter.project_name }} is a python template project with a code structure compatible with PyPI, unit testing and automatic documentation building.
 
 
-Author: {{ cookiecutter.name }}
+Author: {{ cookiecutter.full_name }}
 
 {{ cookiecutter.project_name }} was developed at the [Wellcome EPSRC Centre for Interventional and Surgical Sciences][weiss] in [University College London (UCL)][ucl].
 

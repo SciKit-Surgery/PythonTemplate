@@ -18,7 +18,7 @@ pylintjob:
     - $pyl_venv_name/bin/pip install -r requirements-test.txt
 
     # Run pylint
-    - $pyl_venv_name/bin/pylint --rcfile=tests/pylintrc pythondemo
+    - $pyl_venv_name/bin/pylint --rcfile=tests/pylintrc {{ cookiecutter.pkg_name }}
   tags:
     - gift-linux
 
@@ -46,7 +46,7 @@ testjob-linux:
     - $py3_venv_name/bin/pip install -r requirements-test.txt
 
     # Run tests with coverage
-    - $py3_venv_name/bin/coverage run -a --source ./pythondemo -m unittest discover -s "tests"
+    - $py3_venv_name/bin/coverage run -a --source ./{{ cookiecutter.pkg_name }} -m unittest discover -s "tests"
     - $py3_venv_name/bin/coverage report -m
 
     ###############end of python3

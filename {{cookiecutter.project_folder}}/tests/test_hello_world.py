@@ -4,7 +4,7 @@
 
 from unittest import TestCase
 
-from pythondemo.ui.hello_world import hello_world
+from {{ cookiecutter.pkg_name }}.ui.hello_world import hello_world
 
 
 class TestHelloWorld(TestCase):

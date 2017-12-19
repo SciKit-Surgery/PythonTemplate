@@ -4,6 +4,6 @@
   "gitlab_group": "{{ cookiecutter.full_name|replace(' ', '') }}",
   "project_slug": "{{ cookiecutter.project_name|replace(' ', '') }}",
   "project_url": "https://weisslab.cs.ucl.ac.uk/{{ cookiecutter.gitlab_group }}/{{ cookiecutter.project_slug }}",
-  "pkg_name": "{{ cookiecutter.project_name|lower }}",
+  "pkg_name": "{{ cookiecutter.project_slug|lower }}",
   "open_source_license": ["BSD license", "Apache Software License 2.0"]
 }

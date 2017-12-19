@@ -6,4 +6,5 @@
   "project_url": "https://weisslab.cs.ucl.ac.uk/{{ cookiecutter.gitlab_group }}/{{ cookiecutter.project_folder }}",
   "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
   "pkg_name": "{{ cookiecutter.project_slug|replace('-', '') }}"
+  "open_source_license": ["BSD license", "Apache Software License 2.0"]
 }

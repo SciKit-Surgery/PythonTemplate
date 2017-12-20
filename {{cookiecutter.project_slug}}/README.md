@@ -29,7 +29,7 @@ Please see the [contribution guidelines](./CONTRIBUTING.md).
 ## Licensing and Copyright
 
 Copyright 2017 University College London.
-{{ cookiecutter.project_name }} is released under the {{{ cookiecutter.open_source_license }}}. Please see the LICENSE file for details.
+{{ cookiecutter.project_name }} is released under the {{ cookiecutter.open_source_license }}. Please see the LICENSE file for details.
 
 
 ## Acknowledgements

@@ -39,7 +39,7 @@ Licensing and copyright
 -----------------------
 
 Copyright 2017 University College London.
-{{ cookiecutter.project_name }} is released under the {{{ cookiecutter.open_source_license }}}. Please see the `license file`_ for details.
+{{ cookiecutter.project_name }} is released under the {{ cookiecutter.open_source_license }}. Please see the `license file`_ for details.
 
 
 Acknowledgements
@@ -49,12 +49,12 @@ Supported by `Wellcome`_ and `EPSRC`_.
 
 
 .. _`Wellcome EPSRC Centre for Interventional and Surgical Sciences`: http://www.ucl.ac.uk/weiss
-.. _`source code repository`: {{{ cookiecutter.project_url }}}
+.. _`source code repository`: {{ cookiecutter.project_url }}
 .. _`University College London (UCL)`: http://www.ucl.ac.uk/
 .. _`Wellcome`: https://wellcome.ac.uk/
 .. _`EPSRC`: https://www.epsrc.ac.uk/
-.. _`contributing guidelines`: {{{ cookiecutter.project_url }}}/raw/master/CONTRIBUTING.md
-.. _`license file`: {{{ cookiecutter.project_url }}}/raw/master/LICENSE
+.. _`contributing guidelines`: {{ cookiecutter.project_url }}/raw/master/CONTRIBUTING.md
+.. _`license file`: {{ cookiecutter.project_url }}/raw/master/LICENSE
 
 
 .. toctree::

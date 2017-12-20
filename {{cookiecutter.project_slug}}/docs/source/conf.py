@@ -80,7 +80,7 @@ def setup(app):
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx.ext.autodoc', 'sphinx.ext.viewcode']
+extensions = ['sphinx.ext.autodoc', 'sphinx.ext.viewcode', 'sphinx.ext.imgmath']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -153,10 +153,11 @@ html_theme = 'classic'
 doc_black = '#0A0A0A'
 doc_red = '#E03C31'
 doc_gray = '#979999'
-doc_dark_red = '#952821'
+doc_blue = '#00627D'
+doc_dark_red = '#C53B2C'
 doc_white = '#FEFEFE'
 html_theme_options = {
-    'footerbgcolor': doc_gray,
+    'footerbgcolor': doc_blue,
     'footertextcolor': doc_black,
     'sidebarbgcolor': doc_white,
     'sidebartextcolor': doc_black,
@@ -171,7 +172,7 @@ html_theme_options = {
     'headbgcolor': doc_white,
     'headtextcolor': doc_black,
     'headlinkcolor': doc_red,
-    'codebgcolor': doc_gray,
+    'codebgcolor': doc_blue,
     'codetextcolor': doc_black,
     'stickysidebar': 'true',
 }

@@ -157,7 +157,7 @@ doc_blue = '#00627D'
 doc_dark_red = '#C53B2C'
 doc_white = '#FEFEFE'
 html_theme_options = {
-    'footerbgcolor': doc_blue,
+    'footerbgcolor': doc_gray,
     'footertextcolor': doc_black,
     'sidebarbgcolor': doc_white,
     'sidebartextcolor': doc_black,

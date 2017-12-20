@@ -13,6 +13,8 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
+import os
+
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -21,7 +23,51 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
-import {{ cookiecutter.pkg_name }}
+working_dir = os.path.abspath(os.path.dirname(__file__))
+root_dir_rel = os.path.join('..', '..')
+root_dir_abs = os.path.abspath(root_dir_rel)
+module_path = root_dir_abs
+sys.path.insert(0, module_path)
+logo_file = 'project-icon.png'
+static_images_folder = 'images'
+logo_path = os.path.join('..', '..', logo_file)
+
+# List of patterns, relative to source directory, that match files and
+# directories to ignore when looking for source files.
+# This patterns also effect to html_static_path and html_extra_path
+exclude_patterns = [
+    'tests',
+    'run_*',
+    'setup.py',
+]
+
+# Add any paths that contain custom static files (such as style sheets) here,
+# relative to this directory. They are copied after the builtin static files,
+# so a file named "default.css" will overwrite the builtin "default.css".
+static_folder = '_static'
+html_static_path = [static_folder]
+
+
+def generate_apidocs(*args):
+    """Generate API docs automatically by trawling the available modules"""
+
+    global working_dir, module_path
+    output_path = working_dir
+    apidoc_command_path = 'sphinx-apidoc'
+    if hasattr(sys, 'real_prefix'):  # called from a virtualenv
+        apidoc_command_path = os.path.join(sys.prefix, 'bin', 'sphinx-apidoc')
+        apidoc_command_path = os.path.abspath(apidoc_command_path)
+    subprocess.check_call(
+        [apidoc_command_path, '--force', '--separate'] +
+        ['-o', output_path, module_path] +
+        [os.path.join(root_dir_abs, pattern) for pattern in exclude_patterns])
+
+
+def setup(app):
+    # Hook to allow for automatic generation of API docs
+    # before doc deployment begins.
+    app.connect('builder-inited', generate_apidocs)
+
 
 # -- General configuration ------------------------------------------------
 
@@ -45,6 +91,12 @@ source_suffix = '.rst'
 
 # The master toctree document.
 master_doc = 'index'
+
+
+# This allows modules to be indexed under the submodule name rather than all appearing under {{ cookiecutter.pkg_name }}
+modindex_common_prefix = [
+    '{{ cookiecutter.pkg_name }}.'
+]
 
 # General information about the project.
 project = u'{{ cookiecutter.project_name }}'
@@ -85,12 +137,39 @@ todo_include_todos = False
 # a list of builtin themes.
 #
 html_theme = 'alabaster'
+# html_theme = 'classic'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-# html_theme_options = {}
+doc_black = '#0A0A0A'
+doc_red = '#E03C31'
+doc_gray = '#979999'
+doc_dark_red = '#952821'
+doc_white = '#FEFEFE'
+html_theme_options = {
+    'footerbgcolor': doc_gray,
+    'footertextcolor': doc_black,
+    'sidebarbgcolor': doc_white,
+    'sidebartextcolor': doc_black,
+    'sidebarlinkcolor': doc_red,
+    'relbarbgcolor': doc_white,
+    'relbartextcolor': doc_black,
+    'relbarlinkcolor': doc_red,
+    'bgcolor': doc_white,
+    'textcolor': doc_black,
+    'linkcolor': doc_red,
+    'visitedlinkcolor': doc_dark_red,
+    'headbgcolor': doc_white,
+    'headtextcolor': doc_black,
+    'headlinkcolor': doc_red,
+    'codebgcolor': doc_gray,
+    'codetextcolor': doc_black,
+    'stickysidebar': 'true',
+}
+
+html_logo = logo_path
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,

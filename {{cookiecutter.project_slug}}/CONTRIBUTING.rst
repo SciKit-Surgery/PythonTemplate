@@ -26,7 +26,7 @@ Fixing bugs or implement features
 The easiest way to contribute is to follow these guidelines:
 
 1. Look through the issues on {{ cookiecutter.project_url }}/issues and assign the relevant issue to yourself. If there is not an existing issue that covers your work, please create one: {{ cookiecutter.project_url }}/issues/new
-2. Fork the {{ cookiecutter.project_url }} repository
+2. Fork the repository: {{ cookiecutter.project_url }}/forks/new
 3. Create a branch for your changes
 4. Make your changes following the coding guidelines below.
 5. Commit and push your changes to your fork.
@@ -37,7 +37,7 @@ The easiest way to contribute is to follow these guidelines:
 Coding guidelines
 -----------------
 
-1. Commit in small, related chunks. Review each commit and explain it's purpose in the commit message.
+1. Commit in small, related chunks. Review each commit and explain its purpose in the commit message.
 2. Please follow PEP8 guidelines https://www.python.org/dev/peps/pep-0008/
 3. Create a python virtual environment (virtualenv) for development
 4. Make sure that pylint passes. You may disable specific warnings within the code where it is reasonable to do so

@@ -51,8 +51,8 @@ Supported by `Wellcome`_ and `EPSRC`_.
 .. _`University College London (UCL)`: http://www.ucl.ac.uk/
 .. _`Wellcome`: https://wellcome.ac.uk/
 .. _`EPSRC`: https://www.epsrc.ac.uk/
-.. _`contributing guidelines`: {{ cookiecutter.project_url }}/raw/master/CONTRIBUTING.rst
-.. _`license file`: {{ cookiecutter.project_url }}/raw/master/LICENSE
+.. _`contributing guidelines`: {{ cookiecutter.project_url }}/blob/master/CONTRIBUTING.rst
+.. _`license file`: {{ cookiecutter.project_url }}/blob/master/LICENSE
 
 
 .. toctree::

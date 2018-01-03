@@ -21,12 +21,6 @@ Author: {{ cookiecutter.full_name }}
 {{ cookiecutter.project_name }} was developed at the `Wellcome EPSRC Centre for Interventional and Surgical Sciences`_ in `University College London (UCL)`_.
 
 
-API reference
-^^^^^^^^^^^^^
-
-Please see the :ref:`modindex`.
-
-
 Contributing
 ^^^^^^^^^^^^
 
@@ -35,10 +29,6 @@ Please see the `contributing guidelines`_.
 
 Useful links
 ^^^^^^^^^^^^
-
-:ref:`genindex`
-
-:ref:`search`
 
 `Source code repository`_
 

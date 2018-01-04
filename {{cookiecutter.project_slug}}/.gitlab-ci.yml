@@ -76,6 +76,7 @@ testjob-linux:
     ###############end of python3
 
     - echo 'finished tests'
+  coverage: '/^TOTAL.*\s+(\d+\%)$/'
   tags:
     - gift-linux
 

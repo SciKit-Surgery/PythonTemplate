@@ -18,7 +18,7 @@ pylintjob:
     - $pyl_venv_name/bin/python --version
 
     # Install requirements
-    - $pyl_venv_name/bin/pip install -r requirements-test.txt
+    - $pyl_venv_name/bin/pip install -r requirements-dev.txt
 
     # Run pylint
     - $pyl_venv_name/bin/pylint --rcfile=tests/pylintrc {{ cookiecutter.pkg_name }}
@@ -47,7 +47,7 @@ testjob-linux:
     - $py3_venv_name/bin/python --version
 
     # Install requirements for tests
-    - $py3_venv_name/bin/pip install -r requirements-test.txt
+    - $py3_venv_name/bin/pip install -r requirements-dev.txt
 
     # Run tests with coverage
     - $py3_venv_name/bin/coverage run -a --source ./{{ cookiecutter.pkg_name }} -m unittest discover -s "tests"
@@ -68,7 +68,7 @@ testjob-linux:
     - $py2_venv_name/bin/python --version
 
     # Install requirements for tests
-    - $py2_venv_name/bin/pip install -r requirements-test.txt
+    - $py2_venv_name/bin/pip install -r requirements-dev.txt
 
     # Run tests
     - $py2_venv_name/bin/python -m unittest discover -s "tests"
@@ -98,7 +98,7 @@ testjob-mac:
     - $py3_venv_name/bin/python --version
 
     # Install requirements for tests
-    - $py3_venv_name/bin/pip install -r requirements-test.txt
+    - $py3_venv_name/bin/pip install -r requirements-dev.txt
 
     # Run tests
     - $py3_venv_name/bin/python -m unittest discover -s "tests"
@@ -118,7 +118,7 @@ testjob-mac:
     - $py2_venv_name/bin/python --version
 
     # Install requirements for tests
-    - $py2_venv_name/bin/pip install -r requirements-test.txt
+    - $py2_venv_name/bin/pip install -r requirements-dev.txt
 
     # Run tests
     - $py2_venv_name/bin/python -m unittest discover -s "tests"
@@ -150,7 +150,7 @@ testjob-win:
     - )
 
     # Install requirements for tests
-    - .\%py3_venv_name%\Scripts\pip install -r requirements-test.txt
+    - .\%py3_venv_name%\Scripts\pip install -r requirements-dev.txt
     - if %errorlevel% neq 0 exit /b %errorlevel%
 
     # Run tests
@@ -170,7 +170,7 @@ testjob-win:
     - )
 
     # Install requirements for tests
-    - .\%py2_venv_name%\Scripts\pip install -r requirements-test.txt
+    - .\%py2_venv_name%\Scripts\pip install -r requirements-dev.txt
     - if %errorlevel% neq 0 exit /b %errorlevel%
 
     # Run tests
@@ -190,7 +190,7 @@ build docs:
     - virtualenv -p $py3_bin $py3_venv_name
 
     # Install requirements for sphinx
-    - $py3_venv_name/bin/pip install -r requirements-test.txt
+    - $py3_venv_name/bin/pip install -r requirements-dev.txt
     - source $py3_venv_name/bin/activate
       
     - cd doc

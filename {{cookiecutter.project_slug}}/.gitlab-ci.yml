@@ -1,6 +1,9 @@
 stages:
   - lint
+  - build
   - test
+  - deploy
+
 
 pylintjob:
   stage: lint
@@ -21,6 +24,7 @@ pylintjob:
     - $pyl_venv_name/bin/pylint --rcfile=tests/pylintrc {{ cookiecutter.pkg_name }}
   tags:
     - gift-linux
+
 
 testjob-linux:
   stage: test
@@ -125,6 +129,7 @@ testjob-mac:
   tags:
     - gift-mac
 
+
 testjob-win:
   stage: test
   script:
@@ -174,4 +179,57 @@ testjob-win:
 
   tags:
     - gift-win
+
+
+build docs:
+  stage: build
+  script:
+    # create a virtual env
+    - py3_venv_name="py-venv-py3"
+    - py3_bin=$(which python3)
+    - virtualenv -p $py3_bin $py3_venv_name
+
+    # Install requirements for sphinx
+    - $py3_venv_name/bin/pip install -r requirements-test.txt
+    - source $py3_venv_name/bin/activate
+      
+    - cd doc
+    - make html
+    - cd ..
+    
+  tags:
+    - gift-adelie
+  artifacts:
+    paths:
+    - doc/
+
+
+deploy docs to staging:
+  stage: deploy
+  script:
+    # Note: the group/username directory must already exist on the server before calling this command
+    - rsync -avz -e'ssh -v' --numeric-ids --delete doc/build/html/* staging_docs_rsync:{{ cookiecutter.gitlab_group }}/{{ cookiecutter.project_slug }} 2>&1
+  tags:
+    - docs-staging
+  environment:
+    name: staging
+  only:
+    - master
+  dependencies:
+    - build docs
+
+
+deploy docs to production:
+  stage: deploy
+  script:
+    # Note: the group/username directory must already exist on the server before calling this command
+    - rsync -avz -e'ssh -v' --numeric-ids --delete doc/build/html/* production_docs_rsync:{{ cookiecutter.gitlab_group }}/{{ cookiecutter.project_slug }} 2>&1
+  tags:
+    - docs-production
+  environment:
+    name: production
+  only:
+    - public
+  dependencies:
+    - build docs
 

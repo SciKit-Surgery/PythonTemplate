@@ -61,6 +61,7 @@ deploy docs to staging:
     - docs-staging
   environment:
     name: staging
+    url: http://gift-adelie.cs.ucl.ac.uk/staging/TomDoel/TestPrj
   only:
     - master
   dependencies:

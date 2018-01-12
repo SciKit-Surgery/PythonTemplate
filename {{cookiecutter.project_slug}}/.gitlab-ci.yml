@@ -61,7 +61,7 @@ deploy docs to staging:
     - docs-staging
   environment:
     name: staging
-    url: http://gift-adelie.cs.ucl.ac.uk/staging/TomDoel/TestPrj
+    url: http://gift-adelie.cs.ucl.ac.uk/staging/{{ cookiecutter.gitlab_group }}/{{ cookiecutter.project_slug }}
   only:
     - master
   dependencies:

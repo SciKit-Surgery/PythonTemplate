@@ -1,0 +1,26 @@
+stages:
+  - test
+
+
+test Linux:
+  stage: test
+  script:
+      - tox
+  tags:
+    - shared-linux
+
+
+test macOS:
+  stage: test
+  script:
+      - tox
+  tags:
+    - shared-mac
+
+
+test Windows:
+  stage: test
+  script:
+      - tox
+  tags:
+    - shared-win

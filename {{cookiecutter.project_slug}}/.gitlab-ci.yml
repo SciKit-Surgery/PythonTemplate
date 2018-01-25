@@ -9,7 +9,7 @@ test Linux:
   script:
       - tox
   tags:
-    - gift-linux
+    - shared-linux
   coverage: '/^TOTAL.*\s+(\d+\%)$/'
 
 
@@ -18,7 +18,7 @@ test macOS:
   script:
       - tox
   tags:
-    - gift-mac
+    - shared-mac
 
 
 test Windows:
@@ -26,7 +26,7 @@ test Windows:
   script:
       - tox
   tags:
-    - gift-win
+    - shared-win
 
 
 build docs:
@@ -46,7 +46,7 @@ build docs:
     - cd ..
     
   tags:
-    - gift-adelie
+    - shared-linux
   artifacts:
     paths:
     - doc/

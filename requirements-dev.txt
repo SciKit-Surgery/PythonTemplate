@@ -1,0 +1,7 @@
+-r requirements.txt
+coverage
+mock
+pyfakefs
+parameterized
+pylint
+sphinx

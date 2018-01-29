@@ -4,6 +4,17 @@ stages:
   - deploy
 
 
+build docs:
+  stage: build
+  script:
+    - tox -e docs
+  tags:
+    - shared-linux
+  artifacts:
+    paths:
+    - doc/
+
+
 test Linux:
   stage: test
   script:
@@ -28,22 +39,6 @@ test Windows:
   tags:
     - shared-win
 
-
-build docs:
-  stage: build
-  script:
-    # create a virtual env
-    - py3_venv_name="py-venv-py3"
-    - py3_bin=$(which python3)
-    - virtualenv -p $py3_bin $py3_venv_name
-
-    # Install requirements for sphinx
-    - $py3_venv_name/bin/pip install -r requirements-dev.txt
-    - source $py3_venv_name/bin/activate
-      
-    - cd doc
-    - make html
-    - cd ..
     
   tags:
     - shared-linux

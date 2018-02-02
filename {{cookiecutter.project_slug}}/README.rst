@@ -11,7 +11,7 @@
    :target: {{ cookiecutter.project_url }}/commits/master
 
 .. image:: {{ cookiecutter.project_url }}/badges/master/coverage.svg
-   :target: {{ cookiecutter.project_url }}/commits/master
+   :target: {{ cookiecutter.project_url }}/pipelines
 
 
 {{ cookiecutter.project_name }} is a python project that does interesting things.

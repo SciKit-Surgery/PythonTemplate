@@ -21,6 +21,7 @@ How to use
 1. Install `Cookiecutter`_
 
 ::
+
    pip install cookiecutter
 
 

@@ -8,10 +8,7 @@ Python Template
 
 
 .. image:: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareArchitecture/PythonTemplate/badges/master/build.svg
-   :target: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareArchitecture/PythonTemplate/commits/master
-
-.. image:: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareArchitecture/PythonTemplate/badges/master/coverage.svg
-   :target: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareArchitecture/PythonTemplate/commits/master
+   :target: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareArchitecture/PythonTemplate/pipelines
 
 
 Python Template is a Cookiecutter template for creating a python project. When used with `Cookiecutter`_. Python Template will create a fully working python "Hello world" project with unit tests, Python 2 and 3 compatibility, GitLab CI, lint and sphinx documentation.
@@ -30,11 +27,13 @@ How to use
 2. Run `Cookiecutter`_ with the URL of this template
 
 ::
+
   cookiecutter https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareArchitecture/PythonTemplate.git
 
 4. Answer the questions to configure your template (press enter to choose defaults), for example:
 
 ::
+
   project_name [My New Project]:
   full_name [Your Name]: Joe Bloggs
   gitlab_group [JoeBloggs]:
@@ -58,6 +57,7 @@ Notes:
 5. Create a local git repository for your new project and commit the files. Note that `.gitlab-ci.yml` may be hidden so use `git add .` rather than `git add *` to include it.
 
 ::
+
   cd MyNewProject
   git init
   git add .
@@ -69,6 +69,7 @@ Notes:
 7. Add a remote in order to link your local repository to your WeissLab / CmicLab / GitLab repository and push the files across. NOTE: use the SSH form of the repository URL so you can use SSH key authentication (so you don't have to enter a username and password)
 
 ::
+
   git remote add origin git@weisslab.cs.ucl.ac.uk:JoeBloggs/MyNewProject.git
   git push origin master
 
@@ -90,7 +91,7 @@ List of parameters
 | ::                       |                                                                                |
 |                          |                                                                                |
 |    gitlab_group          | The group on WeissLab where you want to store the project - only affects the   |
-|                          | URL. By default this will full_name with the spaces removed                    |
+|                          | URL. By default this will be full_name with the spaces removed                 |
 +--------------------------+--------------------------------------------------------------------------------+
 | ::                       |                                                                                |
 |                          |                                                                                |
@@ -98,12 +99,12 @@ List of parameters
 +--------------------------+--------------------------------------------------------------------------------+
 | ::                       |                                                                                |
 |                          |                                                                                |
-|    pkg_name              | The main python package name for your project. By default the project_slug     |
-|                          | converted into lower case                                                      |
+|    pkg_name              | The main python package name for your project. By default this is the          |
+|                          | project_slug converted into lower case                                         |
 +--------------------------+--------------------------------------------------------------------------------+
 | ::                       |                                                                                |
 |                          |                                                                                |
-|    open_source_license   | ^Recommend BSD-3 for internal projects, Apache for external collaborations     |
+|    open_source_license   | Recommend BSD-3 for internal projects, Apache for external collaborations      |
 +--------------------------+--------------------------------------------------------------------------------+
 
 

@@ -40,6 +40,9 @@ exclude_patterns = [
     'tests',
     'run_*',
     'setup.py',
+    '_build',
+    'Thumbs.db',
+    '.DS_Store',
 ]
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -124,11 +127,6 @@ release = u''
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
 language = None
-
-# List of patterns, relative to source directory, that match files and
-# directories to ignore when looking for source files.
-# This patterns also effect to html_static_path and html_extra_path
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'

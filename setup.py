@@ -7,7 +7,7 @@ setup(
     url='https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareArchitecture/PythonTemplate',
     author='Tom Doel',
     author_email='t.doel@ucl.ac.uk',
-    license='BSD license',
+    license='BSD-3 license',
 
     packages=find_packages(
         exclude=[

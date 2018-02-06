@@ -1,4 +1,4 @@
-{% if cookiecutter.open_source_license == 'BSD license' %}
+{% if cookiecutter.open_source_license == 'BSD-3 license' %}
 BSD License
 
 Copyright (c) {% now 'local', '%Y' %}, University College London

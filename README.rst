@@ -42,7 +42,7 @@ How to use
   project_url [https://weisslab.cs.ucl.ac.uk/JoeBloggs/MyNewProject]:
   pkg_name [mynewproject]:
   Select open_source_license:
-  1 - BSD license
+  1 - BSD-3 license
   2 - Apache Software License 2.0
   Choose from 1, 2 [1]:
 
@@ -130,7 +130,7 @@ Licensing and copyright
 -----------------------
 
 Copyright 2017 University College London.
-Python Template is released under the BSD license. Please see the `license file`_ for details.
+Python Template is released under the BSD-3 license. Please see the `license file`_ for details.
 
 
 Acknowledgements

@@ -13,6 +13,7 @@ build docs:
   artifacts:
     paths:
     - doc/
+    expire_in: 1 week
 
 
 test Linux:
@@ -38,13 +39,6 @@ test Windows:
       - tox
   tags:
     - shared-win
-
-    
-  tags:
-    - shared-linux
-  artifacts:
-    paths:
-    - doc/
 
 
 deploy docs to staging:

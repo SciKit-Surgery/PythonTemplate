@@ -1,15 +1,14 @@
 .. include:: ../README.rst
 
+
+API reference
+^^^^^^^^^^^^^
+
+* :ref:`modindex`
+* :ref:`genindex`
+* :ref:`search`
+
+
 .. toctree::
    :maxdepth: 4
-   :caption: API reference:
-
-   modules
-
-
-Documentation
-=============
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   :caption: Contents:

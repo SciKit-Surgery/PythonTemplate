@@ -4,7 +4,7 @@
 import six
 
 
-def hello_world():
+def hello_world(text="Hello world"):
     """Show hello world message"""
 
-    six.print_("Hello world")
+    six.print_(text)

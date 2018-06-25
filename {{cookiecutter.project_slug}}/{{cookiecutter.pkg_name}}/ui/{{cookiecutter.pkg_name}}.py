@@ -4,7 +4,7 @@
 import six
 
 
-def {{cookiecutter.pkg_name}}(text="Hello world"):
+def {{cookiecutter.pkg_name}}(text):
     """Show message"""
 
     six.print_(text)

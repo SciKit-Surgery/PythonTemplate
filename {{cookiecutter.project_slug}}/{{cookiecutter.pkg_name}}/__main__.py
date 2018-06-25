@@ -1,8 +1,9 @@
 #!/usr/bin/python
 #  -*- coding: utf-8 -*-
 import sys
+import argparse
 
-from {{ cookiecutter.pkg_name }}.ui.hello_world import hello_world
+from {{ cookiecutter.pkg_name }}.ui.{{ cookiecutter.pkg_name }} import {{ cookiecutter.pkg_name }}
 from versioneer import get_version
 
 
@@ -11,8 +12,10 @@ def main(args=None):
 
     parser = argparse.ArgumentParser(description='{{ cookiecutter.project_name }}')
 
-    parser.add_argument("-t", "--text", required=False, default=None,
-                        type=str
+    parser.add_argument("-t", "--text",
+                        required=False,
+                        default="This is {{ cookiecutter.project_name }}",
+                        type=str,
                         help="Text to display")
     version_string = get_version()
     friendly_version_string = version_string if version_string else 'unknown'

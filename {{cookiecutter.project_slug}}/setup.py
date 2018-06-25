@@ -4,9 +4,7 @@ Setup for {{ cookiecutter.project_name }}
 """
 
 from setuptools import setup, find_packages
-
-from {{cookiecutter.pkg_name}}.utils.versioning import version_from_git
-
+import versioneer
 
 # Get the long description
 with open('README.rst') as f:
@@ -14,7 +12,8 @@ with open('README.rst') as f:
 
 setup(
     name='{{ cookiecutter.project_name }}',
-    version='0.1',
+    version=versioneer.get_version(),
+    cmdclass=versioneer.get_cmdclass(),
     description='{{ cookiecutter.project_name }}',
     long_description=long_description,
     url='{{ cookiecutter.project_url }}',
@@ -44,7 +43,7 @@ setup(
         'Topic :: Scientific/Engineering :: Information Analysis',
         'Topic :: Scientific/Engineering :: Medical Science Apps.',
     ],
-    
+
     keywords='medical imaging',
 
     packages=find_packages(
@@ -53,7 +52,7 @@ setup(
             'tests',
         ]
     ),
-    
+
     install_requires=[
         'six>=1.10',
         'numpy>=1.11',
@@ -62,7 +61,7 @@ setup(
 
     entry_points={
         'console_scripts': [
-            'imagesplit={{cookiecutter.pkg_name}}.applications.split_files:main',
+            '{{ cookiecutter.pkg_name }}={{ cookiecutter.pkg_name }}.__main__:main',
         ],
-    },    
+    },
 )

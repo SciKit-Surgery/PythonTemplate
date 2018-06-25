@@ -2,7 +2,7 @@
 #  -*- coding: utf-8 -*-
 import sys
 
-from {{cookiecutter.pkg_name}}.ui.hello_world import hello_world
+from {{ cookiecutter.pkg_name }}.ui.hello_world import hello_world
 from versioneer import get_version
 
 
@@ -23,7 +23,7 @@ def main(args=None):
 
     args = parser.parse_args(args)
 
-    hello_world(args.text)
+    {{ cookiecutter.pkg_name }}(args.text)
 
 
 if __name__ == "__main__":

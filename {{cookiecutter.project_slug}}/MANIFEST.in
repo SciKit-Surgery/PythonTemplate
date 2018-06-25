@@ -1,0 +1,2 @@
+include versioneer.py
+include {{ cookiecutter.pkg_name }}/_version.py

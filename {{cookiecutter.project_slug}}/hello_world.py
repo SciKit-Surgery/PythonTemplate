@@ -6,7 +6,7 @@ from {{cookiecutter.pkg_name}}.ui.hello_world import hello_world
 
 
 def main(args=None):
-    """Entry point for Helo World application"""
+    """Entry point for Hello World application"""
 
     parser = argparse.ArgumentParser(description='Hello world demo')
 

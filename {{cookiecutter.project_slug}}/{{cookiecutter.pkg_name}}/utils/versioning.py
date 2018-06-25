@@ -38,7 +38,7 @@ def get_version_string():
     if not version_string:
         version_string = "unknown"
 
-    return "ImageSplit version " + version_string
+    return "{{ cookiecutter.project_name }} version " + version_string
 
 
 def _run_describe(dir_in_repo):

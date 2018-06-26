@@ -1,12 +1,12 @@
 # coding=utf-8
 
-"""Hello world tests"""
+"""{{ cookiecutter.project_name }} tests"""
 
 from unittest import TestCase
 
-from {{ cookiecutter.pkg_name }}.ui.hello_world import hello_world
+from {{ cookiecutter.pkg_name }}.ui.{{cookiecutter.pkg_name}} import {{cookiecutter.pkg_name}}
 
 
-class TestHelloWorld(TestCase):
-    def test_hello_world(self):
-        hello_world()
+class Test{{ cookiecutter.project_slug }}(TestCase):
+    def test_{{cookiecutter.pkg_name}}(self):
+        {{cookiecutter.pkg_name}}("Hello world")

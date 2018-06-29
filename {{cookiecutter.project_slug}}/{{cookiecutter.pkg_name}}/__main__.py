@@ -4,7 +4,7 @@ import sys
 import argparse
 
 from {{ cookiecutter.pkg_name }}.ui.{{ cookiecutter.pkg_name }} import {{ cookiecutter.pkg_name }}
-from versioneer import get_version
+from {{ cookiecutter.pkg_name }} import __version__
 
 
 def main(args=None):
@@ -17,7 +17,7 @@ def main(args=None):
                         default="This is {{ cookiecutter.project_name }}",
                         type=str,
                         help="Text to display")
-    version_string = get_version()
+    version_string = __version__
     friendly_version_string = version_string if version_string else 'unknown'
     parser.add_argument(
         "-v", "--version",

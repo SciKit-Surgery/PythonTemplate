@@ -9,4 +9,4 @@ from {{ cookiecutter.pkg_name }}.ui.{{ cookiecutter.pkg_name }} import {{ cookie
 
 class Test{{ cookiecutter.project_slug }}(TestCase):
     def test_{{ cookiecutter.pkg_name }}(self):
-        {{ cookiecutter.pkg_name }}("Hello world")
+        {{ cookiecutter.pkg_name }}(True, "Hello world")

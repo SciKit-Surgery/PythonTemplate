@@ -14,7 +14,7 @@ def run_demo(console, text):
 
         root = Tk()
 
-        label = Label(root, text=display_text)
+        label = Label(root, text=text)
         label.pack()
 
         root.mainloop()

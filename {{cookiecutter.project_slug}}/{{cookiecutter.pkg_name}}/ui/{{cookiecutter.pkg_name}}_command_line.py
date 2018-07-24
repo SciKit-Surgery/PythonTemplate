@@ -21,8 +21,8 @@ def main(args=None):
 
     parser.add_argument("--console", required=False,
                         action='store_true',
-                        help="If set, {{ cookiecutter.project_name }} will not bring up a graphical user "
-                             "interface")ß
+                        help="If set, {{ cookiecutter.project_name }} "
+                             "will not bring up a graphical user interface")
 
     version_string = __version__
     friendly_version_string = version_string if version_string else 'unknown'

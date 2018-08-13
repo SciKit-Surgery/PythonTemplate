@@ -1,14 +1,14 @@
 Python Template
 ===============================
 
-.. image:: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareArchitecture/PythonTemplate/raw/master/project-icon.png
+.. image:: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/PythonTemplate/raw/master/project-icon.png
    :height: 150px
    :width: 150px
-   :target: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareArchitecture/PythonTemplate
+   :target: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/PythonTemplate
 
 
-.. image:: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareArchitecture/PythonTemplate/badges/master/build.svg
-   :target: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareArchitecture/PythonTemplate/pipelines
+.. image:: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/PythonTemplate/badges/master/build.svg
+   :target: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/PythonTemplate/pipelines
 
 
 Python Template is a Cookiecutter template for creating a python project. When used with `Cookiecutter`_. Python Template will create a fully working python "Hello world" project with unit tests, Python 2 and 3 compatibility, GitLab CI, lint and sphinx documentation.
@@ -29,7 +29,7 @@ How to use
 
 ::
 
-  cookiecutter https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareArchitecture/PythonTemplate.git
+  cookiecutter https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/PythonTemplate.git
 
 4. Answer the questions to configure your template (press enter to choose defaults), for example:
 
@@ -140,12 +140,12 @@ Supported by `Wellcome`_ and `EPSRC`_.
 
 
 .. _`Wellcome EPSRC Centre for Interventional and Surgical Sciences`: http://www.ucl.ac.uk/weiss
-.. _`source code repository`: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareArchitecture/PythonTemplate
+.. _`source code repository`: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/PythonTemplate
 .. _`University College London (UCL)`: http://www.ucl.ac.uk/
 .. _`Wellcome`: https://wellcome.ac.uk/
 .. _`EPSRC`: https://www.epsrc.ac.uk/
-.. _`contributing guidelines`: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareArchitecture/PythonTemplate/blob/master/CONTRIBUTING.rst
-.. _`license file`: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareArchitecture/PythonTemplate/blob/master/LICENSE
+.. _`contributing guidelines`: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/PythonTemplate/blob/master/CONTRIBUTING.rst
+.. _`license file`: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/PythonTemplate/blob/master/LICENSE
 .. _`Cookiecutter`: https://cookiecutter.readthedocs.io
 
 .. toctree::

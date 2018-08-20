@@ -41,7 +41,7 @@ How to use
 "repository_server": ["https://weisslab.cs.ucl.ac.uk", "https://cmiclab.cs.ucl.ac.uk", "https://github.com", "https://gitlab.com", "https://YOUR_CUSTOM_SERVER"],
 "full_name": "Your Name",
 "repository_profile_name": "{{ cookiecutter.full_name|replace(' ', '') }}",
-"repository_path": ["{% if cookiecutter.project_server == 'https://weisslab.cs.ucl.ac.uk' %}WEISS/SoftwareRepositories{% elif cookiecutter.project_server == 'https://cmiclab.cs.ucl.ac.uk' %}CMIC{% else %}niftk{% endif %}", "{{ cookiecutter.repository_profile_name }}"],
+"repository_path": ["{% if cookiecutter.repository_server == 'https://weisslab.cs.ucl.ac.uk' %}WEISS/SoftwareRepositories{% elif cookiecutter.repository_server == 'https://cmiclab.cs.ucl.ac.uk' %}CMIC{% else %}niftk{% endif %}", "{{ cookiecutter.repository_profile_name }}"],
 "project_url": "{{ cookiecutter.repository_server }}/{{ cookiecutter.repository_path }}",
 "open_source_license": ["BSD-3 license", "Apache Software License 2.0", "MIT License"],
 "copyright_holder": "University College London"

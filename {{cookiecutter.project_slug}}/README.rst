@@ -14,8 +14,8 @@
     :target: {{ cookiecutter.project_url }}/commits/master
     :alt: Test coverage
 
-.. image:: https://travis-ci.org/{{ cookiecutter.gitlab_group }}/{{ cookiecutter.project_slug }}.svg?branch=master
-    :target: https://travis-ci.org/{{ cookiecutter.gitlab_group }}/{{ cookiecutter.project_slug }}
+.. image:: https://travis-ci.org/{{ cookiecutter.repository_path }}.svg?branch=master
+    :target: https://travis-ci.org/{{ cookiecutter.repository_path }}
     :alt: Travis test status
 
 .. image:: {{ cookiecutter.project_url }}/badges/master/coverage.svg
@@ -37,9 +37,10 @@ Author: {{ cookiecutter.full_name }}
 Installing
 ~~~~~~~~~~
 
+You can pip install directly from the repository as follows:
 ::
 
-    pip install {{ cookiecutter.project_slug }}
+    pip install git+{{ cookiecutter.project_url }}
 
 
 Contributing

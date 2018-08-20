@@ -1,10 +1,12 @@
 {
   "project_name": "My New Project",
-  "full_name": "Your Name",
-  "gitlab_group": "{{ cookiecutter.full_name|replace(' ', '') }}",
   "project_slug": "{{ cookiecutter.project_name|replace(' ', '') }}",
-  "project_url": "https://weisslab.cs.ucl.ac.uk/{{ cookiecutter.gitlab_group }}/{{ cookiecutter.project_slug }}",
   "pkg_name": "{{ cookiecutter.project_slug|lower() }}",
+  "repository_server": ["https://weisslab.cs.ucl.ac.uk", "https://cmiclab.cs.ucl.ac.uk", "https://github.com", "https://gitlab.com"],
+  "full_name": "Your Name",
+  "repository_profile_name": "{{ cookiecutter.full_name|replace(' ', '') }}",
+  "repository_path": ["{{ cookiecutter.repository_profile_name }}," "{% if cookiecutter.project_server == 'https://weisslab.cs.ucl.ac.uk' %}WEISS/SoftwareRepositories{% elif cookiecutter.project_server == 'https://cmiclab.cs.ucl.ac.uk' %}CMIC{% else %}niftk{% endif %}"],
+  "project_url": "{{ cookiecutter.repository_server }}/{{ cookiecutter.repository_path }}",
   "open_source_license": ["BSD-3 license", "Apache Software License 2.0", "MIT License"],
   "copyright_holder": "University College London"
 }

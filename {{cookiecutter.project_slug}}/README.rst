@@ -58,7 +58,7 @@ Useful links
 Licensing and copyright
 -----------------------
 
-Copyright 2017 University College London.
+Copyright {% now 'local', '%Y' %} {{ cookiecutter.copyright_holder }}.
 {{ cookiecutter.project_name }} is released under the {{ cookiecutter.open_source_license }}. Please see the `license file`_ for details.
 
 

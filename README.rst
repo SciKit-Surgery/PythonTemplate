@@ -43,11 +43,9 @@ How to use
   2 - https://cmiclab.cs.ucl.ac.uk
   3 - https://github.com
   4 - https://gitlab.com
-  5 - https://YOUR_CUSTOM_SERVER
-  Choose from 1, 2, 3, 4, 5 [1]:
+  Choose from 1, 2, 3, 4 [1]:
   full_name [Your Name]: Joe Bloggs
   repository_profile_name [JoeBloggs]:
-  Choose from 1, 2, 3, 4, 5 [1]:
   Select repository_path:
   1 - JoeBloggs/mynewproject
   2 - WEISS/SoftwareRepositories/mynewproject
@@ -69,7 +67,18 @@ Notes:
   * Arguments can also be specified in configuration files — see the `Cookiecutter`_  documentation.
 
 
-5. Create a local git repository for your new project and commit the files. Note that `.gitlab-ci.yml` may be hidden so use `git add .` rather than `git add *` to include it.
+5. (Optional) - you can quickly test it works by creating a virtual environment, then installing and running tox:
+
+::
+
+  cd MyNewProject
+  virtualenv mynewprojct_virtualenv
+  source mynewprojct_virtualenv/bin/activate
+  pip install tox
+  tox
+  cd ..
+
+6. Create a local git repository for your new project and commit the files. Note that `.gitlab-ci.yml` may be hidden so use `git add .` rather than `git add *` to include it.
 
 ::
 
@@ -79,16 +88,16 @@ Notes:
   git commit -m "Initial commit of My New Project"
 
 
-6. Create a new project on WeissLab (or CmicLab, GitHub or your preferred git host), making sure the URL matches
+7. Create a new project on WeissLab (or CmicLab, GitHub or your preferred git host), making sure the URL matches
 
-7. Add a remote in order to link your local repository to your WeissLab / CmicLab / GitLab repository and push the files across. NOTE: use the SSH form of the repository URL so you can use SSH key authentication (so you don't have to enter a username and password)
+8. Add a remote in order to link your local repository to your WeissLab / CmicLab / GitLab repository and push the files across. NOTE: use the SSH form of the repository URL so you can use SSH key authentication (so you don't have to enter a username and password)
 
 ::
 
   git remote add origin git@weisslab.cs.ucl.ac.uk:JoeBloggs/MyNewProject.git
   git push origin master
 
-8. If using WeissLab, and assuming your URLs are all correct, GitLab CI should automatically build and test your project
+9. If using WeissLab, and assuming your URLs are all correct, GitLab CI should automatically build and test your project
 
 
 List of parameters
@@ -101,26 +110,53 @@ List of parameters
 +--------------------------+--------------------------------------------------------------------------------+
 | ::                       |                                                                                |
 |                          |                                                                                |
-|    full_name             | Your full name, for authorship information                                     |
-+--------------------------+--------------------------------------------------------------------------------+
-| ::                       |                                                                                |
-|                          |                                                                                |
-|    gitlab_group          | The group on WeissLab where you want to store the project - only affects the   |
-|                          | URL. By default this will be full_name with the spaces removed                 |
-+--------------------------+--------------------------------------------------------------------------------+
-| ::                       |                                                                                |
-|                          |                                                                                |
 |    project_slug          | Project name as used in the URL; by default project_name with spaces removed   |
 +--------------------------+--------------------------------------------------------------------------------+
 | ::                       |                                                                                |
-|                          |                                                                                |
 |    pkg_name              | The main python package name for your project. By default this is the          |
 |                          | project_slug converted into lower case                                         |
++--------------------------+--------------------------------------------------------------------------------+
+| ::                       |                                                                                |
+|    repository_server     | The URL of the git server that will host your code. If you are don't want to   |
+|                          | use any of the predefined options, choose any and modify the project_url later |
++--------------------------+--------------------------------------------------------------------------------+
+| ::                       |                                                                                |
+|                          |                                                                                |
+|    full_name             | Your full name, for authorship information, and to suggest your profile name   |
++--------------------------+--------------------------------------------------------------------------------+
+| ::                       |                                                                                |
+|    repository_profile_name | Your personal profile name on WeissLab/Cmiclab/Gitlab/GitHub. Or you can     |
+|                          | enter a group name that will be used to construct the repository URL           |
++--------------------------+--------------------------------------------------------------------------------+
+| ::                       |                                                                                |
+|    repository_path       | Choose whether you want your project under your personal profile path or in a  |
+|                          | shared location                                                                |
++--------------------------+--------------------------------------------------------------------------------+
+| ::                       |                                                                                |
+|    repository_url        | The full URL to your project will be constructed from the previous options,    |
+|                          | and is of the form repository_server/repository_path                           |
 +--------------------------+--------------------------------------------------------------------------------+
 | ::                       |                                                                                |
 |                          |                                                                                |
 |    open_source_license   | Recommend BSD-3 for internal projects, Apache for external collaborations      |
 +--------------------------+--------------------------------------------------------------------------------+
+| ::                       |                                                                                |
+|                          |                                                                                |
+|    copyright_holder      | If you are a member of UCL you shoud accept the default text                   |
++--------------------------+--------------------------------------------------------------------------------+
+
+
+"project_name": "My New Project",
+"project_slug": "{{ cookiecutter.project_name|replace(' ', '') }}",
+"pkg_name": "{{ cookiecutter.project_slug|lower() }}",
+"repository_server": ["https://weisslab.cs.ucl.ac.uk", "https://cmiclab.cs.ucl.ac.uk", "https://github.com", "https://gitlab.com"],
+"full_name": "Your Name",
+"repository_profile_name": "{{ cookiecutter.full_name|replace(' ', '') }}",
+"repository_path": ["{{ cookiecutter.repository_profile_name }}/{{ cookiecutter.project_slug }}", "{% if cookiecutter.repository_server == 'https://weisslab.cs.ucl.ac.uk' %}WEISS/SoftwareRepositories{% elif cookiecutter.repository_server == 'https://cmiclab.cs.ucl.ac.uk' %}CMIC{% else %}niftk{% endif %}/{{ cookiecutter.project_slug }}"],
+"project_url": "{{ cookiecutter.repository_server }}/{{ cookiecutter.repository_path }}",
+"open_source_license": ["BSD-3 license", "Apache Software License 2.0", "MIT License"],
+"copyright_holder": "University College London"
+
 
 
 Author: Tom Doel

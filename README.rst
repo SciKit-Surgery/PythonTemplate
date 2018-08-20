@@ -35,16 +35,42 @@ How to use
 
 ::
 
+"project_name": "My New Project",
+"project_slug": "{{ cookiecutter.project_name|replace(' ', '') }}",
+"pkg_name": "{{ cookiecutter.project_slug|lower() }}",
+"repository_server": ["https://weisslab.cs.ucl.ac.uk", "https://cmiclab.cs.ucl.ac.uk", "https://github.com", "https://gitlab.com", "https://YOUR_CUSTOM_SERVER"],
+"full_name": "Your Name",
+"repository_profile_name": "{{ cookiecutter.full_name|replace(' ', '') }}",
+"repository_path": ["{% if cookiecutter.project_server == 'https://weisslab.cs.ucl.ac.uk' %}WEISS/SoftwareRepositories{% elif cookiecutter.project_server == 'https://cmiclab.cs.ucl.ac.uk' %}CMIC{% else %}niftk{% endif %}", "{{ cookiecutter.repository_profile_name }}"],
+"project_url": "{{ cookiecutter.repository_server }}/{{ cookiecutter.repository_path }}",
+"open_source_license": ["BSD-3 license", "Apache Software License 2.0", "MIT License"],
+"copyright_holder": "University College London"
+
+
   project_name [My New Project]:
-  full_name [Your Name]: Joe Bloggs
-  gitlab_group [JoeBloggs]:
   project_slug [MyNewProject]:
-  project_url [https://weisslab.cs.ucl.ac.uk/JoeBloggs/MyNewProject]:
   pkg_name [mynewproject]:
+  Select repository_server:
+  1 - https://weisslab.cs.ucl.ac.uk
+  2 - https://cmiclab.cs.ucl.ac.uk
+  3 - https://github.com
+  4 - https://gitlab.com
+  5 - https://YOUR_CUSTOM_SERVER
+  Choose from 1, 2, 3, 4, 5 [1]:
+  full_name [Your Name]: Joe Bloggs
+  repository_profile_name [JoeBloggs]:
+  Choose from 1, 2, 3, 4, 5 [1]:
+  Select repository_path:
+  1 - JoeBloggs/mynewproject
+  2 - WEISS/SoftwareRepositories/mynewproject
+  Choose from 1, 2 [1]: 1
+  project_url [https://weisslab.cs.ucl.ac.uk/JoeBloggs/MyNewProject]:
   Select open_source_license:
   1 - BSD-3 license
   2 - Apache Software License 2.0
-  Choose from 1, 2 [1]:
+  3 - MIT License
+  Choose from 1, 2, 3 [1]:
+  copyright_holder [University College London]:
 
 Notes:
   * Details of arguments are described below

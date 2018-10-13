@@ -2,6 +2,7 @@
 
 """Removes top-level __main__.py and {{ cookiecutter.project_slug }}.py if not needed."""
 
+TERMINATOR = "\x1b[0m"
 SUCCESS = "\x1b[1;32m [SUCCESS]: "
 
 def remove_top_level_files():

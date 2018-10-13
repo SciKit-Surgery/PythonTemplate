@@ -27,9 +27,9 @@ The easiest way to contribute is to follow these guidelines:
 
 1. Look through the issues on {{ cookiecutter.project_url }}/issues and assign the relevant issue to yourself. If there is not an existing issue that covers your work, please create one: {{ cookiecutter.project_url }}/issues/new
 2. Fork the repository: {{ cookiecutter.project_url }}/forks/new
-3. Create a branch for your changes
+3. Create a branch for your changes. The branch name should start with the issue number, followed by hyphen separated words describing the issue. For example: 1-update-contribution-guidelines
 4. Make your changes following the coding guidelines below.
-5. Commit and push your changes to your fork.
+5. Commit and push your changes to your fork. The commit message should start with `Issue #<issue number>`, for example: "Issue #1: Fixed typo". Commit in small, related chunks. Review each commit and explain its purpose in the commit message.
 6. Submit a merge request: {{ cookiecutter.project_url }}/merge_requests/new
 
 
@@ -37,14 +37,13 @@ The easiest way to contribute is to follow these guidelines:
 Coding guidelines
 -----------------
 
-1. Commit in small, related chunks. Review each commit and explain its purpose in the commit message.
-2. Please follow PEP8 guidelines https://www.python.org/dev/peps/pep-0008/
-3. Create a python virtual environment (virtualenv) for development
-4. Make sure that pylint passes. You may disable specific warnings within the code where it is reasonable to do so
-5. Add unit tests for new and modified code
-6. Make sure all existing and new tests pass
-7. Make sure all docstrings have been added
-8. Make sure all dependencies have been added to requirements
-9. Make sure your code works for all required versions of Python
-10. Make sure your code works for all required operating systems
+1. Please follow PEP8 guidelines https://www.python.org/dev/peps/pep-0008/
+2. Create a python virtual environment (virtualenv) for development
+3. Make sure that pylint passes. You may disable specific warnings within the code where it is reasonable to do so
+4. Add unit tests for new and modified code
+5. Make sure all existing and new tests pass
+6. Make sure all docstrings have been added
+7. Make sure all dependencies have been added to requirements
+8. Make sure your code works for all required versions of Python
+9. Make sure your code works for all required operating systems
 

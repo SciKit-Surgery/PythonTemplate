@@ -2,6 +2,8 @@
 
 """Removes top-level __main__.py and {{ cookiecutter.project_slug }}.py if not needed."""
 
+import os
+
 TERMINATOR = "\x1b[0m"
 SUCCESS = "\x1b[1;32m [SUCCESS]: "
 

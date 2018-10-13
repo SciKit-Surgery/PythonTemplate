@@ -144,7 +144,12 @@ List of parameters
 |                          |                                                                                |
 |    copyright_holder      | If you are a member of UCL you shoud accept the default text                   |
 +--------------------------+--------------------------------------------------------------------------------+
-
+| ::                       |                                                                                |
+|                          |                                                                                |
+|    project_runnable      | By default we assume that your project MyNewProject will have a top level      |
+|                          | __main__.py and an entry point called MyNewProject.py. If you are just         |
+|                          | creating a library package, for inclusion in other projects, set this to 'n'.  |
++--------------------------+--------------------------------------------------------------------------------+
 
 "project_name": "My New Project",
 "project_slug": "{{ cookiecutter.project_name|replace(' ', '') }}",
@@ -155,7 +160,8 @@ List of parameters
 "repository_path": ["{{ cookiecutter.repository_profile_name }}/{{ cookiecutter.project_slug }}", "{% if cookiecutter.repository_server == 'https://weisslab.cs.ucl.ac.uk' %}WEISS/SoftwareRepositories{% elif cookiecutter.repository_server == 'https://cmiclab.cs.ucl.ac.uk' %}CMIC{% else %}niftk{% endif %}/{{ cookiecutter.project_slug }}"],
 "project_url": "{{ cookiecutter.repository_server }}/{{ cookiecutter.repository_path }}",
 "open_source_license": ["BSD-3 license", "Apache Software License 2.0", "MIT License"],
-"copyright_holder": "University College London"
+"copyright_holder": "University College London",
+"project_runnable": "y"
 
 
 

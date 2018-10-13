@@ -57,6 +57,7 @@ How to use
   3 - MIT License
   Choose from 1, 2, 3 [1]:
   copyright_holder [University College London]:
+  project_runnable [y]:
 
 Notes:
   * Details of arguments are described below

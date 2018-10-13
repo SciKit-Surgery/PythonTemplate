@@ -9,4 +9,5 @@
   "project_url": "{{ cookiecutter.repository_server }}/{{ cookiecutter.repository_path }}",
   "open_source_license": ["BSD-3 license", "Apache Software License 2.0", "MIT License"],
   "copyright_holder": "University College London"
+  "project_runnable": "y",
 }

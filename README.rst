@@ -151,20 +151,6 @@ List of parameters
 |                          | creating a library package, for inclusion in other projects, set this to 'n'.  |
 +--------------------------+--------------------------------------------------------------------------------+
 
-"project_name": "My New Project",
-"project_slug": "{{ cookiecutter.project_name|replace(' ', '') }}",
-"pkg_name": "{{ cookiecutter.project_slug|lower() }}",
-"repository_server": ["https://weisslab.cs.ucl.ac.uk", "https://cmiclab.cs.ucl.ac.uk", "https://github.com", "https://gitlab.com"],
-"full_name": "Your Name",
-"repository_profile_name": "{{ cookiecutter.full_name|replace(' ', '') }}",
-"repository_path": ["{{ cookiecutter.repository_profile_name }}/{{ cookiecutter.project_slug }}", "{% if cookiecutter.repository_server == 'https://weisslab.cs.ucl.ac.uk' %}WEISS/SoftwareRepositories{% elif cookiecutter.repository_server == 'https://cmiclab.cs.ucl.ac.uk' %}CMIC{% else %}niftk{% endif %}/{{ cookiecutter.project_slug }}"],
-"project_url": "{{ cookiecutter.repository_server }}/{{ cookiecutter.repository_path }}",
-"open_source_license": ["BSD-3 license", "Apache Software License 2.0", "MIT License"],
-"copyright_holder": "University College London",
-"project_runnable": "y"
-
-
-
 Author: Tom Doel
 
 Python Template was developed at the `Wellcome EPSRC Centre for Interventional and Surgical Sciences`_ in `University College London (UCL)`_.

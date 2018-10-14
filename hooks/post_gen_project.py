@@ -8,8 +8,8 @@ TERMINATOR = "\x1b[0m"
 SUCCESS = "\x1b[1;32m [SUCCESS]: "
 
 def remove_top_level_files():
-    file_names = ["{{ cookiecutter.project_slug }}.py",
-                  os.path.join("{{ cookiecutter.project_slug }}", "__main__.py")]
+    file_names = ["{{ cookiecutter.pkg_name }}.py",
+                  os.path.join("{{ cookiecutter.pkg_name }}", "__main__.py")]
 
     for file_name in file_names:
         os.remove(file_name)

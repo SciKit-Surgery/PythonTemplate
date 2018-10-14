@@ -57,7 +57,7 @@ How to use
   3 - MIT License
   Choose from 1, 2, 3 [1]:
   copyright_holder [University College London]:
-  package_runnable [y]:
+  modules_only [n]:
 
 Notes:
   * Details of arguments are described below
@@ -147,10 +147,10 @@ List of parameters
 +--------------------------+--------------------------------------------------------------------------------+
 | ::                       |                                                                                |
 |                          |                                                                                |
-|    pkg_runnable          | By default we assume that your project 'project_name' will have a top level    |
+|    modules_only          | By default we assume that your project 'project_name' will have a top level    |
 |                          | package called 'pkg_name' containing a __main__.py and a top level entry point |
-|                          | called pkg_name.py. If you are just creating a library package, for inclusion  |
-|                          | in other projects, set this to 'n'.                                            |
+|                          | called pkg_name.py. If you are just creating a set of modules, for inclusion   |
+|                          | in other projects, set this to 'y'.                                            |
 +--------------------------+--------------------------------------------------------------------------------+
 
 Author: Tom Doel

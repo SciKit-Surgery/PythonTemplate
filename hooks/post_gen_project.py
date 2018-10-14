@@ -1,6 +1,6 @@
 # coding=utf-8
 
-"""Removes top-level __main__.py and {{ cookiecutter.project_slug }}.py if not needed."""
+"""Runs after project generation to provide additional configuration steps."""
 
 import os
 
@@ -17,7 +17,7 @@ def remove_top_level_files():
 
 def main():
 
-    if "{{ cookiecutter.project_runnable }}".lower() == "n":
+    if "{{ cookiecutter.pkg_runnable }}".lower() == "n":
         remove_top_level_files()
 
     print(SUCCESS + "Project initialized, keep up the good work!" + TERMINATOR)

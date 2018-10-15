@@ -4,6 +4,6 @@
 
 import unittest
 
-class Test{{ cookiecutter.pkg_name }}(TestCase):
+class Test{{ cookiecutter.pkg_name }}(unittest.TestCase):
     def test_{{ cookiecutter.pkg_name }}(self):
         pass

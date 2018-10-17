@@ -7,6 +7,6 @@ from unittest import TestCase
 from {{ cookiecutter.pkg_name }}.ui.{{ cookiecutter.pkg_name }}_demo import run_demo
 
 
-class Test{{ cookiecutter.project_slug }}(TestCase):
+class Test{{ cookiecutter.pkg_name }}(TestCase):
     def test_{{ cookiecutter.pkg_name }}(self):
         run_demo(True, "Hello world")

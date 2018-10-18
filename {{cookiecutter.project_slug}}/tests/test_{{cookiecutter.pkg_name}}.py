@@ -5,5 +5,6 @@
 import unittest
 
 class Test{{ cookiecutter.pkg_name }}(unittest.TestCase):
-    def test_{{ cookiecutter.pkg_name }}(self):
-        pass
+from {{ cookiecutter.pkg_name }}.ui.{{ cookiecutter.pkg_name }}_demo import run_demo
+
+

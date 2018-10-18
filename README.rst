@@ -114,28 +114,28 @@ List of parameters
 |    project_slug          | Project name as used in the URL; by default project_name with spaces removed   |
 +--------------------------+--------------------------------------------------------------------------------+
 | ::                       |                                                                                |
-|    pkg_name              | The main python package name for your project. By default this is the          |
-|                          | project_slug converted into lower case                                         |
+|                          | The main python package name for your project. By default this is the          |
+|   pkg_name               | project_slug converted into lower case                                         |
 +--------------------------+--------------------------------------------------------------------------------+
 | ::                       |                                                                                |
-|    repository_server     | The URL of the git server that will host your code. If you are don't want to   |
-|                          | use any of the predefined options, choose any and modify the project_url later |
+|                          | The URL of the git server that will host your code. If you are don't want to   |
+|  repository_server       | use any of the predefined options, choose any and modify the project_url later |
 +--------------------------+--------------------------------------------------------------------------------+
 | ::                       |                                                                                |
 |                          |                                                                                |
 |    full_name             | Your full name, for authorship information, and to suggest your profile name   |
 +--------------------------+--------------------------------------------------------------------------------+
 | ::                       |                                                                                |
-|    repository_profile_name | Your personal profile name on WeissLab/Cmiclab/Gitlab/GitHub. Or you can     |
-|                          | enter a group name that will be used to construct the repository URL           |
+|                          | Your personal profile name on WeissLab/Cmiclab/Gitlab/GitHub. Or you can       |
+|   repository_profile_name| enter a group name that will be used to construct the repository URL           |
 +--------------------------+--------------------------------------------------------------------------------+
 | ::                       |                                                                                |
-|    repository_path       | Choose whether you want your project under your personal profile path or in a  |
-|                          | shared location                                                                |
+|                          | Choose whether you want your project under your personal profile path or in a  |
+|   repository_path        | shared location                                                                |
 +--------------------------+--------------------------------------------------------------------------------+
 | ::                       |                                                                                |
-|    repository_url        | The full URL to your project will be constructed from the previous options,    |
-|                          | and is of the form repository_server/repository_path                           |
+|                          | The full URL to your project will be constructed from the previous options,    |
+|   repository_url         | and is of the form repository_server/repository_path                           |
 +--------------------------+--------------------------------------------------------------------------------+
 | ::                       |                                                                                |
 |                          |                                                                                |
@@ -144,13 +144,6 @@ List of parameters
 | ::                       |                                                                                |
 |                          |                                                                                |
 |    copyright_holder      | If you are a member of UCL you shoud accept the default text                   |
-+--------------------------+--------------------------------------------------------------------------------+
-| ::                       |                                                                                |
-|                          |                                                                                |
-|    modules_only          | By default we assume that your project 'project_name' will have a top level    |
-|                          | package called 'pkg_name' containing a __main__.py and a top level entry point |
-|                          | called pkg_name.py. If you are just creating a set of modules, for inclusion   |
-|                          | in other projects, set this to 'y'.                                            |
 +--------------------------+--------------------------------------------------------------------------------+
 
 Author: Tom Doel

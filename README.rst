@@ -52,7 +52,7 @@ Syncing to WeissLab
 
 ::
 
-  git remote add origin git@weisslab.cs.ucl.ac.uk:JoeBloggs/MyNewProject.git
+  git remote add origin git@weisslab.cs.ucl.ac.uk:WEISS/SoftwareRepositories/newprojectname.git
   git push origin master
 
 3. If using WeissLab, and assuming your URLs are all correct, GitLab CI should automatically build and test your project

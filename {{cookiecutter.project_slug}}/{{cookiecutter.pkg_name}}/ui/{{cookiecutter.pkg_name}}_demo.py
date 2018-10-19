@@ -18,3 +18,5 @@ def run_demo(console, text):
         label.pack()
 
         root.mainloop()
+
+    return True

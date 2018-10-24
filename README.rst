@@ -151,6 +151,46 @@ Notes:
   * Modify the URL if you are not putting the prokect on WeissLab
   * For most questions you can chose the defaults.
   * Arguments can also be specified in configuration files — see the `Cookiecutter`_  documentation.
+=======
+3. Answer the questions to configure your template, or press enter to choose defaults. See the List Of Parameters section for more details.
+
+
+4. Create a local git repository for your new project and commit the files. Use `git add .` rather than `git add *` to include files which are hidden by default.
+
+::
+
+  cd MyNewProject
+  git init
+  git add .
+  git commit -m "Initial commit of My New Project"
+  
+Syncing to WeissLab
+~~~~~~~~~~~~~~~~~~
+
+1. Create a new project on WeissLab (or CmicLab, GitHub or your preferred git host), making sure the URL matches
+
+2. Add a remote in order to link your local repository to your WeissLab / CmicLab / GitLab repository and push the files across. NOTE: use the SSH form of the repository URL so you can use SSH key authentication (so you don't have to enter a username and password)
+
+::
+
+  git remote add origin git@weisslab.cs.ucl.ac.uk:WEISS/SoftwareRepositories/newprojectname.git
+  git push origin master
+
+3. If using WeissLab, and assuming your URLs are all correct, GitLab CI should automatically build and test your project
+
+Testing
+~~~~~~~
+
+You can quickly test if it has worked by installing and running tox. It is recommended to use a virtual environment:
+
+::
+
+  cd MyNewProject
+  virtualenv mynewprojct_virtualenv
+  source mynewprojct_virtualenv/bin/activate
+  pip install tox
+  tox
+  cd ..
 
 
 
@@ -197,6 +237,7 @@ Notes:
 +--------------------------+--------------------------------------------------------------------------------+
 
 Author: Tom Doel
+=======
 
 Python Template was developed at the `Wellcome EPSRC Centre for Interventional and Surgical Sciences`_ in `University College London (UCL)`_.
 
@@ -209,8 +250,6 @@ Please see the `contributing guidelines`_.
 
 Useful links
 ^^^^^^^^^^^^
-
-`Source code repository`_
 
 
 Licensing and copyright
@@ -228,7 +267,6 @@ Supported by `Wellcome`_ and `EPSRC`_.
 .. _`The WEISS Software Manifsesto - Check it out`: https://weisslab.cs.ucl.ac.uk/WEISS/_manifesto
 .. _`Software Process`: https://doi.org/10.1109/ISBI.2004.1398621
 .. _`Wellcome EPSRC Centre for Interventional and Surgical Sciences`: http://www.ucl.ac.uk/weiss
-.. _`source code repository`: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/PythonTemplate
 .. _`University College London (UCL)`: http://www.ucl.ac.uk/
 .. _`Wellcome`: https://wellcome.ac.uk/
 .. _`EPSRC`: https://www.epsrc.ac.uk/

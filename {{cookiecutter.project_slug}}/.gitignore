@@ -7,5 +7,7 @@
 *.rst
 *.pyc
 .pytest_cache/
-build/
 
+# PyInstaller
+build/
+dist/

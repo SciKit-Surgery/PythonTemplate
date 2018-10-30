@@ -227,7 +227,7 @@ Supported by `Wellcome`_ and `EPSRC`_.
 .. _`spinx`: http://www.sphinx-doc.org/
 .. _`git`: https://git-scm.com/
 .. _`tox`: https://tox.readthedocs.io/
-.. _`SNAPPY`: https://weisslab.cs.ucl.ac.uk/WEISS/PlatformManagement/SNAPPY
+.. _`SNAPPY`: https://weisslab.cs.ucl.ac.uk/WEISS/PlatformManagement/SNAPPY/wikis/home
 .. _`Unix Philosophy': https://en.wikipedia.org/wiki/Unix_philosophy
 .. _`The WEISS Software Manifesto`: https://weisslab.cs.ucl.ac.uk/WEISS/_manifesto
 .. _`Software Process`: https://doi.org/10.1109/ISBI.2004.1398621

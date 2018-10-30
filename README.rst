@@ -18,7 +18,7 @@ Python template can be used to create projects for CmicLab, WEISSLab, GitHub
 Purpose
 ~~~~~~~
 Python Template is part of SNAPPY, a collection of software
-developed by the `Wellcome EPSRC Centre for Surgical Sciences and Interventions`_. 
+developed by the  `Wellcome EPSRC Centre for Interventional and Surgical Sciences`_
 SNAPPY aims to support faster translation of advanced surgical 
 research from the bench to the bed side. SNAPPY does this by supporting and
 encouraging the development of small but well engineered software components that 
@@ -232,7 +232,8 @@ Supported by `Wellcome`_ and `EPSRC`_.
 .. _`spinx`: http://www.sphinx-doc.org/
 .. _`git`: https://git-scm.com/
 .. _`tox`: https://tox.readthedocs.io/
-.. _`The WEISS Software Manifsesto`: https://weisslab.cs.ucl.ac.uk/WEISS/_manifesto
+.. _`Unix Philosophy': https://en.wikipedia.org/wiki/Unix_philosophy
+.. _`The WEISS Software Manifesto`: https://weisslab.cs.ucl.ac.uk/WEISS/_manifesto
 .. _`Software Process`: https://doi.org/10.1109/ISBI.2004.1398621
 .. _`Wellcome EPSRC Centre for Interventional and Surgical Sciences`: http://www.ucl.ac.uk/weiss
 .. _`University College London (UCL)`: http://www.ucl.ac.uk/

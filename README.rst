@@ -18,14 +18,14 @@ Python template can be used to create projects for CmicLab, WEISSLab, GitHub
 Purpose
 ~~~~~~~
 Python Template is part of SNAPPY, a collection of software
-developed by the  `Wellcome EPSRC Centre for Interventional and Surgical Sciences`_
+developed by the  `Wellcome EPSRC Centre for Interventional and Surgical Sciences`_.
 SNAPPY aims to support faster translation of advanced surgical 
 research from the bench to the bed side. SNAPPY does this by supporting and
 encouraging the development of small but well engineered software components that 
 can;
-* be used and developed during early stage research, and;
-* be built into high quality clinical applications that can be production ready in less than 2 years.
-* be widely disseminated to support researchers beyond WEISS.
+- be used for rapid prototyping during early stage research,
+- be built into high quality clinical applications that can be production ready in less than 2 years,
+- be widely disseminated to support researchers beyond WEISS.
 See `The WEISS Software Manifesto`_ for further information. 
 
 SNAPPY supports and encourages well engineered software by helping researchers with
@@ -51,18 +51,18 @@ creation of well defined, maintainable, well documented, and well tested code.
 |                         | publication, with minimal consideration of the wider software|
 |                         | design.                                                      |
 +-------------------------+--------------------------------------------------------------+
-| managing source code    | Source code versioning and updates is handled by `git`_. The |
+| Managing source code    | Source code versioning and updates is handled by `git`_. The |
 | versions and updates    | Python Template supports several git repository providers,   |
 +-------------------------+--------------------------------------------------------------+
-| configuring projects    | The Python language is cross platform. The Python            |
+| Configuring projects    | The Python language is cross platform. The Python            |
 | for specific platforms  | Template takes advantage of the `pip`_ Package manager to    | 
 |                         | create modular projects that can be easily installed on      |
 |                         | multiple platforms.                                          |
 +-------------------------+--------------------------------------------------------------+
-| compilation and linking | By using the python environment, the Python Template avoids  |
+| Compilation and linking | By using the python environment, the Python Template avoids  |
 |                         | the need for compilation and linking.                        |
 +-------------------------+--------------------------------------------------------------+
-| testing the code at     | The Python Platform provides unit testing using tox, and     |
+| Testing the code at     | The Python Platform provides unit testing using tox, and     |
 | run time                | comes ready with appropriate unit tests to meet the          |
 |                         | minimum requirements (see first item). If using WEISSlab to  |
 |                         | host                                                         |
@@ -70,19 +70,19 @@ creation of well defined, maintainable, well documented, and well tested code.
 |                         | set up by default. It is up to the researcher to             |
 |                         | write further tests as the code is developed.                |
 +-------------------------+--------------------------------------------------------------+
-| verifying the validity  | The validity of output is performed as part of the unit      |
+| Verifying the validity  | The validity of output is performed as part of the unit      |
 | of output               | testing (above).                                             |
 +-------------------------+--------------------------------------------------------------+
-| documenting the code    | The Python Template provides a template for code             |
+| Documenting the code    | The Python Template provides a template for code             |
 |                         | documentation showing how to write in line documentation.    |
 |                         | Generation of documentation is then handled automatically    |
 |                         | by WEISSlab.                                                 |
 +-------------------------+--------------------------------------------------------------+
-| tracking and repairing  | Issue tracking is handled by default by the chosen git       |
+| Tracking and repairing  | Issue tracking is handled by default by the chosen git       |
 | bugs                    | repository host.                                             |
 +-------------------------+--------------------------------------------------------------+
 
-Whilst every effort has been made to automate tasks where possible, it is up to the researcher consider software requirements, write documentation, and unit tests. Templates for each of these tasks are provided, so after creating your project, see below please take a little time before you start coding to think about what you want your software to achieve, and write it down in the file doc/requirements.rst.
+Whilst every effort has been made to automate tasks where possible, it is up to the researcher consider software requirements, write documentation, and create unit tests. Templates for each of these tasks are provided, so after creating your project, please take a little time before you start coding to think about what you want your software to achieve, and write it down in the file doc/requirements.rst.
 
 How to use
 ~~~~~~~~~~
@@ -106,7 +106,7 @@ How to use
 
 ::
 
-  cd MyNewProject
+ cd MyNewProject
   git init
   git add .  
   git commit -m "Initial commit of My New Project"
@@ -119,7 +119,7 @@ Note: make sure you use "git add ." not "git add * " to pick up hidden files lik
 
 ::
 
-  git remote add origin git@weisslab.cs.ucl.ac.uk:JoeBloggs/MyNewProject.git
+ git remote add origin git@weisslab.cs.ucl.ac.uk:JoeBloggs/MyNewProject.git
   git push origin master
 
 9. If using WeissLab, and assuming your URLs are all correct, GitLab CI should automatically build and test your project
@@ -128,7 +128,7 @@ Note: make sure you use "git add ." not "git add * " to pick up hidden files lik
 
 ::
 
-  cd MyNewProject
+ cd MyNewProject
   virtualenv mynewprojct_virtualenv
   source mynewprojct_virtualenv/bin/activate
   pip install tox

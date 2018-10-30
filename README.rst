@@ -19,30 +19,32 @@ Purpose
 ~~~~~~~
 Python Template is part of SNAPPY, a collection of software
 developed by the  `Wellcome EPSRC Centre for Interventional and Surgical Sciences`_.
-SNAPPY aims to support faster translation of advanced surgical 
+SNAPPY aims to support faster translation of advanced surgical
 research from the bench to the bed side. SNAPPY does this by supporting and
-encouraging the development of small but well engineered software components that 
+encouraging the development of small but well engineered software components that
 can;
+
 - be used for rapid prototyping during early stage research,
 - be built into high quality clinical applications that can be production ready in less than 2 years,
 - be widely disseminated to support researchers beyond WEISS.
-See `The WEISS Software Manifesto`_ for further information. 
+
+See `The WEISS Software Manifesto`_ for further information.
 
 SNAPPY supports and encourages well engineered software by helping researchers with
-standard software development tasks (`Software Process`_). The table below 
-lists standard development tasks and how the Python Template helps to deliver them. 
+standard software development tasks (`Software Process`_). The table below
+lists standard development tasks and how the Python Template helps to deliver them.
 Paying heed to the following tasks at the earliest stage of development should support the
-creation of well defined, maintainable, well documented, and well tested code. 
+creation of well defined, maintainable, well documented, and well tested code.
 
 +-------------------------+--------------------------------------------------------------+
 |  Task                   |  What the Python Template Does                               |
 +=========================+==============================================================+
 | Requirements generation | The template creates the file doc/requirements.rst           |
-|                         | and populates it with some minimum requirements for all      | 
+|                         | and populates it with some minimum requirements for all      |
 |                         | SNAPPY projects. Instructions and relevant links are provided|
 |                         | to encourage the researcher to add more requirements to the  |
 |                         | file to describe what the project does, both before and      |
-|                         | during development.                                          | 
+|                         | during development.                                          |
 +-------------------------+--------------------------------------------------------------+
 | Software design         | The Python Template provides a modular framework that        |
 |                         | integrates with the wider python ecosystem. Providing a      |
@@ -55,28 +57,28 @@ creation of well defined, maintainable, well documented, and well tested code.
 | versions and updates    | Python Template supports several git repository providers,   |
 +-------------------------+--------------------------------------------------------------+
 | Configuring projects    | The Python language is cross platform. The Python            |
-| for specific platforms  | Template takes advantage of the `pip`_ Package manager to    | 
+| for specific platforms  | Template takes advantage of the `pip`_ Package manager to    |
 |                         | create modular projects that can be easily installed on      |
 |                         | multiple platforms.                                          |
 +-------------------------+--------------------------------------------------------------+
 | Compilation and linking | By using the python environment, the Python Template avoids  |
 |                         | the need for compilation and linking.                        |
 +-------------------------+--------------------------------------------------------------+
-| Testing the code at     | The Python Platform provides unit testing using tox, and     |
+| Testing the code at     | The Python Platform provides unit testing using `tox`_, and  |
 | run time                | comes ready with appropriate unit tests to meet the          |
-|                         | minimum requirements (see first item). If using WEISSlab to  |
-|                         | host                                                         |
-|                         | the code cross platform continuous integration testing is    |
+|                         | minimum requirements (see first item). If using `WEISSlab`_  |
+|                         | to host                                                      |
+|                         | the code, cross platform continuous integration testing is   |
 |                         | set up by default. It is up to the researcher to             |
 |                         | write further tests as the code is developed.                |
 +-------------------------+--------------------------------------------------------------+
 | Verifying the validity  | The validity of output is performed as part of the unit      |
-| of output               | testing (above).                                             |
+| of output               | testing.                                                     |
 +-------------------------+--------------------------------------------------------------+
 | Documenting the code    | The Python Template provides a template for code             |
 |                         | documentation showing how to write in line documentation.    |
 |                         | Generation of documentation is then handled automatically    |
-|                         | by WEISSlab.                                                 |
+|                         | by `WEISSlab`_.                                              |
 +-------------------------+--------------------------------------------------------------+
 | Tracking and repairing  | Issue tracking is handled by default by the chosen git       |
 | bugs                    | repository host.                                             |
@@ -100,29 +102,29 @@ How to use
 
   cookiecutter https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/PythonTemplate.git
 
-4. Answer the questions to configure your template (press enter to choose defaults), for further details on available answers see "List of Parameters" below. 
+3. Answer the questions to configure your template (press enter to choose defaults), for further details on available answers see "List of Parameters" below.
 
-5. Create a local git repository for your new project and commit the files. 
+4. Create a local git repository for your new project and commit the files.
 
 ::
 
- cd MyNewProject
+  cd MyNewProject
   git init
-  git add .  
+  git add .
   git commit -m "Initial commit of My New Project"
 
 Note: make sure you use "git add ." not "git add * " to pick up hidden files like `.gitlab-ci.yml`.
 
-6. Create a new project on WeissLab (or CmicLab, GitHub or your preferred git host), making sure the URL matches
+5. Create a new project on WeissLab (or CmicLab, GitHub or your preferred git host), making sure the URL matches what you set in step 3.
 
-7. Add a remote in order to link your local repository to your WeissLab / CmicLab / GitLab repository and push the files across. NOTE: use the SSH form of the repository URL so you can use SSH key authentication (so you don't have to enter a username and password)
+6. Add a remote in order to link your local repository to your WeissLab / CmicLab / GitLab repository and push the files across. NOTE: use the SSH form of the repository URL so you can use SSH key authentication (so you don't have to enter a username and password)
 
 ::
 
- git remote add origin git@weisslab.cs.ucl.ac.uk:JoeBloggs/MyNewProject.git
+  git remote add origin git@weisslab.cs.ucl.ac.uk:JoanneBloggs/MyNewProject.git
   git push origin master
 
-9. If using WeissLab, and assuming your URLs are all correct, GitLab CI should automatically build and test your project
+7. If using WeissLab, and assuming your URLs are all correct, GitLab CI should automatically build and test your project
 
 8. You can quickly test it works by creating a virtual environment, then installing and running tox:
 
@@ -136,18 +138,11 @@ Note: make sure you use "git add ." not "git add * " to pick up hidden files lik
   cd ..
 
 
-10. Take a moment to enter some requirements, then start coding.
+9. Take a moment to write some software requirements, and populate the README file with a basic description of what you want to do, then start coding.
 
 
-List of parameters
-~~~~~~~~~~~~~~~~~~
-Notes:
-  * Details of arguments are described below
-  * Choose a suitable project name.
-  * The default GitLab group will be your personal namespace. This assumes your username is FirstnameSecondname (if not, you should change this). You should also change this if you want to store your project under a GitLab group (such as CMIC, WEISS, RVM or GIFT-Surg).
-  * Modify the URL if you are not putting the prokect on WeissLab
-  * For most questions you can chose the defaults.
-  * Arguments can also be specified in configuration files — see the `Cookiecutter`_  documentation.
+List of parameters for cookiecutter
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 +--------------------------+--------------------------------------------------------------------------------+
 | ::                       |                                                                                |
@@ -163,7 +158,7 @@ Notes:
 |   pkg_name               | project_slug converted into lower case                                         |
 +--------------------------+--------------------------------------------------------------------------------+
 | ::                       |                                                                                |
-|                          | The URL of the git server that will host your code. If you are don't want to   |
+|                          | The URL of the git server that will host your code. If you don't want to       |
 |  repository_server       | use any of the predefined options, choose any and modify the project_url later |
 +--------------------------+--------------------------------------------------------------------------------+
 | ::                       |                                                                                |
@@ -242,6 +237,7 @@ Supported by `Wellcome`_ and `EPSRC`_.
 .. _`contributing guidelines`: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/PythonTemplate/blob/master/CONTRIBUTING.rst
 .. _`license file`: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/PythonTemplate/blob/master/LICENSE
 .. _`Cookiecutter`: https://cookiecutter.readthedocs.io
+.. _`WEISSLab`: https://weisslab.cs.ucl.ac.uk/
 
 .. toctree::
    :maxdepth: 4

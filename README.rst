@@ -18,17 +18,19 @@ Python template can be used to create projects for CmicLab, WEISSLab, GitHub
 Purpose
 ~~~~~~~
 Python Template is part of SNAPPY, a collection of software
-developed by the Wellcome EPSRC Centre for Surgical Sciences and Interventions. 
-SNAPPY is being developed to support faster translation of advanced surgical 
+developed by the `Wellcome EPSRC Centre for Surgical Sciences and Interventions`_. 
+SNAPPY aims to support faster translation of advanced surgical 
 research from the bench to the bed side. SNAPPY does this by supporting and
 encouraging the development of small but well engineered software components that 
 can;
 * be used and developed during early stage research, and;
-* easily be built into high quality clinical applications that can be production ready in less than 2 years.
+* be built into high quality clinical applications that can be production ready in less than 2 years.
+* be widely disseminated to support researchers beyond WEISS.
+See `The WEISS Software Manifesto`_ for further information. 
 
 SNAPPY supports and encourages well engineered software by helping researchers with
-standard software development tasks (from <link to VTK thing>). The table below 
-lists 9 standard development tasks and how the Python Template helps to deliver them. 
+standard software development tasks (`Software Process`_). The table below 
+lists standard development tasks and how the Python Template helps to deliver them. 
 Paying heed to the following tasks at the earliest stage of development should support the
 creation of well defined, maintainable, well documented, and well tested code. 
 
@@ -43,19 +45,17 @@ creation of well defined, maintainable, well documented, and well tested code.
 |                         | during development.                                          | 
 +-------------------------+--------------------------------------------------------------+
 | Software design         | The Python Template provides a modular framework that        |
-|                         | integrates with the wider SNAPPY ecosystem. Many of the      |
-|                         | important software design decisions have been made by the    |
-|                         | SNAPPY development team. By providing a highly modular       |
-|                         | environment the researcher can focus on algorithm            |
-|                         | development, with minimal consideration of the wider software|
+|                         | integrates with the wider python ecosystem. Providing a   |
+|                         | highly modular environment enables the                       |
+|                         | researcher to focus on algorithm development, testing and    |
+|                         | publication, with minimal consideration of the wider software|
 |                         | design.                                                      |
 +-------------------------+--------------------------------------------------------------+
-| managing source code    | Source code versioning and updates is handled by git. The    |
+| managing source code    | Source code versioning and updates is handled by `git`_. The |
 | versions and updates    | Python Template supports several git repository providers,   |
-|                         | allowing the researcher to choose an appropriate one.        |
 +-------------------------+--------------------------------------------------------------+
-| configuring projects    | The Python environment is cross platform. The Python         |
-| for specific platforms  | Template takes advantage of the pip Package manager to       | 
+| configuring projects    | The Python language is cross platform. The Python            |
+| for specific platforms  | Template takes advantage of the `pip`_ Package manager to    | 
 |                         | create modular projects that can be easily installed on      |
 |                         | multiple platforms.                                          |
 +-------------------------+--------------------------------------------------------------+
@@ -64,25 +64,25 @@ creation of well defined, maintainable, well documented, and well tested code.
 +-------------------------+--------------------------------------------------------------+
 | testing the code at     | The Python Platform provides unit testing using tox, and     |
 | run time                | comes ready with appropriate unit tests to meet the          |
-|                         | minimum requirements (see above). If using WEISSlab to host  |
+|                         | minimum requirements (see first item). If using WEISSlab to  |
+|                         | host                                                         |
 |                         | the code cross platform continuous integration testing is    |
-|                         | set up by default. It is up to the user to                   |
-|                         | write further tests as the code is developed, by providing   |
-|                         | a ready made template for unit tests, this should be easy.   |
+|                         | set up by default. It is up to the researcher to             |
+|                         | write further tests as the code is developed.                |
 +-------------------------+--------------------------------------------------------------+
 | verifying the validity  | The validity of output is performed as part of the unit      |
 | of output               | testing (above).                                             |
 +-------------------------+--------------------------------------------------------------+
 | documenting the code    | The Python Template provides a template for code             |
-|                         | documentation showing how to write documentation for         |
-|                         | functions using spinx? It is up to the user to write         |
-|                         | further documentation as the code is developed.              |
+|                         | documentation showing how to write in line documentation.    |
+|                         | Generation of documentation is then handled automatically    |
+|                         | by WEISSlab.                                                 |
 +-------------------------+--------------------------------------------------------------+
 | tracking and repairing  | Issue tracking is handled by default by the chosen git       |
 | bugs                    | repository host.                                             |
 +-------------------------+--------------------------------------------------------------+
 
-Whilst every effort has been made to automate tasks where possible, it is up to the researcher consider software requirements, write documentation, and sensible unit tests. Templates for each of these tasks are provided, so after creating your project, see below please take a little time before you start coding to think about what you want your software to achieve, and write it down in the file doc/requirements.rst.
+Whilst every effort has been made to automate tasks where possible, it is up to the researcher consider software requirements, write documentation, and unit tests. Templates for each of these tasks are provided, so after creating your project, see below please take a little time before you start coding to think about what you want your software to achieve, and write it down in the file doc/requirements.rst.
 
 How to use
 ~~~~~~~~~~
@@ -122,10 +122,11 @@ Note: make sure you use "git add ." not "git add * " to pick up hidden files lik
   git remote add origin git@weisslab.cs.ucl.ac.uk:JoeBloggs/MyNewProject.git
   git push origin master
 
+9. If using WeissLab, and assuming your URLs are all correct, GitLab CI should automatically build and test your project
+
 8. You can quickly test it works by creating a virtual environment, then installing and running tox:
 
 ::
-
   cd MyNewProject
   virtualenv mynewprojct_virtualenv
   source mynewprojct_virtualenv/bin/activate
@@ -133,66 +134,19 @@ Note: make sure you use "git add ." not "git add * " to pick up hidden files lik
   tox
   cd ..
 
-
-9. If using WeissLab, and assuming your URLs are all correct, GitLab CI should automatically build and test your project
 
 10. Take a moment to enter some requirements, then start coding.
 
 
 List of parameters
 ~~~~~~~~~~~~~~~~~~
-
-::
-
 Notes:
   * Details of arguments are described below
-  * Choose a suitable project name (it can h.
+  * Choose a suitable project name.
   * The default GitLab group will be your personal namespace. This assumes your username is FirstnameSecondname (if not, you should change this). You should also change this if you want to store your project under a GitLab group (such as CMIC, WEISS, RVM or GIFT-Surg).
   * Modify the URL if you are not putting the prokect on WeissLab
   * For most questions you can chose the defaults.
   * Arguments can also be specified in configuration files — see the `Cookiecutter`_  documentation.
-=======
-3. Answer the questions to configure your template, or press enter to choose defaults. See the List Of Parameters section for more details.
-
-
-4. Create a local git repository for your new project and commit the files. Use `git add .` rather than `git add *` to include files which are hidden by default.
-
-::
-
-  cd MyNewProject
-  git init
-  git add .
-  git commit -m "Initial commit of My New Project"
-  
-Syncing to WeissLab
-~~~~~~~~~~~~~~~~~~
-
-1. Create a new project on WeissLab (or CmicLab, GitHub or your preferred git host), making sure the URL matches
-
-2. Add a remote in order to link your local repository to your WeissLab / CmicLab / GitLab repository and push the files across. NOTE: use the SSH form of the repository URL so you can use SSH key authentication (so you don't have to enter a username and password)
-
-::
-
-  git remote add origin git@weisslab.cs.ucl.ac.uk:WEISS/SoftwareRepositories/newprojectname.git
-  git push origin master
-
-3. If using WeissLab, and assuming your URLs are all correct, GitLab CI should automatically build and test your project
-
-Testing
-~~~~~~~
-
-You can quickly test if it has worked by installing and running tox. It is recommended to use a virtual environment:
-
-::
-
-  cd MyNewProject
-  virtualenv mynewprojct_virtualenv
-  source mynewprojct_virtualenv/bin/activate
-  pip install tox
-  tox
-  cd ..
-
-
 
 +--------------------------+--------------------------------------------------------------------------------+
 | ::                       |                                                                                |
@@ -233,11 +187,10 @@ You can quickly test if it has worked by installing and running tox. It is recom
 +--------------------------+--------------------------------------------------------------------------------+
 | ::                       |                                                                                |
 |                          |                                                                                |
-|    copyright_holder      | If you are a member of UCL you shoud accept the default text                   |
+|    copyright_holder      | If you are a member of UCL you should accept the default text                  |
 +--------------------------+--------------------------------------------------------------------------------+
 
-Author: Tom Doel
-=======
+Authors: Tom Doel, Stephen Thompson
 
 Python Template was developed at the `Wellcome EPSRC Centre for Interventional and Surgical Sciences`_ in `University College London (UCL)`_.
 
@@ -251,6 +204,11 @@ Please see the `contributing guidelines`_.
 Useful links
 ^^^^^^^^^^^^
 
+`pip`_
+`python`_
+`spinx`_
+`git`_
+`tox`_
 
 Licensing and copyright
 -----------------------
@@ -264,7 +222,12 @@ Acknowledgements
 
 Supported by `Wellcome`_ and `EPSRC`_.
 
-.. _`The WEISS Software Manifsesto - Check it out`: https://weisslab.cs.ucl.ac.uk/WEISS/_manifesto
+.. _`pip`: https://pypi.org/project/pip/
+.. _`python`: https://www.python.org/
+.. _`spinx`: http://www.sphinx-doc.org/
+.. _`git`: https://git-scm.com/
+.. _`tox`: https://tox.readthedocs.io/
+.. _`The WEISS Software Manifsesto`: https://weisslab.cs.ucl.ac.uk/WEISS/_manifesto
 .. _`Software Process`: https://doi.org/10.1109/ISBI.2004.1398621
 .. _`Wellcome EPSRC Centre for Interventional and Surgical Sciences`: http://www.ucl.ac.uk/weiss
 .. _`University College London (UCL)`: http://www.ucl.ac.uk/

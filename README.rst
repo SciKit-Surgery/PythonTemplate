@@ -36,7 +36,7 @@ creation of well defined, maintainable, well documented, and well tested code.
 
 +-------------------------+--------------------------------------------------------------+
 |  Task                   |  What the Python Template Does                               |
-+-------------------------+--------------------------------------------------------------+
++=========================+==============================================================+
 | Requirements generation | The template creates the file doc/requirements.rst           |
 |                         | and populates it with some minimum requirements for all      | 
 |                         | SNAPPY projects. Instructions and relevant links are provided|
@@ -45,7 +45,7 @@ creation of well defined, maintainable, well documented, and well tested code.
 |                         | during development.                                          | 
 +-------------------------+--------------------------------------------------------------+
 | Software design         | The Python Template provides a modular framework that        |
-|                         | integrates with the wider python ecosystem. Providing a   |
+|                         | integrates with the wider python ecosystem. Providing a      |
 |                         | highly modular environment enables the                       |
 |                         | researcher to focus on algorithm development, testing and    |
 |                         | publication, with minimal consideration of the wider software|
@@ -91,7 +91,7 @@ How to use
 
 ::
 
-   pip install cookiecutter
+  pip install cookiecutter
 
 
 2. Run `Cookiecutter`_ with the URL of this template
@@ -127,6 +127,7 @@ Note: make sure you use "git add ." not "git add * " to pick up hidden files lik
 8. You can quickly test it works by creating a virtual environment, then installing and running tox:
 
 ::
+
   cd MyNewProject
   virtualenv mynewprojct_virtualenv
   source mynewprojct_virtualenv/bin/activate
@@ -205,9 +206,13 @@ Useful links
 ^^^^^^^^^^^^
 
 `pip`_
+
 `python`_
+
 `spinx`_
+
 `git`_
+
 `tox`_
 
 Licensing and copyright

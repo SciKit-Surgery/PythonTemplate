@@ -1,8 +1,11 @@
 .. include:: ../README.rst
 
-Software requirements
-^^^^^^^^^^^^^^^^^^^^^
+Software requirements for {{ cookiecutter.project_name }}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 :ref:`requirements`
+
+A quick start guide with PyCharm
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 :ref:`pycharm`
 
 API reference

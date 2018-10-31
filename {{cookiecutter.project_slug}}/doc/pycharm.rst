@@ -4,7 +4,7 @@ Get started with PyCharm
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 PyCharm is a popular python editor. This is a quickstart guide setting up 
-PyCharm for developing {{ cookiecutter.pkg_name }}
+PyCharm for developing {{ cookiecutter.pkg_name }}.
 This assumes you have PyCharm installed and configured to support virtual environments.
 
 1. Start PyCharm

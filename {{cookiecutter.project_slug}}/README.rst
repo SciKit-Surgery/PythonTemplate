@@ -31,7 +31,7 @@
 
 Author: {{ cookiecutter.full_name }}
 
-{{ cookiecutter.project_name }} is part of the `SNAPPY` software project, developed at the `Wellcome EPSRC Centre for Interventional and Surgical Sciences`_, part of `University College London (UCL)`_.
+{{ cookiecutter.project_name }} is part of the `SNAPPY`_ software project, developed at the `Wellcome EPSRC Centre for Interventional and Surgical Sciences`_, part of `University College London (UCL)`_.
 
 
 Installing

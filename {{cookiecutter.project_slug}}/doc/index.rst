@@ -3,6 +3,7 @@
 Software requirements
 ^^^^^^^^^^^^^^^^^^^^^
 :ref:`requirements`
+:ref:`pycharm`
 
 API reference
 ^^^^^^^^^^^^^

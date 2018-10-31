@@ -64,8 +64,9 @@ creation of well defined, maintainable, well documented, and well tested code.
 | Compilation and linking | By using the python environment, the Python Template avoids  |
 |                         | the need for compilation and linking.                        |
 +-------------------------+--------------------------------------------------------------+
-| Testing the code at     | The Python Platform provides unit testing using `tox`_, and  |
-| run time                | comes ready with appropriate unit tests to meet the          |
+| Testing the code at     | The Python Platform uses `tox`_ to automate tests (pytest),  |
+| run time                | coverage analysis and linting (pylint)                       |
+|                         | comes ready with appropriate unit tests to meet the          |
 |                         | minimum requirements (see first item). If using `WEISSlab`_  |
 |                         | to host                                                      |
 |                         | the code, cross platform continuous integration testing is   |

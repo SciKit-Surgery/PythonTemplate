@@ -43,6 +43,9 @@ exclude_patterns = [
     '_build',
     'Thumbs.db',
     '.DS_Store',
+    '_verion.py',
+    'versioneer.py'
+
 ]
 
 # Add any paths that contain custom static files (such as style sheets) here,

@@ -1,8 +1,12 @@
 .. include:: ../README.rst
 
+Contents
+~~~~~~~~
+.. toctree::
+  :maxdepth: 1
 
-API reference
-^^^^^^^^^^^^^
+  requirements
+  pycharm
 
 * :ref:`modindex`
 * :ref:`genindex`

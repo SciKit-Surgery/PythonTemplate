@@ -57,7 +57,7 @@ creation of well defined, maintainable, well documented, and well tested code.
 | versions and updates    | Python Template supports several git repository providers,   |
 +-------------------------+--------------------------------------------------------------+
 | Configuring projects    | The Python language is cross platform. The Python            |
-| for specific platforms  | Template takes advantage of the `pip`_ Package manager to    |
+| for specific platforms  | Template takes advantage of the `pip`_ package manager to    |
 |                         | create modular projects that can be easily installed on      |
 |                         | multiple platforms.                                          |
 +-------------------------+--------------------------------------------------------------+

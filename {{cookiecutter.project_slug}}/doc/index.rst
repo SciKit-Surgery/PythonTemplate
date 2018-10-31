@@ -1,15 +1,12 @@
 .. include:: ../README.rst
 
-Software requirements for {{ cookiecutter.project_name }}
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-:ref:`requirements`
+Contents
+~~~~~~~~
+.. toctree::
+  :maxdepth: 1
 
-A quick start guide with PyCharm
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-:ref:`pycharm`
-
-API reference
-^^^^^^^^^^^^^
+  requirements
+  pycharm
 
 * :ref:`modindex`
 * :ref:`genindex`

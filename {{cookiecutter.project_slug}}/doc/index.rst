@@ -1,5 +1,8 @@
 .. include:: ../README.rst
 
+Software requirements
+^^^^^^^^^^^^^^^^^^^^^
+:ref:`requirements`
 
 API reference
 ^^^^^^^^^^^^^

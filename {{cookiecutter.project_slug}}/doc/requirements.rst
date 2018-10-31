@@ -1,5 +1,7 @@
 .. highlight:: shell
 
+.. _requirements:
+
 ===============================================
 Requirements for {{ cookiecutter.project_name }}
 ===============================================

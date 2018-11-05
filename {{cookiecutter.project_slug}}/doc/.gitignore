@@ -1,4 +1,4 @@
-/{{ cookiecutter.project_slug }}.rst
-/{{ cookiecutter.project_slug }}.*.rst
+/{{cookiecutter.pkg_name}}.rst
+/{{cookiecutter.pkg_name}}.*.rst
 /modules.rst
 /build

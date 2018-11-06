@@ -5,7 +5,7 @@
 from {{ cookiecutter.pkg_name }}.ui.{{ cookiecutter.pkg_name }}_demo import run_demo
 
 import six
-import tkinte
+import tkinter
 
 # Pytest style
 

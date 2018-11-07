@@ -33,18 +33,32 @@ Author: {{ cookiecutter.full_name }}
 
 {{ cookiecutter.project_name }} is part of the `SNAPPY`_ software project, developed at the `Wellcome EPSRC Centre for Interventional and Surgical Sciences`_, part of `University College London (UCL)`_.
 
+Design Considerations
+---------------------
+
+(edit as appropriate once project is created)
+
+1. Python only
+2. As few dependencies as possible. Try to stick to standard scipy packages like numpy and pandas.
+3. Discuss extra dependencies with the team and maybe the outcome will be to create a new separate package, where you can be more specific and more modular.
+4. Unit test well, using pytest, with good coverage.
+5. All errors as exceptions rather than return codes.
 
 Installing
-~~~~~~~~~~
+----------
 
 You can pip install directly from the repository as follows:
+
 ::
 
     pip install git+{{ cookiecutter.project_url }}
 
 
 Developing
-^^^^^^^^^^
+----------
+
+Cloning
+^^^^^^^
 
 You can clone the repository using the following command:
 
@@ -58,10 +72,10 @@ Running the tests
 
 You can run the unit tests by installing and running tox:
 
-    ::
+::
 
-      pip install tox
-      tox
+    pip install tox
+    tox
 
 Contributing
 ^^^^^^^^^^^^

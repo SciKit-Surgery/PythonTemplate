@@ -241,6 +241,3 @@ Supported by `Wellcome`_ and `EPSRC`_.
 .. _`Cookiecutter`: https://cookiecutter.readthedocs.io
 .. _`WEISSLab`: https://weisslab.cs.ucl.ac.uk/
 
-.. toctree::
-   :maxdepth: 4
-   :caption: Contents:

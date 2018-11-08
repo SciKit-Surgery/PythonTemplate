@@ -18,20 +18,26 @@ When reporting a bug, please include:
 * Detailed steps to reproduce the bug.
 
 
-
-
 Fixing bugs or implement features
 ---------------------------------
 
 The easiest way to contribute is to follow these guidelines:
 
 1. Look through the issues on {{ cookiecutter.project_url }}/issues and assign the relevant issue to yourself. If there is not an existing issue that covers your work, please create one: {{ cookiecutter.project_url }}/issues/new
-2. Fork the repository: {{ cookiecutter.project_url }}/forks/new
-3. Create a branch for your changes. The branch name should start with the issue number, followed by hyphen separated words describing the issue. For example: 1-update-contribution-guidelines
-4. Make your changes following the coding guidelines below.
-5. Commit and push your changes to your fork. The commit message should start with `Issue #<issue number>`, for example: "Issue #1: Fixed typo". Commit in small, related chunks. Review each commit and explain its purpose in the commit message.
-6. Submit a merge request: {{ cookiecutter.project_url }}/merge_requests/new
+2. Read the design considerations below.
+3. Fork the repository: {{ cookiecutter.project_url }}/forks/new
+4. Create a branch for your changes. The branch name should start with the issue number, followed by hyphen separated words describing the issue. For example: 1-update-contribution-guidelines
+5. Make your changes following the coding guidelines below.
+6. Commit and push your changes to your fork. The commit message should start with `Issue #<issue number>`, for example: "Issue #1: Fixed typo". Commit in small, related chunks. Review each commit and explain its purpose in the commit message.
+7. Submit a merge request: {{ cookiecutter.project_url }}/merge_requests/new
 
+Design Considerations
+---------------------
+
+1. As few dependencies as possible. Try to stick to standard scipy packages like numpy and pandas.
+2. Discuss extra dependencies with the team and maybe the outcome will be to create a new separate package, where you can be more specific and more modular.
+3. Unit test well, using pytest, with good coverage.
+4. All errors as exceptions rather than return codes.
 
 
 Coding guidelines

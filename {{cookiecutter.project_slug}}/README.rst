@@ -35,16 +35,20 @@ Author: {{ cookiecutter.full_name }}
 
 
 Installing
-~~~~~~~~~~
+----------
 
 You can pip install directly from the repository as follows:
+
 ::
 
     pip install git+{{ cookiecutter.project_url }}
 
 
 Developing
-^^^^^^^^^^
+----------
+
+Cloning
+^^^^^^^
 
 You can clone the repository using the following command:
 
@@ -58,10 +62,10 @@ Running the tests
 
 You can run the unit tests by installing and running tox:
 
-    ::
+::
 
-      pip install tox
-      tox
+    pip install tox
+    tox
 
 Contributing
 ^^^^^^^^^^^^

@@ -7,12 +7,8 @@ Contents
 
   requirements
   pycharm
+  Module Contents <modules>
 
 * :ref:`modindex`
 * :ref:`genindex`
 * :ref:`search`
-
-
-.. toctree::
-   :maxdepth: 4
-   :caption: Contents:

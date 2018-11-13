@@ -20,7 +20,7 @@ def test_using_pytest_cookienewwithgitinit_withTK():
         try:
             console=False
             assert run_demo(console, "Hello World") == True
-            except tkinter.TclError:
+        except tkinter.TclError:
             six.print_("Got TCL error, probably no DISPLAY set, that's OK.")
             assert True
         except:

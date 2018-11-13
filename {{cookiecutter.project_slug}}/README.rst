@@ -14,13 +14,6 @@
     :target: {{ cookiecutter.project_url }}/commits/master
     :alt: Test coverage
 
-.. image:: https://travis-ci.org/{{ cookiecutter.repository_path }}.svg?branch=master
-    :target: https://travis-ci.org/{{ cookiecutter.repository_path }}
-    :alt: Travis test status
-
-.. image:: {{ cookiecutter.project_url }}/badges/master/coverage.svg
-   :target: {{ cookiecutter.project_url }}/pipelines
-
 .. image:: https://readthedocs.org/projects/{{ cookiecutter.project_slug }}/badge/?version=latest
     :target: http://{{ cookiecutter.project_slug }}.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status

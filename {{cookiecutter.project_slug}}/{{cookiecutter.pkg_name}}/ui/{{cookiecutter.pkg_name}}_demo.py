@@ -17,6 +17,10 @@ def run_demo(console, text):
         label = Label(root, text=text)
         label.pack()
 
-        root.mainloop()
+        #uncomment root.mainloop() to enter tk main loop.
+        #Delete any unit tests covering this section first
+        #though as they will not complete.
+
+        #root.mainloop()
 
     return True

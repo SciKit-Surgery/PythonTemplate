@@ -201,15 +201,11 @@ Please see the `contributing guidelines`_.
 Useful links
 ^^^^^^^^^^^^
 
-`pip`_
-
-`python`_
-
-`spinx`_
-
-`git`_
-
-`tox`_
+* `pip`_
+* `python`_
+* `spinx`_
+* `git`_
+* `tox`_
 
 Licensing and copyright
 -----------------------

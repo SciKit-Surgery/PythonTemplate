@@ -22,7 +22,7 @@ Requirements
 |    0001    |  Functions are documented                              |  pylint, see                        |
 |            |                                                        |  tests/pylint.rc and tox.ini        |
 +------------+--------------------------------------------------------+-------------------------------------+
-|    0002    |  Package has a version number                          |                                     |
+|    0002    |  Package has a version number                          |  No test yet, handled by git.       |
 +------------+--------------------------------------------------------+-------------------------------------+
 
 

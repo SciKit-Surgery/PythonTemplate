@@ -1,7 +1,7 @@
 .. _pycharm:
 
-Get started with PyCharm
-^^^^^^^^^^^^^^^^^^^^^^^^
+Some Hints for Developing with PyCharm
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 PyCharm is a popular python editor. This is a quickstart guide setting up 
 PyCharm for developing {{ cookiecutter.pkg_name }}.

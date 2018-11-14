@@ -96,7 +96,3 @@ Supported by `Wellcome`_ and `EPSRC`_.
 .. _`contributing guidelines`: {{ cookiecutter.project_url }}/blob/master/CONTRIBUTING.rst
 .. _`license file`: {{ cookiecutter.project_url }}/blob/master/LICENSE
 
-
-.. toctree::
-   :maxdepth: 4
-   :caption: Contents:

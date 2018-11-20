@@ -113,7 +113,7 @@ deploy docs to production:
   dependencies:
     - build docs
 
-deploy pip to test:
+deploy pip to PyPI-test:
 
   stage: deploy
   when: manual
@@ -141,10 +141,10 @@ deploy pip to test:
     - python setup.py bdist_wheel
 
     # Upload to testpypi server
-    - twine upload --repository PyPI-test dist/* --username $PYPI_USER --password $PYPI_PASS
+    - twine upload --repository https://test.pypi.org/legacy/ dist/* --username $PYPI_USER --password $PYPI_PASS
 
 
-deploy pip to production:
+deploy pip to PyPI:
 
   stage: deploy
   when: manual
@@ -171,5 +171,5 @@ deploy pip to production:
     # bundle installer
     - python setup.py bdist_wheel
 
-    # Upload to testpypi server
+    # Upload to pypi
     - twine upload --repository pypi dist/* --username $PYPI_USER --password $PYPI_PASS

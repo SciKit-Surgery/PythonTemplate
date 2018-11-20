@@ -113,6 +113,36 @@ deploy docs to production:
   dependencies:
     - build docs
 
+deploy pip to test:
+
+  stage: deploy
+  when: manual
+  only:
+    - tags
+    
+  environment:
+    name: PyPI-test
+    url: https://test.pypi.org/pypi/{{ cookiecutter.project_slug }}
+    
+  tags:
+    - pip-production
+    
+  artifacts:
+    paths:
+    - dist/
+    
+  script:
+    # Install packages required to build/publish
+    # remove any previous distribution files
+    - pip install wheel twine setuptools
+    - rm -rf dist
+
+    # bundle installer
+    - python setup.py bdist_wheel
+
+    # Upload to testpypi server
+    - twine upload --repository PyPI-test dist/* --username $PYPI_USER --password $PYPI_PASS
+
 
 deploy pip to production:
 

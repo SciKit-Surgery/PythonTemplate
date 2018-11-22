@@ -3,3 +3,4 @@ omit =
         ./{{ cookiecutter.pkg_name }}/_version.py
         ./{{ cookiecutter.pkg_name }}/__init__.py
         ./{{ cookiecutter.pkg_name }}/__main__.py
+        ./{{ cookiecutter.pkg_name }}/ui/{{ cookiecutter.pkg_name }}_command_line.py

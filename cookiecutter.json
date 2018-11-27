@@ -7,7 +7,7 @@
   "repository_profile_name": "{{ cookiecutter.full_name|replace(' ', '') }}",
   "repository_path": ["{{ cookiecutter.repository_profile_name }}/{{ cookiecutter.project_slug }}",
                        "{% if cookiecutter.repository_server == 'https://weisslab.cs.ucl.ac.uk' %}WEISS/SoftwareRepositories{% elif cookiecutter.repository_server == 'https://cmiclab.cs.ucl.ac.uk' %}CMIC{% else %}niftk{% endif %}/{{ cookiecutter.project_slug }}",
-                      "{% if cookiecutter.repository_server == 'https://weisslab.cs.ucl.ac.uk' %}WEISS/SoftwareRepositories/SNAPPY{% endif %}/ {{ cookiecutter.project_slug }}"],
+                      "{% if cookiecutter.repository_server == 'https://weisslab.cs.ucl.ac.uk' %}WEISS/SoftwareRepositories/SNAPPY{% endif %}/{{ cookiecutter.project_slug }}"],
   "project_url": "{{ cookiecutter.repository_server }}/{{ cookiecutter.repository_path }}",
   "open_source_license": ["BSD-3 license", "Apache Software License 2.0", "MIT License"],
   "copyright_holder": "University College London"

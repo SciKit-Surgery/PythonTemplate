@@ -16,6 +16,7 @@ setup(
     cmdclass=versioneer.get_cmdclass(),
     description='{{ cookiecutter.project_name }}',
     long_description=long_description,
+    long_description_content_type='text/x-rst',
     url='{{ cookiecutter.project_url }}',
     author='{{ cookiecutter.full_name }}',
     author_email='YOUR-EMAIL@ucl.ac.uk',

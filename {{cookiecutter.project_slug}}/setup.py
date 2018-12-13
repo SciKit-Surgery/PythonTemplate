@@ -57,7 +57,6 @@ setup(
     install_requires=[
         'six>=1.10',
         'numpy>=1.11',
-        'pillow',
     ],
 
     entry_points={

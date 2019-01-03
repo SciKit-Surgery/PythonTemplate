@@ -5,6 +5,7 @@
    :height: 128px
    :width: 128px
    :target: {{ cookiecutter.project_url }}
+   :alt: Logo
 
 .. image:: {{ cookiecutter.project_url }}/badges/master/build.svg
    :target: {{ cookiecutter.project_url }}/pipelines

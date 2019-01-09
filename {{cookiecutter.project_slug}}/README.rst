@@ -20,12 +20,11 @@
 
 
 
-{{ cookiecutter.project_name }} is a python project that does interesting things. 
-
 Author: {{ cookiecutter.full_name }}
 
 {{ cookiecutter.project_name }} is part of the `SNAPPY`_ software project, developed at the `Wellcome EPSRC Centre for Interventional and Surgical Sciences`_, part of `University College London (UCL)`_.
 
+{{ cookiecutter.project_name }} supports Python 2.7 and Python 3.6.
 
 Installing
 ----------

@@ -1,6 +1,7 @@
 {
   "project_name": "My New Project",
   "project_slug": "{{ cookiecutter.project_name|replace(' ', '') }}",
+  "project_description": "{{cookiecutter.project_name}} is a Python package",
   "pkg_name": "{{ cookiecutter.project_slug|lower() }}",
   "repository_server": ["https://weisslab.cs.ucl.ac.uk", "https://cmiclab.cs.ucl.ac.uk", "https://github.com", "https://gitlab.com"],
   "full_name": "Your Name",

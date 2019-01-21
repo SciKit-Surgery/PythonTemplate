@@ -14,7 +14,7 @@ setup(
     name='{{ cookiecutter.project_name }}',
     version=versioneer.get_version(),
     cmdclass=versioneer.get_cmdclass(),
-    description='{{ cookiecutter.project_name }}',
+    description='{{ cookiecutter.project_description }}',
     long_description=long_description,
     long_description_content_type='text/x-rst',
     url='{{ cookiecutter.project_url }}',

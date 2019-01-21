@@ -3,15 +3,21 @@
 """Hello world demo module"""
 import six
 
-
+# Check if tkinter is available
+try:
+    from tkinter import Tk, Label
+except ImportError:
+    tk_available = False
+else:
+    tk_available = True
+    
 def run_demo(console, text):
-    """Show message"""
-
+    
+    """Show message"""    
     six.print_(text)
 
-    if not console:
-        from tkinter import Tk, Label
-
+    if not console and tk_available:
+        
         root = Tk()
 
         label = Label(root, text=text)

@@ -7,16 +7,16 @@ import six
 try:
     from tkinter import Tk, Label
 except ImportError:
-    tk_available = False
+    TK_AVAILABLE = False
 else:
-    tk_available = True
+    TK_AVAILABLE = True
     
 def run_demo(console, text):
     
     """Show message"""    
     six.print_(text)
 
-    if not console and tk_available:
+    if not console and TK_AVAILABLE:
         
         root = Tk()
 

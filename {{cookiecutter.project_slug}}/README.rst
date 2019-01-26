@@ -27,15 +27,14 @@ Author: {{ cookiecutter.full_name }}
 
 {{ cookiecutter.project_name }} supports Python 2.7 and Python 3.6.
 
-Installing
-----------
-
-You can pip install directly from the repository as follows:
+{{ cookiecutter.project_name }} is currently a demo project, which will add/multiply two numbers. Example usage:
 
 ::
 
-    pip install git+{{ cookiecutter.project_url }}
+    python {{cookiecutter.pkg_name}}.py 5 8
+    python {{cookiecutter.pkg_name}}.py 3 6 --multiply
 
+Please explore the project structure, and implement your own functionality.
 
 Developing
 ----------
@@ -50,15 +49,36 @@ You can clone the repository using the following command:
     git clone {{ cookiecutter.project_url }}
 
 
-Running the tests
-^^^^^^^^^^^^^^^^^
+Running tests
+^^^^^^^^^^^^^
+Pytest is used for running unit tests:
+::
 
-You can run the unit tests by installing and running tox:
+    pip install pytest
+    python -m pytest
+
+
+Linting
+^^^^^^^
+
+This code conforms to the PEP8 standard. Pylint can be used to analyse the code:
 
 ::
 
-    pip install tox
-    tox
+    pip install pylint
+    pylint --rcfile=tests/pylintrc {{cookiecutter.pkg_name}}
+
+
+Installing
+----------
+
+You can pip install directly from the repository as follows:
+
+::
+
+    pip install git+{{ cookiecutter.project_url }}
+
+
 
 Contributing
 ^^^^^^^^^^^^

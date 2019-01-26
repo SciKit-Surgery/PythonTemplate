@@ -1,32 +1,25 @@
 # coding=utf-8
 
 """Hello world demo module"""
-import six
+from {{ cookiecutter.pkg_name }}.algorithms import addition, multiplication
 
-# Check if tkinter is available
-try:
-    from tkinter import Tk, Label
-except ImportError:
-    TK_AVAILABLE = False
-else:
-    TK_AVAILABLE = True
-    
-def run_demo(console, text):
-    
-    """Show message"""    
-    six.print_(text)
+def run_demo(input_x, input_y, multiply, verbose):
+    """ Run the application """
 
-    if not console and TK_AVAILABLE:
-        
-        root = Tk()
+    if multiply:
+        result = multiplication.multiply_two_numbers(input_x, input_y)
 
-        label = Label(root, text=text)
-        label.pack()
+    else:
+        result = addition.add_two_numbers(input_x, input_y)
 
-        #uncomment root.mainloop() to enter tk main loop.
-        #Delete any unit tests covering this section first
-        #though as they will not complete.
 
-        #root.mainloop()
+    if verbose:
+        if multiply:
+            print("Calculating {} * {}".format(input_x, input_y))
 
-    return True
+        else:
+            print("Calculating {} + {}".format(input_x, input_y))
+
+    print("Result is {}".format(result))
+
+    return result

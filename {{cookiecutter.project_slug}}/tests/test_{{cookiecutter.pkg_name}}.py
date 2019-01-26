@@ -3,38 +3,25 @@
 """{{ cookiecutter.project_name }} tests"""
 
 from {{ cookiecutter.pkg_name }}.ui.{{ cookiecutter.pkg_name }}_demo import run_demo
-
+from {{ cookiecutter.pkg_name }}.algorithms import addition, multiplication
 import six
 
 # Pytest style
 
 def test_using_pytest_{{ cookiecutter.pkg_name }}():
-    console = True
-    assert run_demo(console, "Hello World") == True
+    x = 1
+    y = 2
+    verbose = False
+    multiply = False
 
-# Disable this test if root.mainloop is uncommented in
-# run_demo()
-def test_using_pytest_cookienewwithgitinit_withTK():
-    try:
-        import tkinter
-        try:
-            console=False
-            assert run_demo(console, "Hello World") == True
-        except tkinter.TclError:
-            six.print_("Got TCL error, probably no DISPLAY set, that's OK.")
-            assert True
-        except:
-            six.print_("Got another error (not TCL), that's not OK.")
-            assert False
+    expected_answer = 3
+    assert run_demo(x, y, multiply, verbose) == expected_answer
 
-    except ModuleNotFoundError:
-        six.print_("Got module not found on tkinter, please check your python installation")
-        #we're not trying to test whether we have tkinter so this is ok
-        assert True
-    except ImportError:
-        six.print_("Got import error on tkinter, please check your python installation")
-        #we're not trying to test whether we have tkinter so this is ok
-        assert True
-    except:
-        assert False
+def test_addition():
+
+    assert addition.add_two_numbers(1, 2) == 3
+
+def test_multiplication():
+
+    assert multiplication.multiply_two_numbers(2, 2) == 4
 

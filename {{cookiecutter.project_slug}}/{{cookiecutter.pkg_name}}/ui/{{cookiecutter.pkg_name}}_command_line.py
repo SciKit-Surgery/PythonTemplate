@@ -13,24 +13,33 @@ def main(args=None):
 
     parser = argparse.ArgumentParser(description='{{ cookiecutter.project_name }}')
 
-    parser.add_argument("-t", "--text",
-                        required=False,
-                        default="This is {{ cookiecutter.project_name }}",
-                        type=str,
-                        help="Text to display")
+    ## ADD POSITIONAL ARGUMENTS
+    parser.add_argument("x",
+                        type=int,
+                        help="1st number")
 
-    parser.add_argument("--console", required=False,
-                        action='store_true',
-                        help="If set, {{ cookiecutter.project_name }} "
-                             "will not bring up a graphical user interface")
+    parser.add_argument("y",
+                        type=int,
+                        help="2nd number")
+
+    # ADD OPTINAL ARGUMENTS
+    parser.add_argument("-m", "--multiply",
+                        action="store_true",
+                        help="Enable multiplication of inputs."
+                        )
+
+    parser.add_argument("-v", "--verbose",
+                        action="store_true",
+                        help="Enable verbose output",
+                        )
 
     version_string = __version__
     friendly_version_string = version_string if version_string else 'unknown'
     parser.add_argument(
-        "-v", "--version",
+        "--version",
         action='version',
         version='{{ cookiecutter.project_name }} version ' + friendly_version_string)
 
     args = parser.parse_args(args)
 
-    run_demo(args.console, args.text)
+    run_demo(args.x, args.y, args.multiply, args.verbose)

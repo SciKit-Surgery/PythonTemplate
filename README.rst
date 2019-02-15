@@ -125,18 +125,38 @@ Note: make sure you use "git add ." not "git add * " to pick up hidden files lik
   git remote add origin git@weisslab.cs.ucl.ac.uk:JoanneBloggs/MyNewProject.git
   git push origin master
 
-7. If using WeissLab, and assuming your URLs are all correct, GitLab CI should automatically build and test your project
+7. If using WeissLab, and assuming your URLs are all correct, GitLab CI should automatically build and test your project.
 
-8. You can quickly test it works by creating a virtual environment, then installing and running tox:
+8. (**Optional**) Create a virtual environment.
+
+   For an introduction to virtual environments, see https://realpython.com/python-virtual-environments-a-primer/.
+
+   If you do use a virtual environment, ensure that your virtual_envs folder is not inside MyNewProject.
 
 ::
 
- cd MyNewProject
+  mkdir virtual_envs
+  cd virtual_envs
   virtualenv mynewprojct_virtualenv
   source mynewprojct_virtualenv/bin/activate
-  pip install tox
-  tox
-  cd ..
+
+9. You can verify your project has been set up correctly by installing and running tox.
+
+::
+
+ pip install tox
+ cd MyNewProject
+ tox
+ cd ..
+
+tox runs several different stages, including pytest for unit tests and pylint for check for PEP8 linting. These can also be run independently:
+
+::
+
+ pip install pytest pylint
+ python -m pytest
+ pylint --rcfile=tests/pylintrc mynewproject
+
 
 
 9. Take a moment to write some software requirements, and populate the README file with a basic description of what you want to do, then start coding.

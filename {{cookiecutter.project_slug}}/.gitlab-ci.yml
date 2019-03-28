@@ -84,6 +84,7 @@ test Windows:
 # if the build stage is skipped, skip these also
 .deploy-docs-skip-template: &deploy-docs-skip-template
   stage: deploy
+  when: manual
   except:
     variables:
       - $CI_COMMIT_MESSAGE =~ /\[skip[ _-]build?\]/i

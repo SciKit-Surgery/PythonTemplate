@@ -137,8 +137,8 @@ Note: make sure you use "git add ." not "git add * " to pick up hidden files lik
 
   mkdir virtual_envs
   cd virtual_envs
-  virtualenv mynewprojct_virtualenv
-  source mynewprojct_virtualenv/bin/activate
+  virtualenv -p python3 mynewproject_virtualenv
+  source mynewproject_virtualenv/bin/activate
 
 9. You can verify your project has been set up correctly by installing and running tox.
 

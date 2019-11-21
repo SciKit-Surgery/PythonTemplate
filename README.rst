@@ -176,7 +176,7 @@ List of parameters for cookiecutter
 +--------------------------+--------------------------------------------------------------------------------+
 | ::                       |                                                                                |
 |                          | The main python package name for your project. By default this is the          |
-|   pkg_name               | project_slug converted into lower case                                         |
+|   pkg_name               | project_slug converted into lower case. pkg_name should not contain dashes (-) |
 +--------------------------+--------------------------------------------------------------------------------+
 | ::                       |                                                                                |
 |                          | The URL of the git server that will host your code. If you don't want to       |

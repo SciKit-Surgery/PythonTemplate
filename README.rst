@@ -137,8 +137,8 @@ Note: make sure you use "git add ." not "git add * " to pick up hidden files lik
 
   mkdir virtual_envs
   cd virtual_envs
-  virtualenv mynewprojct_virtualenv
-  source mynewprojct_virtualenv/bin/activate
+  virtualenv -p python3 mynewproject_virtualenv
+  source mynewproject_virtualenv/bin/activate
 
 9. You can verify your project has been set up correctly by installing and running tox.
 
@@ -176,7 +176,7 @@ List of parameters for cookiecutter
 +--------------------------+--------------------------------------------------------------------------------+
 | ::                       |                                                                                |
 |                          | The main python package name for your project. By default this is the          |
-|   pkg_name               | project_slug converted into lower case                                         |
+|   pkg_name               | project_slug converted into lower case. pkg_name should not contain dashes (-) |
 +--------------------------+--------------------------------------------------------------------------------+
 | ::                       |                                                                                |
 |                          | The URL of the git server that will host your code. If you don't want to       |

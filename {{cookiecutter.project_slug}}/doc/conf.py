@@ -63,8 +63,11 @@ def generate_apidocs(*args):
     global working_dir, module_path
     output_path = working_dir
     apidoc_command_path = 'sphinx-apidoc'
+    exe_sub_dir = 'bin'
+    if sys.platform == 'win32':
+        exe_sub_dir = 'Scripts'
     if hasattr(sys, 'real_prefix'):  # called from a virtualenv
-        apidoc_command_path = os.path.join(sys.prefix, 'bin', 'sphinx-apidoc')
+        apidoc_command_path = os.path.join(sys.prefix, exe_sub_dir, 'sphinx-apidoc')
         apidoc_command_path = os.path.abspath(apidoc_command_path)
     subprocess.check_call(
         [apidoc_command_path, '--force', '--separate'] +

@@ -1,6 +1,6 @@
-on: push
-
 {% raw %}
+
+on: push
 
 jobs:
   test:
@@ -26,6 +26,35 @@ jobs:
       - name: Run tests
         run: |
           python -m pytest -v -s ./tests/
+{% endraw %}
 
-          
+      - name: Linting
+        run: |
+        pylint --rcfile=tests/pylintrc {{cookiecutter.pkg_name}} tests
+
+{% raw %}
+  deploy:
+    runs-on: ubuntu-18.04
+    needs: test
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/checkout@master
+      - name: Set up Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.6
+
+      - name: Install dependencies
+        run: python -m pip install wheel twine setuptools
+
+      - name: Build wheel
+        run: |
+          python setup.py bdist_wheel
+      - name: Publish package if tagged release
+        if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
+        uses: pypa/gh-action-pypi-publish@master
+        # You need to generate a PYPI API token and add it to your GitHub secrets
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}
 {% endraw %}

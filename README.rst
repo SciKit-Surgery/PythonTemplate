@@ -192,7 +192,7 @@ List of parameters for cookiecutter
 |    copyright_holder      | If you are a member of UCL you should accept the default text                  |
 +--------------------------+--------------------------------------------------------------------------------+
 
-Authors: Tom Doel, Stephen Thompson, Matt Clarkson, Thomas Dowrick
+Authors: Tom Doel, Stephen Thompson, Matt Clarkson, Thomas Dowrick, Mian Ahmad
 
 Python Template was developed at the `Wellcome EPSRC Centre for Interventional and Surgical Sciences`_ in `University College London (UCL)`_.
 

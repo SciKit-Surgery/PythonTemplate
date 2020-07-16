@@ -27,10 +27,9 @@ jobs:
         run: |
           python -m pytest -v -s ./tests/
 {% endraw %}
-
       - name: Linting
         run: |
-        pylint --rcfile=tests/pylintrc {{cookiecutter.pkg_name}} tests
+          pylint --rcfile=tests/pylintrc {{cookiecutter.pkg_name}} tests
 
 {% raw %}
   deploy:

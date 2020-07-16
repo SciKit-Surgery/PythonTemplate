@@ -12,26 +12,17 @@ Python Template
    :alt: GitHub Actions CI statuss
 
 
-Python Template is a Cookiecutter template for creating a python project. When used with `Cookiecutter`_. Python Template will create a fully working python "Hello world" project with unit tests, Python 2 and 3 compatibility, GitLab CI, lint and sphinx documentation.
-
-Python template can be used to create projects for CmicLab, WEISSLab, GitHub
+Python Template is a Cookiecutter template for creating a python project. When used with `Cookiecutter`_.
+Python Template will create a fully working python "Hello world" project with unit tests, GitHub Actions/GitLab CI, linting, PyPi distribution and sphinx documentation.
 
 Purpose
 ~~~~~~~
-Python Template is part of `scikit-surgery`_, a collection of software
-developed by the  `Wellcome EPSRC Centre for Interventional and Surgical Sciences`_.
-`scikit-surgery`_ aims to support faster translation of advanced surgical
-research from the bench to the bed side. `scikit-surgery`_ does this by supporting and
-encouraging the development of small but well engineered software components that
-can;
+Python Template was developed by the  `Wellcome EPSRC Centre for Interventional and Surgical Sciences`_,
+ to assist researchers in the development of small but well engineered stofware components. It has been
+ widely used in the development of `scikit-surgery`_, but can be used as a starting point for any
+ Python project.
 
-- be used for rapid prototyping during early stage research,
-- be built into high quality clinical applications that can be production ready in less than 2 years,
-- be widely disseminated to support researchers beyond WEISS.
-
-See `The WEISS Software Manifesto`_ and the `scikit-surgery`_ wiki or further information.
-
-SNAPPY supports and encourages well engineered software by helping researchers with
+The template supports and encourages well engineered software by helping researchers with
 standard software development tasks (`Software Process`_). The table below
 lists standard development tasks and how the Python Template helps to deliver them.
 Paying heed to the following tasks at the earliest stage of development should support the
@@ -68,8 +59,8 @@ creation of well defined, maintainable, well documented, and well tested code.
 | Testing the code at     | The Python Platform uses `tox`_ to automate tests (pytest),  |
 | run time                | coverage analysis and linting (pylint)                       |
 |                         | comes ready with appropriate unit tests to meet the          |
-|                         | minimum requirements (see first item). If using `WEISSlab`_  |
-|                         | to host                                                      |
+|                         | minimum requirements (see first item). If using GitHub or    |
+|                         | `WEISSlab`_ to host                                          |
 |                         | the code, cross platform continuous integration testing is   |
 |                         | set up by default. It is up to the researcher to             |
 |                         | write further tests as the code is developed.                |
@@ -79,8 +70,7 @@ creation of well defined, maintainable, well documented, and well tested code.
 +-------------------------+--------------------------------------------------------------+
 | Documenting the code    | The Python Template provides a template for code             |
 |                         | documentation showing how to write in line documentation.    |
-|                         | Generation of documentation is then handled automatically    |
-|                         | by `WEISSlab`_.                                              |
+|                         | Documentation can be automatically built using `ReadTheDocs_`|
 +-------------------------+--------------------------------------------------------------+
 | Tracking and repairing  | Issue tracking is handled by default by the chosen git       |
 | bugs                    | repository host.                                             |
@@ -117,16 +107,16 @@ How to use
 
 Note: make sure you use "git add ." not "git add * " to pick up hidden files like `.gitlab-ci.yml`.
 
-5. Create a new project on WeissLab (or CmicLab, GitHub or your preferred git host), making sure the URL matches what you set in step 3.
+5. Create a new project on GitHub (or Weisslab/CmicLab/Gitlab), making sure the URL matches what you set in step 3.
 
-6. Add a remote in order to link your local repository to your WeissLab / CmicLab / GitLab repository and push the files across. NOTE: use the SSH form of the repository URL so you can use SSH key authentication (so you don't have to enter a username and password)
+6. Add a remote in order to link your local repository to your GitHub repository and push the files across. NOTE: use the SSH form of the repository URL so you can use SSH key authentication (so you don't have to enter a username and password)
 
 ::
 
-  git remote add origin git@weisslab.cs.ucl.ac.uk:JoanneBloggs/MyNewProject.git
+  git remote add origin git@github.com:JoanneBloggs/MyNewProject.git
   git push origin master
 
-7. If using WeissLab, and assuming your URLs are all correct, GitLab CI should automatically build and test your project.
+7. If using GitHub or WeissLAb, and assuming your URLs are all correct, GitHub Actions/GitLab CI should automatically run tests for your project.
 
 8. (**Optional**) Create a virtual environment.
 
@@ -188,7 +178,7 @@ List of parameters for cookiecutter
 |    full_name             | Your full name, for authorship information, and to suggest your profile name   |
 +--------------------------+--------------------------------------------------------------------------------+
 | ::                       |                                                                                |
-|                          | Your personal profile name on WeissLab/Cmiclab/Gitlab/GitHub. Or you can       |
+|                          | Your personal profile name on GitHub/WeissLab/Cmiclab/Gitlab. Or you can       |
 |   repository_profile_name| enter a group name that will be used to construct the repository URL           |
 +--------------------------+--------------------------------------------------------------------------------+
 | ::                       |                                                                                |
@@ -208,7 +198,7 @@ List of parameters for cookiecutter
 |    copyright_holder      | If you are a member of UCL you should accept the default text                  |
 +--------------------------+--------------------------------------------------------------------------------+
 
-Authors: Tom Doel, Stephen Thompson
+Authors: Tom Doel, Stephen Thompson, Matt Clarkson, Thomas Dowrick
 
 Python Template was developed at the `Wellcome EPSRC Centre for Interventional and Surgical Sciences`_ in `University College London (UCL)`_.
 
@@ -257,4 +247,4 @@ Supported by `Wellcome`_ and `EPSRC`_.
 .. _`license file`: https://github.com/UCL/PythonTemplate/blob/master/LICENSE
 .. _`Cookiecutter`: https://cookiecutter.readthedocs.io
 .. _`WEISSLab`: https://weisslab.cs.ucl.ac.uk/
-
+.. _`ReadTheDocs`: https://readthedocs.org/

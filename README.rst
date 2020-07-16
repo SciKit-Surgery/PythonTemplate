@@ -27,10 +27,10 @@ creation of well defined, maintainable, well documented, and well tested code.
 +=========================+==============================================================+
 | Requirements generation | The template creates the file doc/requirements.rst           |
 |                         | and populates it with some minimum requirements for all      |
-|                         | SNAPPY projects. Instructions and relevant links are provided|
-|                         | to encourage the researcher to add more requirements to the  |
-|                         | file to describe what the project does, both before and      |
-|                         | during development.                                          |
+|                         | SciKit-Surgery projects. Instructions and relevant links are |
+|                         | provided to encourage the researcher to add more             |
+|                         | requirements to the file to describe what the project does,  |
+|                         | both before and during development.                          |
 +-------------------------+--------------------------------------------------------------+
 | Software design         | The Python Template provides a modular framework that        |
 |                         | integrates with the wider python ecosystem. Providing a      |
@@ -64,7 +64,7 @@ creation of well defined, maintainable, well documented, and well tested code.
 +-------------------------+--------------------------------------------------------------+
 | Documenting the code    | The Python Template provides a template for code             |
 |                         | documentation showing how to write in line documentation.    |
-|                         | Documentation can be automatically built using `ReadTheDocs_`|
+|                         | Documentation can be automatically built using `ReadTheDocs`_|
 +-------------------------+--------------------------------------------------------------+
 | Tracking and repairing  | Issue tracking is handled by default by the chosen git       |
 | bugs                    | repository host.                                             |
@@ -229,7 +229,7 @@ Supported by `Wellcome`_ and `EPSRC`_.
 .. _`spinx`: http://www.sphinx-doc.org/
 .. _`git`: https://git-scm.com/
 .. _`tox`: https://tox.readthedocs.io/
-.. _`scikit-surgery`: https://weisslab.cs.ucl.ac.uk/WEISS/PlatformManagement/SNAPPY/wikis/home
+.. _`scikit-surgery`: https://github.com/UCL/scikit-surgery/wiki
 .. _`Unix Philosophy': https://en.wikipedia.org/wiki/Unix_philosophy
 .. _`The WEISS Software Manifesto`: https://weisslab.cs.ucl.ac.uk/WEISS/_manifesto
 .. _`Software Process`: https://doi.org/10.1109/ISBI.2004.1398621

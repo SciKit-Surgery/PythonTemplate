@@ -24,5 +24,3 @@ def test_addition():
 def test_multiplication():
     """ Test multiplication """
     assert multiplication.multiply_two_numbers(2, 2) == 4
-
-

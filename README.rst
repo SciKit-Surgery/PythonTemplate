@@ -18,9 +18,9 @@ Python Template will create a fully working python "Hello world" project with un
 Purpose
 ~~~~~~~
 Python Template was developed by the  `Wellcome EPSRC Centre for Interventional and Surgical Sciences`_,
- to assist researchers in the development of small but well engineered stofware components. It has been
- widely used in the development of `scikit-surgery`_, but can be used as a starting point for any
- Python project.
+to assist researchers in the development of small but well engineered stofware components. It has been
+widely used in the development of `scikit-surgery`_, but can be used as a starting point for any
+Python project.
 
 The template supports and encourages well engineered software by helping researchers with
 standard software development tasks (`Software Process`_). The table below

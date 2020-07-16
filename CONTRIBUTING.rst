@@ -10,7 +10,7 @@ We welcome contributions to this Python Template.
 Reporting bugs and feature requests
 -----------------------------------
 
-Please create a new issue on https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareArchitecture/PythonTemplate/issues/new
+Please create a new issue on https://github.com/UCL/PythonTemplate/issues/new
 
 When reporting a bug, please include:
 * The version of PythonTemplate you are using
@@ -25,12 +25,12 @@ Fixing bugs or implement features
 
 The easiest way to contribute is to follow these guidelines:
 
-1. Look through the issues on https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareArchitecture/PythonTemplate/issues and assign the relevant issue to yourself. If there is not an existing issue that covers your work, please create one: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareArchitecture/PythonTemplate/issues/new
-2. Fork the repository: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareArchitecture/PythonTemplate/forks/new
+1. Look through the issues on https://github.com/UCL/PythonTemplate/issues and assign the relevant issue to yourself. If there is not an existing issue that covers your work, please create one: https://github.com/UCL/PythonTemplate/issues/new
+2. Fork the repository: https://github.com/UCL/PythonTemplate/forks/new
 3. Create a branch for your changes
 4. Make your changes following the coding guidelines below.
 5. Commit and push your changes to your fork.
-6. Submit a merge request: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareArchitecture/PythonTemplate/merge_requests/new
+6. Submit a merge request: https://github.com/UCL/PythonTemplate/merge_requests/new
 
 
 

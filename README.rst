@@ -1,14 +1,15 @@
 Python Template
 ===============================
 
-.. image:: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/PythonTemplate/raw/master/project-icon.png
+.. image:: https://github.com/UCL/PythonTemplate/raw/master/project-icon.png
    :height: 150px
    :width: 150px
-   :target: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/PythonTemplate
+   :target: https://github.com/UCL/PythonTemplate
 
 
-.. image:: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/PythonTemplate/badges/master/build.svg
-   :target: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/PythonTemplate/pipelines
+.. image:: https://github.com/UCL/PythonTemplate/workflows/.github/workflows/ci.yml/badge.svg
+   :target: https://github.com/UCL/PythonTemplate/actions
+   :alt: GitHub Actions CI statuss
 
 
 Python Template is a Cookiecutter template for creating a python project. When used with `Cookiecutter`_. Python Template will create a fully working python "Hello world" project with unit tests, Python 2 and 3 compatibility, GitLab CI, lint and sphinx documentation.
@@ -17,10 +18,10 @@ Python template can be used to create projects for CmicLab, WEISSLab, GitHub
 
 Purpose
 ~~~~~~~
-Python Template is part of `SNAPPY`_, a collection of software
+Python Template is part of `scikit-surgery`_, a collection of software
 developed by the  `Wellcome EPSRC Centre for Interventional and Surgical Sciences`_.
-`SNAPPY`_ aims to support faster translation of advanced surgical
-research from the bench to the bed side. `SNAPPY`_ does this by supporting and
+`scikit-surgery`_ aims to support faster translation of advanced surgical
+research from the bench to the bed side. `scikit-surgery`_ does this by supporting and
 encouraging the development of small but well engineered software components that
 can;
 
@@ -28,7 +29,7 @@ can;
 - be built into high quality clinical applications that can be production ready in less than 2 years,
 - be widely disseminated to support researchers beyond WEISS.
 
-See `The WEISS Software Manifesto`_ and the `SNAPPY`_ wiki or further information.
+See `The WEISS Software Manifesto`_ and the `scikit-surgery`_ wiki or further information.
 
 SNAPPY supports and encourages well engineered software by helping researchers with
 standard software development tasks (`Software Process`_). The table below
@@ -101,7 +102,7 @@ How to use
 
 ::
 
-  cookiecutter https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/PythonTemplate.git
+  cookiecutter https://github.com/UCL/PythonTemplate.git
 
 3. Answer the questions to configure your template (press enter to choose defaults), for further details on available answers see "List of Parameters" below.
 
@@ -244,7 +245,7 @@ Supported by `Wellcome`_ and `EPSRC`_.
 .. _`spinx`: http://www.sphinx-doc.org/
 .. _`git`: https://git-scm.com/
 .. _`tox`: https://tox.readthedocs.io/
-.. _`SNAPPY`: https://weisslab.cs.ucl.ac.uk/WEISS/PlatformManagement/SNAPPY/wikis/home
+.. _`scikit-surgery`: https://weisslab.cs.ucl.ac.uk/WEISS/PlatformManagement/SNAPPY/wikis/home
 .. _`Unix Philosophy': https://en.wikipedia.org/wiki/Unix_philosophy
 .. _`The WEISS Software Manifesto`: https://weisslab.cs.ucl.ac.uk/WEISS/_manifesto
 .. _`Software Process`: https://doi.org/10.1109/ISBI.2004.1398621
@@ -252,8 +253,8 @@ Supported by `Wellcome`_ and `EPSRC`_.
 .. _`University College London (UCL)`: http://www.ucl.ac.uk/
 .. _`Wellcome`: https://wellcome.ac.uk/
 .. _`EPSRC`: https://www.epsrc.ac.uk/
-.. _`contributing guidelines`: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/PythonTemplate/blob/master/CONTRIBUTING.rst
-.. _`license file`: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/PythonTemplate/blob/master/LICENSE
+.. _`contributing guidelines`: https://github.com/UCL/PythonTemplate/blob/master/CONTRIBUTING.rst
+.. _`license file`: https://github.com/UCL/PythonTemplate/blob/master/LICENSE
 .. _`Cookiecutter`: https://cookiecutter.readthedocs.io
 .. _`WEISSLab`: https://weisslab.cs.ucl.ac.uk/
 

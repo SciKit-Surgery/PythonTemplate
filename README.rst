@@ -1,12 +1,6 @@
 Python Template
 ===============================
 
-.. image:: https://github.com/UCL/PythonTemplate/raw/master/project-icon.png
-   :height: 150px
-   :width: 150px
-   :target: https://github.com/UCL/PythonTemplate
-
-
 .. image:: https://github.com/UCL/PythonTemplate/workflows/.github/workflows/ci.yml/badge.svg
    :target: https://github.com/UCL/PythonTemplate/actions
    :alt: GitHub Actions CI statuss

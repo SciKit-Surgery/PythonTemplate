@@ -4,9 +4,9 @@ setup(
     name='Python Template',
     version='0.1',
     description='Python Template',
-    url='https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareArchitecture/PythonTemplate',
+    url='https://https://github.com/SciKit-Surgery/PythonTemplate',
     author='Tom Doel',
-    author_email='t.doel@ucl.ac.uk',
+    author_email='s.thompson@ucl.ac.uk',
     license='BSD-3 license',
 
     packages=find_packages(

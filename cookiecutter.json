@@ -7,6 +7,7 @@
   "full_name": "Your Name",
   "repository_profile_name": "e.g. Your GitHub Username",
   "repository_path": ["{{ cookiecutter.repository_profile_name }}/{{ cookiecutter.project_slug }}",
+    "{% if cookiecutter.repository_server == 'https://github.com' %}SciKit-Surgery{%endif %}/{{ cookiecutter.project_slug }}",
     "{% if cookiecutter.repository_server == 'https://github.com' %}UCL{%endif %}/{{ cookiecutter.project_slug }}",
     "{% if cookiecutter.repository_server == 'https://weisslab.cs.ucl.ac.uk' %}WEISS/SoftwareRepositories{% elif cookiecutter.repository_server == 'https://cmiclab.cs.ucl.ac.uk' %}CMIC{% else %}niftk{% endif %}/{{ cookiecutter.project_slug }}",
     "{% if cookiecutter.repository_server == 'https://weisslab.cs.ucl.ac.uk' %}WEISS/SoftwareRepositories/SNAPPY{% endif %}/{{ cookiecutter.project_slug }}"

@@ -1,6 +1,8 @@
 cff-version: 1.2.0
-message: "If you use any SciKit-Surgery packages in your research, please cite it as below."
+message: "If you use the SciKit-Surgery Python Template please cite it as below."
 authors:
+- family-names: "Doel"
+  given-names: "Tom"
 - family-names: "Thompson"
   given-names: "Stephen"
   orcid: "https://orcid.org/0000-0001-7286-1326"
@@ -13,8 +15,9 @@ authors:
 - family-names: "Clarkson"
   given-names: "Matthew"
   orcid: "https://orcid.org/0000-0002-5565-1252"
-title: "SciKit-Surgery"
-url: "https://github.com/SciKit-Surgery/scikit-surgery"
+title: "Python Template"
+doi: 10.5281/zenodo.5879063 
+url: "https://github.com/SciKit-Surgery/PythonTemplate"
 preferred-citation:
   type: article
   authors:

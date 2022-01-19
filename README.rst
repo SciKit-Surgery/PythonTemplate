@@ -1,8 +1,8 @@
 Python Template
 ===============================
 
-.. image:: https://github.com/UCL/PythonTemplate/workflows/.github/workflows/ci.yml/badge.svg
-   :target: https://github.com/UCL/PythonTemplate/actions
+.. image:: https://github.com/SciKit-Surgery/PythonTemplate/workflows/.github/workflows/ci.yml/badge.svg
+   :target: https://github.com/SciKit-Surgery/PythonTemplate/actions
    :alt: GitHub Actions CI statuss
 
 
@@ -86,7 +86,7 @@ How to use
 
 ::
 
-  cookiecutter https://github.com/UCL/PythonTemplate.git
+  cookiecutter https://github.com/SciKit-Surgery/PythonTemplate.git
 
 3. Answer the questions to configure your template (press enter to choose defaults), for further details on available answers see "List of Parameters" below.
 
@@ -229,7 +229,7 @@ Supported by `Wellcome`_ and `EPSRC`_.
 .. _`spinx`: http://www.sphinx-doc.org/
 .. _`git`: https://git-scm.com/
 .. _`tox`: https://tox.readthedocs.io/
-.. _`scikit-surgery`: https://github.com/UCL/scikit-surgery/wiki
+.. _`scikit-surgery`: https://github.com/SciKit-Surgery/scikit-surgery
 .. _`Unix Philosophy': https://en.wikipedia.org/wiki/Unix_philosophy
 .. _`The WEISS Software Manifesto`: https://weisslab.cs.ucl.ac.uk/WEISS/_manifesto
 .. _`Software Process`: https://doi.org/10.1109/ISBI.2004.1398621
@@ -237,8 +237,8 @@ Supported by `Wellcome`_ and `EPSRC`_.
 .. _`University College London (UCL)`: http://www.ucl.ac.uk/
 .. _`Wellcome`: https://wellcome.ac.uk/
 .. _`EPSRC`: https://www.epsrc.ac.uk/
-.. _`contributing guidelines`: https://github.com/UCL/PythonTemplate/blob/master/CONTRIBUTING.rst
-.. _`license file`: https://github.com/UCL/PythonTemplate/blob/master/LICENSE
+.. _`contributing guidelines`: https://github.com/SciKit-Surgery/PythonTemplate/blob/master/CONTRIBUTING.rst
+.. _`license file`: https://github.com/SciKit-Surgery/PythonTemplate/blob/master/LICENSE
 .. _`Cookiecutter`: https://cookiecutter.readthedocs.io
 .. _`WEISSLab`: https://weisslab.cs.ucl.ac.uk/
 .. _`ReadTheDocs`: https://readthedocs.org/

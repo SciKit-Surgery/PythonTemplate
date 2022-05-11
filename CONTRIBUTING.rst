@@ -18,20 +18,17 @@ When reporting a bug, please include:
 * Detailed steps to reproduce the bug.
 
 
-
-
 Fixing bugs or implement features
 ---------------------------------
 
 The easiest way to contribute is to follow these guidelines:
 
 1. Look through the issues on https://github.com/SciKit-Surgery/PythonTemplate/issues and assign the relevant issue to yourself. If there is not an existing issue that covers your work, please create one: https://github.com/SciKit-Surgery/PythonTemplate/issues/new
-2. Fork the repository: https://github.com/SciKit-Surgery/PythonTemplate/forks/new
+2. Fork the repository: https://github.com/SciKit-Surgery/PythonTemplate/fork
 3. Create a branch for your changes
 4. Make your changes following the coding guidelines below.
 5. Commit and push your changes to your fork.
-6. Submit a merge request: https://github.com/SciKit-Surgery/PythonTemplate/merge_requests/new
-
+6. Submit a pull request: https://github.com/SciKit-Surgery/PythonTemplate/pull
 
 
 Coding guidelines

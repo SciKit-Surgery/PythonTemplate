@@ -15,11 +15,11 @@ def run_demo(input_x, input_y, multiply, verbose):
 
     if verbose:
         if multiply:
-            print("Calculating {} * {}".format(input_x, input_y))
+            print(f"Calculating {input_x} * {input_y}")
 
         else:
-            print("Calculating {} + {}".format(input_x, input_y))
+            print(f"Calculating {input_x} + {input_y}")
 
-    print("Result is {}".format(result))
+    print(f"Result is {result}")
 
     return result

@@ -21,15 +21,15 @@ When reporting a bug, please include:
 Fixing bugs or implement features
 ---------------------------------
 
-The easiest way to contribute is to follow these guidelines:
+The easiest way to contribute is to follow these guidelines [*]_:
 
 1. Look through the issues on {{ cookiecutter.project_url }}/issues and assign the relevant issue to yourself. If there is not an existing issue that covers your work, please create one: {{ cookiecutter.project_url }}/issues/new
 2. Read the design considerations below.
-3. Fork the repository: {{ cookiecutter.project_url }}/forks/new
+3. Fork the repository: {{ cookiecutter.project_url }}/fork
 4. Create a branch for your changes. The branch name should start with the issue number, followed by hyphen separated words describing the issue. For example: 1-update-contribution-guidelines
 5. Make your changes following the coding guidelines below.
 6. Commit and push your changes to your fork. The commit message should start with `Issue #<issue number>`, for example: "Issue #1: Fixed typo". Commit in small, related chunks. Review each commit and explain its purpose in the commit message.
-7. Submit a merge request: {{ cookiecutter.project_url }}/merge_requests/new
+7. Submit a pull request: {{ cookiecutter.project_url }}/pull
 
 Design Considerations
 ---------------------
@@ -53,3 +53,4 @@ Coding guidelines
 8. Make sure your code works for all required versions of Python
 9. Make sure your code works for all required operating systems
 
+.. [*] The hyperlinks assume you are using Github, they may be wrong for projects hosted on GitLab

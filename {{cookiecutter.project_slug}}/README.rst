@@ -23,9 +23,9 @@
 
 Author: {{ cookiecutter.full_name }}
 
-{{ cookiecutter.project_name }} is part of the `scikit-surgery`_ software project, developed at the `Wellcome EPSRC Centre for Interventional and Surgical Sciences`_, part of `University College London (UCL)`_.
+{{ cookiecutter.project_name }} is part of the `SciKit-Surgery`_ software project, developed at the `Wellcome EPSRC Centre for Interventional and Surgical Sciences`_, part of `University College London (UCL)`_.
 
-{{ cookiecutter.project_name }} supports Python 2.7 and Python 3.6.
+{{ cookiecutter.project_name }} is tested on Python 3.7 but should support other modern Python versions.
 
 {{ cookiecutter.project_name }} is currently a demo project, which will add/multiply two numbers. Example usage:
 
@@ -109,7 +109,7 @@ Supported by `Wellcome`_ and `EPSRC`_.
 .. _`Wellcome EPSRC Centre for Interventional and Surgical Sciences`: http://www.ucl.ac.uk/weiss
 .. _`source code repository`: {{ cookiecutter.project_url }}
 .. _`Documentation`: https://{{ cookiecutter.project_slug }}.readthedocs.io
-.. _`scikit-surgery`: https://github.com/SciKit-Surgery/scikit-surgery
+.. _`SciKit-Surgery`: https://github.com/SciKit-Surgery
 .. _`University College London (UCL)`: http://www.ucl.ac.uk/
 .. _`Wellcome`: https://wellcome.ac.uk/
 .. _`EPSRC`: https://www.epsrc.ac.uk/

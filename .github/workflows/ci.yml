@@ -6,13 +6,43 @@ jobs:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
         python-ver: [3.7, 3.8, 3.9]
+        experimental: [false]
+        include:
+          - python-ver: '3.10'
+            os: ubuntu-latest
+            experimental: true
+          - python-ver: '3.10'
+            os: macos-latest
+            experimental: true
+          - python-ver: '3.10'
+            os: windows-latest
+            experimental: true
+          - python-ver: 3.11
+            os: ubuntu-latest
+            experimental: true
+          - python-ver: 3.11
+            os: macos-latest
+            experimental: true
+          - python-ver: 3.11
+            os: windows-latest
+            experimental: true
+          - python-ver: 3.12-dev
+            os: ubuntu-latest
+            experimental: true
+          - python-ver: 3.12-dev
+            os: macos-latest
+            experimental: true
+          - python-ver: 3.12-dev
+            os: windows-latest
+            experimental: true
 
     runs-on: ${{ matrix.os }}
+    continue-on-error: ${{ matrix.experimental }}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Set up Python
-        uses: actions/setup-python@v1
+        uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-ver }}
 

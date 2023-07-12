@@ -25,7 +25,7 @@ Author: {{ cookiecutter.full_name }}
 
 {{ cookiecutter.project_name }} is part of the `SciKit-Surgery`_ software project, developed at the `Wellcome EPSRC Centre for Interventional and Surgical Sciences`_, part of `University College London (UCL)`_.
 
-{{ cookiecutter.project_name }} is tested on Python 3.7 but should support other modern Python versions.
+{{ cookiecutter.project_name }} is tested on Python 3.8 but should support other modern Python versions.
 
 {{ cookiecutter.project_name }} is currently a demo project, which will add/multiply two numbers. Example usage:
 
@@ -49,12 +49,22 @@ You can clone the repository using the following command:
     git clone {{ cookiecutter.project_url }}
 
 
+Create virtual environment
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You can create a mamba virtual environment using
+
+::
+
+    mamba create -n {{ cookiecutter.project_name }}VE python=3.8 pip -c conda-forge
+    mamba activate {{ cookiecutter.project_name }}VE
+    pip install -r requirements-dev.txt
+
 Running tests
 ^^^^^^^^^^^^^
 Pytest is used for running unit tests:
 ::
 
-    pip install pytest
     python -m pytest
 
 
@@ -65,7 +75,6 @@ This code conforms to the PEP8 standard. Pylint can be used to analyse the code:
 
 ::
 
-    pip install pylint
     pylint --rcfile=tests/pylintrc {{cookiecutter.pkg_name}}
 
 
@@ -115,4 +124,3 @@ Supported by `Wellcome`_ and `EPSRC`_.
 .. _`EPSRC`: https://www.epsrc.ac.uk/
 .. _`contributing guidelines`: {{ cookiecutter.project_url }}/blob/master/CONTRIBUTING.rst
 .. _`license file`: {{ cookiecutter.project_url }}/blob/master/LICENSE
-

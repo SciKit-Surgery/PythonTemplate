@@ -75,11 +75,13 @@ Whilst every effort has been made to automate tasks where possible, it is up to 
 How to use
 ~~~~~~~~~~
 
-1. Install `Cookiecutter`_
+1. Install `Cookiecutter`_ using virtual environments in `mambaforce`_
 
 ::
 
-  pip install cookiecutter
+  mamba create -n ssptVE python=3.8 pip -c conda-forge
+  mamba activate ssptVE
+  pip install -r requirements-dev.txt
 
 
 2. Run `Cookiecutter`_ with the URL of this template
@@ -242,3 +244,4 @@ Supported by `Wellcome`_ and `EPSRC`_.
 .. _`Cookiecutter`: https://cookiecutter.readthedocs.io
 .. _`WEISSLab`: https://weisslab.cs.ucl.ac.uk/
 .. _`ReadTheDocs`: https://readthedocs.org/
+.. _`mambaforce`: https://github.com/conda-forge/miniforge#install

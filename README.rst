@@ -19,8 +19,8 @@ Python project.
 The template supports and encourages well engineered software by helping researchers with
 standard software development tasks (`Software Process`_).
 
-How the Python Template helps to deliver standard development tasks
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+How to deliver standard software development tasks
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The table below lists standard development tasks and how the Python Template helps to deliver them.
 Paying heed to the following tasks at the earliest stage of development should support the
 creation of well defined, maintainable, well documented, and well tested code.
@@ -90,7 +90,6 @@ Similarly, you can install your VE using `mambaforce`_ by replacing conda with m
   conda activate ssptVE
   pip install -r requirements-dev.txt
 
-
 2. Run `Cookiecutter`_ with the URL of this template
 
 ::
@@ -98,7 +97,8 @@ Similarly, you can install your VE using `mambaforce`_ by replacing conda with m
   cookiecutter https://github.com/SciKit-Surgery/PythonTemplate.git
 
 3. Answer the questions to configure your template (press enter to choose defaults), for further details on available
-answers see "List of Parameters" below.
+answers.
+See "List of Parameters" below.
 
 4. Create a local git repository for your new project and commit the files.
 

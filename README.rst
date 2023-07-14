@@ -3,11 +3,12 @@ Python Template
 
 .. image:: https://github.com/SciKit-Surgery/PythonTemplate/workflows/.github/workflows/ci.yml/badge.svg
    :target: https://github.com/SciKit-Surgery/PythonTemplate/actions
-   :alt: GitHub Actions CI statuss
+   :alt: GitHub Actions CI status
 
 
-Python Template is a Cookiecutter template for creating a python project. When used with `Cookiecutter`_.
-Python Template will create a fully working python "Hello world" project with unit tests, GitHub Actions/GitLab CI, linting, PyPi distribution and sphinx documentation.
+Python Template is a Cookiecutter template for creating a python project.
+When used with `Cookiecutter`_ Python Template will create a fully working python "Hello world" project with unit tests,
+GitHub Actions/GitLab CI, linting, PyPi distribution and sphinx documentation.
 
 Purpose
 ~~~~~~~
@@ -15,10 +16,12 @@ Python Template was developed by the  `Wellcome EPSRC Centre for Interventional 
 to assist researchers in the development of small but well engineered stofware components. It has been
 widely used in the development of `scikit-surgery`_, but can be used as a starting point for any
 Python project.
-
 The template supports and encourages well engineered software by helping researchers with
-standard software development tasks (`Software Process`_). The table below
-lists standard development tasks and how the Python Template helps to deliver them.
+standard software development tasks (`Software Process`_).
+
+How to deliver standard software development tasks
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The table below lists standard development tasks and how the Python Template helps to deliver them.
 Paying heed to the following tasks at the earliest stage of development should support the
 creation of well defined, maintainable, well documented, and well tested code.
 
@@ -70,17 +73,22 @@ creation of well defined, maintainable, well documented, and well tested code.
 | bugs                    | repository host.                                             |
 +-------------------------+--------------------------------------------------------------+
 
-Whilst every effort has been made to automate tasks where possible, it is up to the researcher consider software requirements, write documentation, and create unit tests. Templates for each of these tasks are provided, so after creating your project, please take a little time before you start coding to think about what you want your software to achieve, and write it down in the file doc/requirements.rst.
+Whilst every effort has been made to automate tasks where possible, it is up to the researcher consider software
+requirements, write documentation, and create unit tests.
+Templates for each of these tasks are provided, so after creating your project, please take a little time before you
+start coding to think about what you want your software to achieve, and write it down in the file doc/requirements.rst.
 
 How to use
 ~~~~~~~~~~
 
-1. Install `Cookiecutter`_
+1. Install `Cookiecutter`_ package and other requirements using virtual environments (VE) in `conda`_.
+Similarly, you can install your VE using `mambaforce`_ by replacing conda with mamba.
 
 ::
 
-  pip install cookiecutter
-
+  conda create -n ssptVE python=3.8 pip -c conda-forge
+  conda activate ssptVE
+  pip install -r requirements-dev.txt
 
 2. Run `Cookiecutter`_ with the URL of this template
 
@@ -88,7 +96,9 @@ How to use
 
   cookiecutter https://github.com/SciKit-Surgery/PythonTemplate.git
 
-3. Answer the questions to configure your template (press enter to choose defaults), for further details on available answers see "List of Parameters" below.
+3. Answer the questions to configure your template (press enter to choose defaults), for further details on available
+answers.
+See "List of Parameters" below.
 
 4. Create a local git repository for your new project and commit the files.
 
@@ -103,29 +113,19 @@ Note: make sure you use "git add ." not "git add * " to pick up hidden files lik
 
 5. Create a new project on GitHub (or Weisslab/CmicLab/Gitlab), making sure the URL matches what you set in step 3.
 
-6. Add a remote in order to link your local repository to your GitHub repository and push the files across. NOTE: use the SSH form of the repository URL so you can use SSH key authentication (so you don't have to enter a username and password)
+6. Add a remote in order to link your local repository to your GitHub repository and push the files across.
+NOTE: use the SSH form of the repository URL so you can use SSH key authentication
+(so you don't have to enter a username and password).
 
 ::
 
   git remote add origin git@github.com:JoanneBloggs/MyNewProject.git
   git push origin master
 
-7. If using GitHub or WeissLAb, and assuming your URLs are all correct, GitHub Actions/GitLab CI should automatically run tests for your project.
+7. If using GitHub or WeissLAb, and assuming your URLs are all correct, GitHub Actions/GitLab CI should automatically
+run tests for your project.
 
-8. (**Optional**) Create a virtual environment.
-
-   For an introduction to virtual environments, see https://realpython.com/python-virtual-environments-a-primer/.
-
-   If you do use a virtual environment, ensure that your virtual_envs folder is not inside MyNewProject.
-
-::
-
-  mkdir virtual_envs
-  cd virtual_envs
-  virtualenv -p python3 mynewproject_virtualenv
-  source mynewproject_virtualenv/bin/activate
-
-9. You can verify your project has been set up correctly by installing and running tox.
+8. You can verify your project has been set up correctly by installing and running tox.
 
 ::
 
@@ -134,7 +134,8 @@ Note: make sure you use "git add ." not "git add * " to pick up hidden files lik
  tox
  cd ..
 
-tox runs several different stages, including pytest for unit tests and pylint for check for PEP8 linting. These can also be run independently:
+tox runs several different stages, including pytest for unit tests and pylint for check for PEP8 linting.
+These can also be run independently:
 
 ::
 
@@ -144,7 +145,8 @@ tox runs several different stages, including pytest for unit tests and pylint fo
 
 
 
-9. Take a moment to write some software requirements, and populate the README file with a basic description of what you want to do, then start coding.
+9. Take a moment to write some software requirements, and populate the README file with a basic description of
+what you want to do, then start coding.
 
 
 List of parameters for cookiecutter
@@ -192,19 +194,20 @@ List of parameters for cookiecutter
 |    copyright_holder      | If you are a member of UCL you should accept the default text                  |
 +--------------------------+--------------------------------------------------------------------------------+
 
-Authors: Tom Doel, Stephen Thompson, Matt Clarkson, Thomas Dowrick, Mian Ahmad
+Authors: Tom Doel, Stephen Thompson, Matt Clarkson, Thomas Dowrick, Mian Ahmad, Miguel Xochicale
 
-Python Template was developed at the `Wellcome EPSRC Centre for Interventional and Surgical Sciences`_ in `University College London (UCL)`_.
+Python Template was developed at the `Wellcome EPSRC Centre for Interventional and Surgical Sciences`_ in
+`University College London (UCL)`_.
 
 
 Contributing
-^^^^^^^^^^^^
+~~~~~~~~~~~~
 
 Please see the `contributing guidelines`_.
 
 
 Useful links
-^^^^^^^^^^^^
+~~~~~~~~~~~~
 
 * `pip`_
 * `python`_
@@ -242,3 +245,5 @@ Supported by `Wellcome`_ and `EPSRC`_.
 .. _`Cookiecutter`: https://cookiecutter.readthedocs.io
 .. _`WEISSLab`: https://weisslab.cs.ucl.ac.uk/
 .. _`ReadTheDocs`: https://readthedocs.org/
+.. _`mambaforce`: https://github.com/conda-forge/miniforge#install
+.. _`conda`: https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html

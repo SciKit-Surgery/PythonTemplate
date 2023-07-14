@@ -75,12 +75,13 @@ Whilst every effort has been made to automate tasks where possible, it is up to 
 How to use
 ~~~~~~~~~~
 
-1. Install `Cookiecutter`_ using virtual environments in `mambaforce`_
+1. Install `Cookiecutter`_ package and other requirements using virtual environments (VE) in `conda`_.
+Similarly, you can install your VE using `mambaforce`_ by replacing conda with mamba.
 
 ::
 
-  mamba create -n ssptVE python=3.8 pip -c conda-forge
-  mamba activate ssptVE
+  conda create -n ssptVE python=3.8 pip -c conda-forge
+  conda activate ssptVE
   pip install -r requirements-dev.txt
 
 
@@ -114,20 +115,7 @@ Note: make sure you use "git add ." not "git add * " to pick up hidden files lik
 
 7. If using GitHub or WeissLAb, and assuming your URLs are all correct, GitHub Actions/GitLab CI should automatically run tests for your project.
 
-8. (**Optional**) Create a virtual environment.
-
-   For an introduction to virtual environments, see https://realpython.com/python-virtual-environments-a-primer/.
-
-   If you do use a virtual environment, ensure that your virtual_envs folder is not inside MyNewProject.
-
-::
-
-  mkdir virtual_envs
-  cd virtual_envs
-  virtualenv -p python3 mynewproject_virtualenv
-  source mynewproject_virtualenv/bin/activate
-
-9. You can verify your project has been set up correctly by installing and running tox.
+8. You can verify your project has been set up correctly by installing and running tox.
 
 ::
 
@@ -245,3 +233,4 @@ Supported by `Wellcome`_ and `EPSRC`_.
 .. _`WEISSLab`: https://weisslab.cs.ucl.ac.uk/
 .. _`ReadTheDocs`: https://readthedocs.org/
 .. _`mambaforce`: https://github.com/conda-forge/miniforge#install
+.. _`conda`: https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html

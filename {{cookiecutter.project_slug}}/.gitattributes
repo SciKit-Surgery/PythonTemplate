@@ -1,1 +1,1 @@
-{{ cookiecutter.pkg_name }}/_version.py export-subst
+{{cookiecutter.pkg_name}}/_version.py export-subst

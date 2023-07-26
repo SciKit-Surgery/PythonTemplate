@@ -85,11 +85,11 @@ How to use
 
 ::
 
-  conda mamba create -n ssptVE python=3.8 pip -c conda-forge
+  conda create -n ssptVE python=3.8 pip -c conda-forge
   conda activate ssptVE
   pip install -r requirements-dev.txt
 
-2. Run `Cookiecutter`_ with the URL of this template.
+2. Run Cookiecutter with the URL of this template.
 Alternatively, you can run it in the same path of this repository if you are developing a new feature for this template.
 
 ::
@@ -114,12 +114,11 @@ Note: make sure you use "git add ." not "git add * " to pick up hidden files lik
 5. Create a new project on GitHub (or Weisslab/CmicLab/Gitlab), making sure the URL matches what you set in step 3.
 
 6. Add a remote in order to link your local repository to your GitHub repository and push the files across.
-NOTE: use the SSH form of the repository URL so you can use SSH key authentication
-(so you don't have to enter a username and password).
+**NOTE**: use the `SSH`_ form of the repository URL for SSH key authentication (so you don't have to enter a username and password).
 
 ::
 
-  git remote add origin git@github.com:JoanneBloggs/MyNewProject.git
+  git remote add origin git@github.com:GITHUB_USERNAME/MyNewProject.git
   git push origin master
 
 7. If using GitHub or WeissLAb, and assuming your URLs are all correct, GitHub Actions/GitLab CI should automatically
@@ -250,3 +249,4 @@ Supported by `Wellcome`_ and `EPSRC`_.
 .. _`ReadTheDocs`: https://readthedocs.org/
 .. _`mambaforce`: https://github.com/conda-forge/miniforge#install
 .. _`conda`: https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html
+.. _`SSH`: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent

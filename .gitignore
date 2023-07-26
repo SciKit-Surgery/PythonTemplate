@@ -3,6 +3,8 @@
 
 # Default project slug path
 **/MyNewProject
+**/Python_Template.egg-info/
+**/dist/
 
 # Generated files
 .tox

@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "PythonTemplate"
+description= "Python Template is a Cookiecutter template for creating a python project"
+authors = [
+    {name="Tom Doel", email="enquiries@codechoreography.co.uk"},
+	{name="Stephen Thompson", email= "s.thompson@ucl.ac.uk"},
+    {name="Miguel Xochicale", email= "m.xochicale@ucl.ac.uk"}
+]
+version = "2.0.rc0"
+readme = "README.rst"
+license={text="BSD-3 license"}
+classifiers=[
+	"Development Status :: 2 - Pre-Alpha",
+	"Intended Audience :: Developers",
+	"Programming Language :: Python",
+]
+
+[project.urls]
+homepage = "https://https://github.com/SciKit-Surgery/PythonTemplate"
+
+[tool.setuptools.packages.find]
+include=[""]
+exclude=["doc", "tests"]

@@ -75,8 +75,8 @@ creation of well defined, maintainable, well documented, and well tested code.
 | Testing the code at     | The Python Platform uses `tox`_ to automate tests (pytest),  |
 | run time                | coverage analysis and linting (pylint)                       |
 |                         | comes ready with appropriate unit tests to meet the          |
-|                         | minimum requirements (see first item). If using GitHub or    |
-|                         | `WEISSlab`_ to host                                          |
+|                         | minimum requirements (see first item). If using GitHub       |
+|                         | to host                                                      |
 |                         | the code, cross platform continuous integration testing is   |
 |                         | set up by default. It is up to the researcher to             |
 |                         | write further tests as the code is developed.                |
@@ -130,7 +130,7 @@ See "List of parameters for cookiecutter" below.
 
 Note: make sure you use "git add ." not "git add * " to pick up hidden files like `.gitlab-ci.yml`.
 
-5. Create a new project on GitHub (or Weisslab/CmicLab/Gitlab), making sure the URL matches what you set in step 3.
+5. Create a new project on GitHub, making sure the URL matches what you set in step 3.
 
 6. Add a remote in order to link your local repository to your GitHub repository and push the files across.
 **NOTE**: use the `SSH`_ form of the repository URL for SSH key authentication (so you don't have to enter a username and password).
@@ -140,7 +140,7 @@ Note: make sure you use "git add ." not "git add * " to pick up hidden files lik
   git remote add origin git@github.com:GITHUB_USERNAME/MyNewProject.git
   git push origin master
 
-7. If using GitHub or WeissLAb, and assuming your URLs are all correct, GitHub Actions/GitLab CI should automatically
+7. If using GitHub, and assuming your URLs are all correct, GitHub Actions should automatically
 run tests for your project.
 
 8. You can verify your project has been set up correctly by installing and running tox.
@@ -195,7 +195,7 @@ List of parameters for cookiecutter
 |    full_name             | Your full name, for authorship information, and to suggest your profile name   |
 +--------------------------+--------------------------------------------------------------------------------+
 | ::                       |                                                                                |
-|                          | Your personal profile name on GitHub/WeissLab/Cmiclab/Gitlab. Or you can       |
+|                          | Your personal profile name on GitHub. Or you can                               |
 |   repository_profile_name| enter a group name that will be used to construct the repository URL           |
 +--------------------------+--------------------------------------------------------------------------------+
 | ::                       |                                                                                |
@@ -249,7 +249,6 @@ Supported by `Wellcome`_ and `EPSRC`_.
 .. _`tox`: https://tox.readthedocs.io/
 .. _`SciKit-Surgery`: https://www.github.com/SciKit-Surgery
 .. _`Unix Philosophy': https://en.wikipedia.org/wiki/Unix_philosophy
-.. _`The WEISS Software Manifesto`: https://weisslab.cs.ucl.ac.uk/WEISS/_manifesto
 .. _`Software Process`: https://doi.org/10.1109/ISBI.2004.1398621
 .. _`Wellcome EPSRC Centre for Interventional and Surgical Sciences`: http://www.ucl.ac.uk/weiss
 .. _`University College London (UCL)`: http://www.ucl.ac.uk/

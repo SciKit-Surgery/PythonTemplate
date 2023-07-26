@@ -1,20 +1,39 @@
 Python Template
 ===============================
 
+.. image:: https://github.com/SciKit-Surgery/PythonTemplate/raw/master/project-icon.png
+   :height: 128px
+   :target: https://github.com/SciKit-Surgery/PythonTemplate
+   :alt: Logo
+
+|
+
 .. image:: https://github.com/SciKit-Surgery/PythonTemplate/workflows/.github/workflows/ci.yml/badge.svg
    :target: https://github.com/SciKit-Surgery/PythonTemplate/actions
    :alt: GitHub Actions CI status
 
+.. image:: https://img.shields.io/badge/Cite-SciKit--Surgery-informational
+   :target: https://doi.org/10.1007/s11548-020-02180-5
+   :alt: The SciKit-Surgery paper
+
+.. image:: https://img.shields.io/twitter/follow/scikit_surgery?style=social
+   :target: https://twitter.com/scikit_surgery?ref_src=twsrc%5Etfw
+   :alt: Follow scikit_surgery on twitter
 
 Python Template is a Cookiecutter template for creating a python project.
 When used with `Cookiecutter`_ Python Template will create a fully working python "Hello world" project with unit tests,
 GitHub Actions, linting, PyPi distribution and sphinx documentation.
 
+Authors: Tom Doel, Stephen Thompson, Matt Clarkson, Thomas Dowrick, Mian Ahmad, Miguel Xochicale
+
+Python Template is part of the `SciKit-Surgery`_ software project, developed at the
+`Wellcome EPSRC Centre for Interventional and Surgical Sciences`_, part of `University College London (UCL)`_.
+
 Purpose
 ~~~~~~~
 Python Template was developed by the  `Wellcome EPSRC Centre for Interventional and Surgical Sciences`_,
 to assist researchers in the development of small but well engineered software components. It has been
-widely used in the development of `scikit-surgery`_, but can be used as a starting point for any
+widely used in the development of `SciKit-Surgery`_, but can be used as a starting point for any
 Python project.
 The template supports and encourages well engineered software by helping researchers with
 standard software development tasks (`Software Process`_).
@@ -196,12 +215,6 @@ List of parameters for cookiecutter
 |    copyright_holder      | If you are a member of UCL you should accept the default text                  |
 +--------------------------+--------------------------------------------------------------------------------+
 
-Authors: Tom Doel, Stephen Thompson, Matt Clarkson, Thomas Dowrick, Mian Ahmad, Miguel Xochicale
-
-Python Template was developed at the `Wellcome EPSRC Centre for Interventional and Surgical Sciences`_ in
-`University College London (UCL)`_.
-
-
 Contributing
 ~~~~~~~~~~~~
 
@@ -234,7 +247,7 @@ Supported by `Wellcome`_ and `EPSRC`_.
 .. _`spinx`: http://www.sphinx-doc.org/
 .. _`git`: https://git-scm.com/
 .. _`tox`: https://tox.readthedocs.io/
-.. _`scikit-surgery`: https://github.com/SciKit-Surgery/scikit-surgery
+.. _`SciKit-Surgery`: https://www.github.com/SciKit-Surgery
 .. _`Unix Philosophy': https://en.wikipedia.org/wiki/Unix_philosophy
 .. _`The WEISS Software Manifesto`: https://weisslab.cs.ucl.ac.uk/WEISS/_manifesto
 .. _`Software Process`: https://doi.org/10.1109/ISBI.2004.1398621

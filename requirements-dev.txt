@@ -6,3 +6,5 @@ parameterized
 pylint
 sphinx
 pytest
+tox
+build

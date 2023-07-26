@@ -8,12 +8,12 @@ Python Template
 
 Python Template is a Cookiecutter template for creating a python project.
 When used with `Cookiecutter`_ Python Template will create a fully working python "Hello world" project with unit tests,
-GitHub Actions/GitLab CI, linting, PyPi distribution and sphinx documentation.
+GitHub Actions, linting, PyPi distribution and sphinx documentation.
 
 Purpose
 ~~~~~~~
 Python Template was developed by the  `Wellcome EPSRC Centre for Interventional and Surgical Sciences`_,
-to assist researchers in the development of small but well engineered stofware components. It has been
+to assist researchers in the development of small but well engineered software components. It has been
 widely used in the development of `scikit-surgery`_, but can be used as a starting point for any
 Python project.
 The template supports and encourages well engineered software by helping researchers with
@@ -81,24 +81,24 @@ start coding to think about what you want your software to achieve, and write it
 How to use
 ~~~~~~~~~~
 
-1. Install `Cookiecutter`_ package and other requirements using virtual environments (VE) in `conda`_.
-Similarly, you can install your VE using `mambaforce`_ by replacing conda with mamba.
+1. Install `Cookiecutter`_ package and other requirements using virtual environments (VE) in `conda`_ or `mambaforce`_ by replacing conda with mamba.
 
 ::
 
-  conda create -n ssptVE python=3.8 pip -c conda-forge
+  conda mamba create -n ssptVE python=3.8 pip -c conda-forge
   conda activate ssptVE
   pip install -r requirements-dev.txt
 
-2. Run `Cookiecutter`_ with the URL of this template
+2. Run `Cookiecutter`_ with the URL of this template.
+Alternatively, you can run it in the same path of this repository if you are developing a new feature for this template.
 
 ::
 
   cookiecutter https://github.com/SciKit-Surgery/PythonTemplate.git
+  cookiecutter .
 
-3. Answer the questions to configure your template (press enter to choose defaults), for further details on available
-answers.
-See "List of Parameters" below.
+3. Answer the questions to configure your template (press enter to choose defaults), for further details on available answers.
+See "List of parameters for cookiecutter" below.
 
 4. Create a local git repository for your new project and commit the files.
 
@@ -129,7 +129,6 @@ run tests for your project.
 
 ::
 
- pip install tox
  cd MyNewProject
  tox
  cd ..
@@ -139,13 +138,17 @@ These can also be run independently:
 
 ::
 
- pip install pytest pylint
  python -m pytest
  pylint --rcfile=tests/pylintrc mynewproject
 
+9. Install your package in editable mode and build your package
 
+::
 
-9. Take a moment to write some software requirements, and populate the README file with a basic description of
+ python -m pip install -e .
+ python -m build
+
+10. Take a moment to write some software requirements, and populate the README file with a basic description of
 what you want to do, then start coding.
 
 

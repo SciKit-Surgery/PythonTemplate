@@ -1,6 +1,9 @@
 # Pycharm
 /.idea
 
+# Default project slug path
+**/MyNewProject
+
 # Generated files
 .tox
 .coverage

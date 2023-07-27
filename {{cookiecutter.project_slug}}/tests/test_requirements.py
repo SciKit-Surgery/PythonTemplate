@@ -5,8 +5,9 @@ scikit-surgery test to check that `requirements.txt vs `setup.py` or `requiremen
 specify the same dependencies
 """
 import pytest
+import glob
 
-@pytest.mark.skip(reason="temporally skipping this for the migration to pyproject.toml")
+@pytest.mark.skipif(not glob.glob('setup.py')=='setup.py', reason="there is no setup.py")
 def test_requirements_vs_setup():
     """
     Test that the requirements.txt matches setup.py

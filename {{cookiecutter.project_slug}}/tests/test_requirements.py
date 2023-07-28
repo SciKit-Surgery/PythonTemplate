@@ -7,15 +7,12 @@ specify the same dependencies
 import pytest
 import glob
 
-@pytest.mark.skipif(not glob.glob('setup.py')=='setup.py', reason="there is no setup.py")
+
+@pytest.mark.skipif(not glob.glob('setup.py') == 'setup.py', reason="there is no setup.py")
 def test_requirements_vs_setup():
     """
     Test that the requirements.txt matches setup.py
     """
-
-   # setup=open("setup.py","r")
-   # setuptxt = setup.read()
-   # setup.close()
 
     with open("setup.py", "r", encoding='us-ascii') as file_to_read:
         searchlines = file_to_read.readlines()
@@ -38,7 +35,6 @@ def test_requirements_vs_setup():
         req = line.replace(',', '').replace("'", "")
         req = req.replace(' ', '').replace('\n', '')
         setup_reqs.append(req)
-
 
     with open("requirements.txt", "r", encoding='us-ascii') as file_to_read:
         searchlines = file_to_read.readlines()

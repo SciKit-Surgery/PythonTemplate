@@ -149,6 +149,8 @@ run tests for your project.
 
  cd MyNewProject
  tox
+ tox -e lint
+ tox -e docs
  cd ..
 
 tox runs several different stages, including pytest for unit tests and pylint for check for PEP8 linting.
@@ -214,6 +216,22 @@ List of parameters for cookiecutter
 |                          |                                                                                |
 |    copyright_holder      | If you are a member of UCL you should accept the default text                  |
 +--------------------------+--------------------------------------------------------------------------------+
+
+For developers
+~~~~~~~~~~~~~~
+1. Run Cookiecutter with the URL of this template.
+
+::
+
+  cookiecutter .
+  cd MyNewProject
+  tox
+  tox -e lint
+  tox -e docs
+  python -m pytest
+  pylint --rcfile=tests/pylintrc mynewproject
+  python -m pip install -e .
+  python -m build
 
 Contributing
 ~~~~~~~~~~~~

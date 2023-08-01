@@ -4,7 +4,10 @@ mock
 pyfakefs
 parameterized
 pylint
-sphinx
 pytest
 tox
 build
+six
+docutils
+sphinx
+sphinx_rtd_theme

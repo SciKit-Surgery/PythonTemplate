@@ -57,30 +57,6 @@ static_folder = 'static'
 html_static_path = [static_folder]
 
 
-def generate_apidocs(*args):
-    """Generate API docs automatically by trawling the available modules"""
-
-    global working_dir, module_path
-    output_path = working_dir
-    apidoc_command_path = 'sphinx-apidoc'
-    exe_sub_dir = 'bin'
-    if sys.platform == 'win32':
-        exe_sub_dir = 'Scripts'
-    if hasattr(sys, 'real_prefix'):  # called from a virtualenv
-        apidoc_command_path = os.path.join(sys.prefix, exe_sub_dir, 'sphinx-apidoc')
-        apidoc_command_path = os.path.abspath(apidoc_command_path)
-    subprocess.check_call(
-        [apidoc_command_path, '--force', '--separate'] +
-        ['-o', output_path, module_path] +
-        [os.path.join(root_dir_abs, pattern) for pattern in exclude_patterns])
-
-
-def setup(app):
-    # Hook to allow for automatic generation of API docs
-    # before doc deployment begins.
-    app.connect('builder-inited', generate_apidocs)
-
-
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
@@ -90,7 +66,7 @@ def setup(app):
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx.ext.autodoc', 'sphinx.ext.viewcode', 'sphinx.ext.imgmath', 'nbsphinx']
+extensions = ['sphinx.ext.autodoc', 'sphinx.ext.viewcode', 'sphinx.ext.imgmath']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -134,7 +110,7 @@ release = u''
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+# language = None
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'

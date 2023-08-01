@@ -13,6 +13,7 @@ authors = [
 version = "2.0.rc0"
 readme = "README.rst"
 license={text="BSD-3 license"}
+keywords=["Medical image computing"]
 classifiers=[
 	"Development Status :: 2 - Pre-Alpha",
 	"Intended Audience :: Developers",

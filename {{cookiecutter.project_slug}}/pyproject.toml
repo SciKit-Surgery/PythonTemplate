@@ -9,7 +9,7 @@ authors=[
 	{name="{{ cookiecutter.full_name }}", email="YOUR-EMAIL@ucl.ac.uk"},
 ]
 license={text="{{ cookiecutter.open_source_license }}"}
-keywords=["medical imaging"]
+keywords=["Medical image computing"]
 classifiers=[
 	"Development Status :: 2 - Pre-Alpha",
     "Programming Language :: Python",

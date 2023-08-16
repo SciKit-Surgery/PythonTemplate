@@ -104,9 +104,8 @@ How to use
 
 ::
 
-  conda create -n ssptVE python=3.8 pip -c conda-forge
+  conda mamba create -n ssptVE python=3.8 pip cookiecutter -c conda-forge
   conda activate ssptVE
-  pip install -r requirements-dev.txt
 
 2. Run Cookiecutter with the URL of this template.
 Alternatively, you can run it in the same path of this repository if you are developing a new feature for this template.
@@ -125,6 +124,7 @@ See "List of parameters for cookiecutter" below.
 
   cd MyNewProject
   git init
+  pip install -r requirements-dev.txt
   git add .
   git commit -m "Initial commit of My New Project"
 
@@ -225,6 +225,7 @@ For developers
 
   cookiecutter .
   cd MyNewProject
+  pip install -r requirements-dev.txt
   tox
   tox -e lint
   tox -e docs

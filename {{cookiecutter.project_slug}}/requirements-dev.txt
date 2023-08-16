@@ -9,7 +9,12 @@ mock
 pyfakefs
 parameterized
 pylint
-pyinstaller
 pytest
+pyinstaller
 tox
-pip
+tox-conda
+build
+six
+docutils
+sphinx
+sphinx_rtd_theme

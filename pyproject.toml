@@ -26,3 +26,25 @@ homepage = "https://https://github.com/SciKit-Surgery/PythonTemplate"
 [tool.setuptools.packages.find]
 include=[""]
 exclude=["doc", "tests"]
+
+[tool.pytest.ini_options]
+addopts = "--color=yes -v"
+testpaths = [
+    "tests",
+]
+
+[tool.tox]
+legacy_tox_ini = """
+    [testenv]
+    skip_install = true
+    description =
+        Test package creation
+    deps =
+        cookiecutter
+        pytest
+    commands =
+        pytest -v -s -rs tests/
+
+    [tox]
+    env_list = py3{8,9,10,11,12}
+"""

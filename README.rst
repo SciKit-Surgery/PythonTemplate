@@ -104,10 +104,19 @@ How to use
 
 ::
 
-  conda mamba create -n ssptVE python=3.8 pip cookiecutter -c conda-forge
+  conda create -n ssptVE pip -c conda-forge
   conda activate ssptVE
+  pip install cookiecutter tox>=4
 
-2. Run Cookiecutter with the URL of this template.
+
+2. Test template using `tox` and `pytest`
+
+::
+
+  conda activate ssptVE
+  tox
+
+3. Run Cookiecutter with the URL of this template.
 Alternatively, you can run it in the same path of this repository if you are developing a new feature for this template.
 
 ::
@@ -115,10 +124,10 @@ Alternatively, you can run it in the same path of this repository if you are dev
   cookiecutter https://github.com/SciKit-Surgery/PythonTemplate.git
   cookiecutter .
 
-3. Answer the questions to configure your template (press enter to choose defaults), for further details on available answers.
+4. Answer the questions to configure your template (press enter to choose defaults), for further details on available answers.
 See "List of parameters for cookiecutter" below.
 
-4. Create a local git repository for your new project and commit the files.
+5. Create a local git repository for your new project and commit the files.
 
 ::
 
@@ -130,9 +139,9 @@ See "List of parameters for cookiecutter" below.
 
 Note: make sure you use "git add ." not "git add * " to pick up hidden files like `.gitlab-ci.yml`.
 
-5. Create a new project on GitHub, making sure the URL matches what you set in step 3.
+6. Create a new project on GitHub, making sure the URL matches what you set in step 3.
 
-6. Add a remote in order to link your local repository to your GitHub repository and push the files across.
+7. Add a remote in order to link your local repository to your GitHub repository and push the files across.
 **NOTE**: use the `SSH`_ form of the repository URL for SSH key authentication (so you don't have to enter a username and password).
 
 ::
@@ -140,10 +149,10 @@ Note: make sure you use "git add ." not "git add * " to pick up hidden files lik
   git remote add origin git@github.com:GITHUB_USERNAME/MyNewProject.git
   git push origin master
 
-7. If using GitHub, and assuming your URLs are all correct, GitHub Actions should automatically
+8. If using GitHub, and assuming your URLs are all correct, GitHub Actions should automatically
 run tests for your project.
 
-8. You can verify your project has been set up correctly by installing and running tox.
+9. You can verify your project has been set up correctly by installing and running tox.
 
 ::
 
@@ -161,7 +170,7 @@ These can also be run independently:
  python -m pytest
  pylint --rcfile=tests/pylintrc mynewproject
 
-9. Install your package in editable mode and build your package
+10. Install your package in editable mode and build your package
 
 ::
 

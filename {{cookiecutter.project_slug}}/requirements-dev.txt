@@ -11,7 +11,7 @@ parameterized
 pylint
 pytest
 pyinstaller
-tox
+tox>=4
 tox-conda
 build
 six

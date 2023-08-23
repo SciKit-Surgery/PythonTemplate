@@ -27,6 +27,23 @@ classifiers=[
 dependencies = [
 	"numpy",
 ]
+optional-dependencies = {dev = [
+    "twine",
+	"coverage",
+	"mock",
+	"pyfakefs",
+	"parameterized",
+	"pylint",
+	"pytest",
+	"pyinstaller",
+    "tox>=4",
+	"tox-conda",
+	"build",
+	"six",
+	"docutils",
+	"sphinx",
+	"sphinx_rtd_theme",
+]}
 dynamic = [
     "version",
 ]

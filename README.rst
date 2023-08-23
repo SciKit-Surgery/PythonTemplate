@@ -106,7 +106,7 @@ How to use
 
   conda create -n ssptVE pip -c conda-forge
   conda activate ssptVE
-  pip install cookiecutter tox>=4
+  python -m pip install -e ".[dev]"
 
 
 2. Test template using `tox` and `pytest`
@@ -133,7 +133,7 @@ See "List of parameters for cookiecutter" below.
 
   cd MyNewProject
   git init
-  pip install -r requirements-dev.txt
+  python -m pip install -e ".[dev]"
   git add .
   git commit -m "Initial commit of My New Project"
 

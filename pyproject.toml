@@ -19,6 +19,12 @@ classifiers=[
 	"Intended Audience :: Developers",
 	"Programming Language :: Python",
 ]
+dependencies = [
+]
+optional-dependencies = {dev = [
+	"cookiecutter",
+	"tox>=4",
+]}
 
 [project.urls]
 homepage = "https://https://github.com/SciKit-Surgery/PythonTemplate"

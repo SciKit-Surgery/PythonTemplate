@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "PythonTemplate"
+description= "Python Template is a Cookiecutter template for creating a python project"
+authors = [
+    {name="Tom Doel", email="enquiries@codechoreography.co.uk"},
+	{name="Stephen Thompson", email= "s.thompson@ucl.ac.uk"},
+    {name="Miguel Xochicale", email= "m.xochicale@ucl.ac.uk"}
+]
+version = "2.0.rc0"
+readme = "README.rst"
+license={text="BSD-3 license"}
+keywords=["Medical image computing"]
+classifiers=[
+	"Development Status :: 2 - Pre-Alpha",
+	"Intended Audience :: Developers",
+	"Programming Language :: Python",
+]
+dependencies = [
+]
+optional-dependencies = {dev = [
+	"cookiecutter",
+	"tox>=4",
+]}
+
+[project.urls]
+homepage = "https://https://github.com/SciKit-Surgery/PythonTemplate"
+
+[tool.setuptools.packages.find]
+include=[""]
+exclude=["doc", "tests"]
+
+[tool.pytest.ini_options]
+addopts = "--color=yes -v"
+testpaths = [
+    "tests",
+]
+
+[tool.tox]
+legacy_tox_ini = """
+    [testenv]
+    skip_install = true
+    description =
+        Test package creation
+    deps =
+        cookiecutter
+        pytest
+    commands =
+        pytest -v -s -rs tests/
+
+    [tox]
+    env_list = py3{8,9,10,11,12}
+"""

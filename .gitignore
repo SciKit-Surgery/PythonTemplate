@@ -1,6 +1,11 @@
 # Pycharm
 /.idea
 
+# Default project slug path
+**/MyNewProject
+**/PythonTemplate.egg-info/
+**/dist/
+
 # Generated files
 .tox
 .coverage

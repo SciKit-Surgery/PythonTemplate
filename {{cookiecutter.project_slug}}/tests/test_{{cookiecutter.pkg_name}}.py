@@ -6,7 +6,7 @@ from {{ cookiecutter.pkg_name }}.ui.{{ cookiecutter.pkg_name }}_demo import run_
 from {{ cookiecutter.pkg_name }}.algorithms import addition, multiplication
 
 # Pytest style
-def test_using_pytest_{{ cookiecutter.pkg_name }}():
+def test_using_run_demo_{{ cookiecutter.pkg_name }}():
     """First test"""
     #pylint:disable=invalid-name
     x = 1

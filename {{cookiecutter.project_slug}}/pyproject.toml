@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}"
+description= "{{ cookiecutter.project_description }}"
+authors=[
+	{name="{{ cookiecutter.full_name }}", email="YOUR-EMAIL@ucl.ac.uk"},
+]
+license={text="{{ cookiecutter.open_source_license }}"}
+keywords=["Medical image computing"]
+classifiers=[
+	"Development Status :: 2 - Pre-Alpha",
+    "Programming Language :: Python",
+	'Intended Audience :: Developers',
+	'Intended Audience :: Healthcare Industry',
+	'Intended Audience :: Information Technology',
+	'Intended Audience :: Science/Research',
+	"Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+	"Topic :: Scientific/Engineering :: Artificial Intelligence",
+	{% if cookiecutter.open_source_license == 'BSD-3 license' %}"License :: OSI Approved :: BSD License",
+	{% elif cookiecutter.open_source_license == 'Apache Software License 2.0' %}"License :: OSI Approved :: Apache Software License",
+	{% elif cookiecutter.open_source_license == 'GNU General Public License v3' %}"License :: OSI Approved :: GNU General Public License v3 (GPLv3)", {% endif %}
+]
+dependencies = [
+	"numpy",
+]
+optional-dependencies = {dev = [
+    "twine",
+	"coverage",
+	"mock",
+	"pyfakefs",
+	"parameterized",
+	"pylint",
+	"pytest",
+	"pyinstaller",
+    "tox>=4",
+	"tox-conda",
+	"build",
+	"six",
+	"docutils",
+	"sphinx",
+	"sphinx_rtd_theme",
+]}
+dynamic = [
+    "version",
+]
+
+[project.urls]
+homepage = "{{ cookiecutter.project_url }}"
+
+[tool.setuptools.packages.find]
+include=[""]
+exclude=["doc", "tests"]
+
+[project.scripts]
+{{ cookiecutter.pkg_name }}="{{ cookiecutter.pkg_name }}.__main__:main"
